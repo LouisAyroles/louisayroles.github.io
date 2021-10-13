@@ -5,7 +5,8 @@ export enum Type {
 export class Project {
     id: number;
     name: string;
-    type: Type
+    type: Type;
+    short_description: string;
     description: string;
     profilPicture: string;
     pictures: Array<string>;

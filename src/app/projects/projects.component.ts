@@ -11,7 +11,7 @@ import {PROJECTS} from "../mock-projects";
 })
 export class ProjectsComponent implements OnInit {
 
-    private projects: Project[] | undefined;
+    public projects: Project[];
 
     ngOnInit(){
         this.projects = PROJECTS;
