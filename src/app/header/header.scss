@@ -1,0 +1,20 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital@1&display=swap');
+
+h1{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 5em;
+    display: inline-block;
+    padding-top: 0.1em;
+}
+#banner{
+    max-width: 35%;
+    height: auto;
+    float: right;
+    display: inline-block;
+}
+
+.container-fluid{
+    width: 80%;
+    padding-top: 5em;
+}
