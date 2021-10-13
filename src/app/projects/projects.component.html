@@ -1,6 +1,8 @@
 <div class="container">
   <h2> My projects</h2>
   <hr/>
+  <div class="card shadow-sm p-3 mb-5 bg-body rounded">
+    <div class="card-body">
         <div class="row">
           <div class="col">
             <img src="{{projects[0].profilPicture}}" alt="{{projects[0].name}}">
@@ -12,19 +14,28 @@
               {{projects[0].description}}
           </div>
         </div>
+    </div>
+  </div>
 
+
+    <div class="card shadow-sm p-3 mb-5 bg-body rounded">
+      <div class="card-body">
         <div class="row">
-          <div class="col desc">
-            <div class="title">
-              {{projects[1].name}}
-            </div>
-            {{projects[1].description}}
+        <div class="col desc">
+          <div class="title">
+            {{projects[1].name}}
           </div>
-          <div class="col img2">
-            <img src="{{projects[1].profilPicture}}" alt="{{projects[1].name}}">
-          </div>
+          {{projects[1].description}}
         </div>
+        <div class="col img2">
+          <img src="{{projects[1].profilPicture}}" alt="{{projects[1].name}}">
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <div class="card shadow-sm p-3 mb-5 bg-body rounded">
+    <div class="card-body">
       <div class="row">
         <div class="col">
           <img src="{{projects[2].profilPicture}}" alt="{{projects[2].name}}">
@@ -36,7 +47,11 @@
           {{projects[2].description}}
         </div>
       </div>
+    </div>
+  </div>
 
+  <div class="card shadow-sm p-3 mb-5 bg-body rounded">
+    <div class="card-body">
   <div class="row">
     <div class="col desc">
       <div class="title">
@@ -47,5 +62,7 @@
     <div class="col img2">
       <img src="{{projects[3].profilPicture}}" alt="{{projects[3].name}}">
     </div>
+  </div>
+</div>
   </div>
 </div>

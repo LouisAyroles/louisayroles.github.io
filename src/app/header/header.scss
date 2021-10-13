@@ -2,19 +2,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital@1&display=swap');
 
 h1{
-    font-family: 'Chakra Petch', sans-serif;
-    font-size: 5em;
-    display: inline-block;
-    padding-top: 0.1em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    color: white;
 }
 #banner{
-    max-width: 35%;
+    max-width: 700px;
     height: auto;
-    float: right;
-    display: inline-block;
+    float: left;
 }
-
-.container-fluid{
+.text{
+  padding-top: 10rem;
+  text-align: justify;
+}
+.gradient{
+  background: #355C7D;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.custom-container{
+  margin-left:auto;
+  margin-right: auto;
     width: 80%;
     padding-top: 5em;
 }
