@@ -9,7 +9,7 @@ import {ProjectsComponent} from "./projects/projects.component";
 import {RouterModule} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
 import { HomepageComponent } from './homepage/homepage.component';
-import { ProjectComponent } from './project/project.component';
+import { ProjectDetailsComponent } from './project/project-details.component';
 @NgModule({
   imports: [BrowserModule,
   RouterModule,
@@ -20,7 +20,7 @@ import { ProjectComponent } from './project/project.component';
     FooterComponent,
     ProjectsComponent,
     HomepageComponent,
-    ProjectComponent],
+    ProjectDetailsComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
