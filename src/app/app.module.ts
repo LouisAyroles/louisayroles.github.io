@@ -10,6 +10,8 @@ import {RouterModule} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
 import { HomepageComponent } from './homepage/homepage.component';
 import { ProjectDetailsComponent } from './project/project-details.component';
+import { CvComponent } from './cv/cv.component';
+import { ContactComponent } from './contact/contact.component';
 @NgModule({
   imports: [BrowserModule,
   RouterModule,
@@ -20,7 +22,9 @@ import { ProjectDetailsComponent } from './project/project-details.component';
     FooterComponent,
     ProjectsComponent,
     HomepageComponent,
-    ProjectDetailsComponent],
+    ProjectDetailsComponent,
+    CvComponent,
+    ContactComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

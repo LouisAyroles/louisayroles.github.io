@@ -1,17 +1,12 @@
 <div class="container">
-  <div class="card shadow-sm p-3 mb-5 bg-body rounded">
-    <div class="card-body">
+  <h2>{{project.name}}</h2>
+  <span>«{{project.short_description}}»</span>
       <div class="row">
         <div class="col desc">
-          <div class="title">
-            {{project.name}}
-          </div>
           {{project.description}}
         </div>
         <div class="col img2">
           <img src="{{project.profilPicture}}" alt="{{project.name}}">
         </div>
       </div>
-    </div>
-  </div>
 </div>

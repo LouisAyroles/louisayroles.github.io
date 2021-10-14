@@ -1,0 +1,23 @@
+h1{
+  color: white;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background: #355C7D;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D); /* W3C, IE 10+*/
+}
+
+
+img{
+  padding-top: 4rem;
+  min-width: 20%;
+  max-width: 50%;
+  border-radius: 10px;
+}
+
+.text-center{
+  border-radius: 10px;
+}
