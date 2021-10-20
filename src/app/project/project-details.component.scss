@@ -13,7 +13,6 @@ span{
 }
 
 .general-desc{
-  padding-top: 4rem;
   font-size: large;
   font-family: 'Montserrat', sans-serif;
   text-align: justify;
@@ -40,6 +39,16 @@ span{
   justify-content:center;
  }
 
+.img-desc{
+  display: flex;
+  align-items: center;
+  & img{
+    width: 400px;
+  }
+  justify-content:center;
+
+}
+
 .full-desc{
   padding-top: 5rem;
 }
@@ -54,7 +63,6 @@ span{
 }
 
 .img2 img{
-  width: 450px;
   padding-top: 3rem;
 }
 

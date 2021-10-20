@@ -12,21 +12,23 @@ export const PROJECTS: Project[] = [
         profilPicture: "../assets/projects/raid5/raid5.png",
       pictures: [
         {
-          src: "blabla",
-          title: "CartOCampus",
-          desc: "test"
+          src: "../assets/projects/raid5/raid5Disk.png",
+          desc: "Le principe du RAID 5 est de repartir les données en couche sur plusieurs disques et de faire la parité des 3 sur le dernier disque. De cette maniere là, il est possible de retrouver les données en cas de panne. "
         },
         {
-          src: "src",
-          title: "CartOCampus",
-          desc: "blabla"
+          src: "../assets/projects/raid5/raid5couche1.png",
+          desc: "L'ensemble du projet a été codé en langage C. Nous avons utilisés des primitives tel que fread ou fwrite. Une attention particuliere a ete donnée sur les commentaires puisque ceux ci permettaient de generer automatiquement un documenation. "
+        },
+        {
+          src: "../assets/projects/raid5/raidPrompt.png",
+          desc: "Voici l'interface en ligne de commande du RAID5. Nous avons donc developpé plusieurs commandes que vous pouvez retrouver avec un help." +
+            " Il est possible de load un fichier à parit d'un pc hôte vers le systeme ou d'exporter un fichier du systeme vers le pc hôte."
         },
       ],
-      techno: ["../assets/techno/android.png",
-        "../assets/techno/bitbucket.png",
-        "../assets/techno/kotlin.png",
+      techno: ["../assets/techno/c.png",
+        "../assets/techno/atom.png",
+        "../assets/techno/github.png",
         "../assets/techno/scrum.png",
-        "../assets/techno/xml.png",
       ],
         created: new Date(),
     },
@@ -42,25 +44,21 @@ export const PROJECTS: Project[] = [
       pictures: [
         {
           src: "../assets/projects/neocampus/cartocampus.png",
-          title: "CartOCampus",
           desc: "Une carte interactive 3D basée sur OpenStreetMap qui permet aux étudiants de se repérer dans la fac." +
             " Il est possible de faire des recherches par nom de bâtiments, d'amphithéâtre, de restaurants etc. "
         },
         {
           src: "../assets/projects/neocampus/restocampus.png",
-          title: "RestOCampus",
           desc: "Une liste des restaurants, filtrable selon la distance, les moyens de paiements disponibles etc." +
             " Elle permet de consulter les horaires d'ouvertures, les menus et d'autres infos utiles."
         },
         {
           src: "../assets/projects/neocampus/meteocampus.png",
-          title: "MeteOCampus",
           desc: "Une fonctionnalité météo qui permet de ne pas se faire surprendre par le temps lorsque vous vous habillez le matin." +
             " Elle est personnalisé avec des photos de l'université qui change en fonction du temps."
         },
         {
           src: "../assets/projects/neocampus/bibliocampus.png",
-          title: "BibliOCampus",
           desc: "BibliOCampus, une autre fonction de cette application qui vous permet de voir les BUs disponibles à proximité." +
             " Elle vous permet d'acceder à quelques infos pratiques comme les horaires d'ouvertures ou l'accès."
         }
@@ -86,20 +84,16 @@ export const PROJECTS: Project[] = [
        pictures: [
         {
           src: "blabla",
-          title: "CartOCampus",
           desc: "test"
         },
         {
           src: "src",
           desc: "blabla",
-          title: "CartOCampus",
         },
       ],
-      techno: ["../assets/techno/android.png",
-        "../assets/techno/bitbucket.png",
-        "../assets/techno/kotlin.png",
-        "../assets/techno/scrum.png",
-        "../assets/techno/xml.png",
+      techno: ["../assets/techno/seo.png",
+        "../assets/techno/ecommerce.png",
+        "../assets/techno/shopify.png",
       ],
         created: new Date()
     },
@@ -114,12 +108,10 @@ export const PROJECTS: Project[] = [
     pictures: [
       {
         src: "blabla",
-        title: "CartOCampus",
         desc: "test"
       },
       {
         src: "src",
-        title: "CartOCampus",
         desc: "blabla"
       },
     ],
