@@ -28,26 +28,55 @@ ul.dropdown-menu.show.inverse{
   border-radius: 8px;
 }
 
-a.dropdown-item:hover{
-  background: white;
+a.dropdown-item{
+  border-radius: 10px;
+  background: transparent;
+  &.underlined{
+    &:hover {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    color: #ad6882;
+    background: white;
+  }
+  &:hover{
+    color: #ad6882 !important;
+    background: white;
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+  }
 }
 
-nav .navbar-nav li a:hover{
-  color: #ad6882;
-  background: white;
+
+
+nav .navbar-nav li a {
   border-radius: 10px;
+  &.underlined{
+    &:hover {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    color: #ad6882;
+    background: white;
+  }
+  &:hover{
+    box-shadow: 0 2px 1px -1px white;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 }
-.inverse a{
+
+.inverse a {
   color: #ad6882 !important;
   background: transparent;
   border-radius: 10px;
-}
-.inverse a:hover{
-  color: white !important;
-  background: #355C7D !important;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D) !important;  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  border-radius: 10px;
+
+  &:hover{
+    color: white !important;
+    background: #355C7D !important;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D) !important;  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
 }
 
 .divider{
