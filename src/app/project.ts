@@ -1,3 +1,5 @@
+import {Photo} from "./photo";
+
 export enum Type {
     Perso = 1,
     Pro = 2
@@ -9,6 +11,6 @@ export class Project {
     short_description: string;
     description: string;
     profilPicture: string;
-    pictures: Array<string>;
+    pictures: Array<Photo>;
     created: Date;
   }

@@ -12,10 +12,13 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ProjectDetailsComponent } from './project/project-details.component';
 import { CvComponent } from './cv/cv.component';
 import { ContactComponent } from './contact/contact.component';
+import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
+import { HobbiesComponent } from './hobbies/hobbies.component';
 @NgModule({
   imports: [BrowserModule,
   RouterModule,
-  AppRoutingModule],
+  AppRoutingModule,
+    NgxExtendedPdfViewerModule],
   declarations: [ AppComponent,
     HeaderComponent,
     NavbarComponent,
@@ -24,7 +27,8 @@ import { ContactComponent } from './contact/contact.component';
     HomepageComponent,
     ProjectDetailsComponent,
     CvComponent,
-    ContactComponent],
+    ContactComponent,
+    HobbiesComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

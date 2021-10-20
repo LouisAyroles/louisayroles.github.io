@@ -5,6 +5,7 @@ import {ProjectDetailsComponent} from "./project/project-details.component";
 import {ProjectResolver} from "./resolver/project.resolver";
 import {CvComponent} from "./cv/cv.component";
 import {ContactComponent} from "./contact/contact.component";
+import {HobbiesComponent} from "./hobbies/hobbies.component";
 
 const appRoutes: Routes = [
   {
@@ -23,6 +24,10 @@ const appRoutes: Routes = [
   {
     path: 'contact',
     component: ContactComponent
+  },
+  {
+    path: 'hobbies',
+    component: HobbiesComponent
   }
 ]
 

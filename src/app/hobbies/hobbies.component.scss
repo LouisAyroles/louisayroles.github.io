@@ -1,0 +1,28 @@
+iframe{
+  width:1280px;
+  height:720px;
+  padding-top: 2rem;
+  border-radius: 8px 8px;
+}
+
+.corner-wrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 1;
+  height: 320px;
+  width: 480px;
+}
+
+hr {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+h1{
+  font-size: 3rem;
+  font-family: 'Montserrat',sans-serif;
+  text-align: center;
+  padding: 3rem;
+}
