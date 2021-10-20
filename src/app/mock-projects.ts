@@ -13,13 +13,20 @@ export const PROJECTS: Project[] = [
       pictures: [
         {
           src: "blabla",
+          title: "CartOCampus",
           desc: "test"
         },
         {
           src: "src",
+          title: "CartOCampus",
           desc: "blabla"
         },
-
+      ],
+      techno: ["../assets/techno/android.png",
+        "../assets/techno/bitbucket.png",
+        "../assets/techno/kotlin.png",
+        "../assets/techno/scrum.png",
+        "../assets/techno/xml.png",
       ],
         created: new Date(),
     },
@@ -34,15 +41,37 @@ export const PROJECTS: Project[] = [
         profilPicture: "../assets/projects/neocampus/neocampus.png",
       pictures: [
         {
-          src: "blabla",
-          desc: "test"
+          src: "../assets/projects/neocampus/cartocampus.png",
+          title: "CartOCampus",
+          desc: "Une carte interactive 3D basée sur OpenStreetMap qui permet aux étudiants de se repérer dans la fac." +
+            " Il est possible de faire des recherches par nom de bâtiments, d'amphithéâtre, de restaurants etc. "
         },
         {
-          src: "src",
-          desc: "blabla"
+          src: "../assets/projects/neocampus/restocampus.png",
+          title: "RestOCampus",
+          desc: "Une liste des restaurants, filtrable selon la distance, les moyens de paiements disponibles etc." +
+            " Elle permet de consulter les horaires d'ouvertures, les menus et d'autres infos utiles."
         },
-
+        {
+          src: "../assets/projects/neocampus/meteocampus.png",
+          title: "MeteOCampus",
+          desc: "Une fonctionnalité météo qui permet de ne pas se faire surprendre par le temps lorsque vous vous habillez le matin." +
+            " Elle est personnalisé avec des photos de l'université qui change en fonction du temps."
+        },
+        {
+          src: "../assets/projects/neocampus/bibliocampus.png",
+          title: "BibliOCampus",
+          desc: "BibliOCampus, une autre fonction de cette application qui vous permet de voir les BUs disponibles à proximité." +
+            " Elle vous permet d'acceder à quelques infos pratiques comme les horaires d'ouvertures ou l'accès."
+        }
       ],
+      techno: ["../assets/techno/android.png",
+                "../assets/techno/bitbucket.png",
+                "../assets/techno/kotlin.png",
+                "../assets/techno/scrum.png",
+                "../assets/techno/xml.png",
+      ],
+
         created: new Date()
     },
     {
@@ -57,13 +86,20 @@ export const PROJECTS: Project[] = [
        pictures: [
         {
           src: "blabla",
+          title: "CartOCampus",
           desc: "test"
         },
         {
           src: "src",
-          desc: "blabla"
+          desc: "blabla",
+          title: "CartOCampus",
         },
-
+      ],
+      techno: ["../assets/techno/android.png",
+        "../assets/techno/bitbucket.png",
+        "../assets/techno/kotlin.png",
+        "../assets/techno/scrum.png",
+        "../assets/techno/xml.png",
       ],
         created: new Date()
     },
@@ -78,13 +114,20 @@ export const PROJECTS: Project[] = [
     pictures: [
       {
         src: "blabla",
+        title: "CartOCampus",
         desc: "test"
       },
       {
         src: "src",
+        title: "CartOCampus",
         desc: "blabla"
       },
-
+    ],
+    techno: ["../assets/techno/android.png",
+      "../assets/techno/bitbucket.png",
+      "../assets/techno/kotlin.png",
+      "../assets/techno/scrum.png",
+      "../assets/techno/xml.png",
     ],
     created: new Date()
   }

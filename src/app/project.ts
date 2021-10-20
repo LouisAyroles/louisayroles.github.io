@@ -12,5 +12,6 @@ export class Project {
     description: string;
     profilPicture: string;
     pictures: Array<Photo>;
+    techno: Array<string>;
     created: Date;
   }

@@ -1,12 +1,32 @@
 <div class="container">
   <h2>{{project.name}}</h2>
   <span>«{{project.short_description}}»</span>
-      <div class="row">
-        <div class="col desc">
-          {{project.description}}
+  <div class="row infos">
+    <div class="col general-desc">
+      {{project.description}}
+    </div>
+    <div class="col img-right">
+      <img src="{{project.profilPicture}}" alt="{{project.name}}">
+    </div>
+  </div>
+  <hr/>
+  <div  class="techno">
+    <img *ngFor="let techno of project.techno" src="{{techno}}" alt="">
+  </div>
+
+    <div class="row full-desc" *ngFor="let picdesc of project.pictures">
+        <div *ngIf="getBool()" class="col desc">
+          {{picdesc.desc}}
         </div>
-        <div class="col img2">
-          <img src="{{project.profilPicture}}" alt="{{project.name}}">
+        <div *ngIf="getBool()" class="col img-right">
+          <img src="{{picdesc.src}}" alt="{{project.name}}">
         </div>
-      </div>
+        <div *ngIf="invertBool()" class="col img-left">
+          <img src="{{picdesc.src}}" alt="{{project.name}}">
+        </div>
+        <div *ngIf="getBool()" class="col desc">
+            {{picdesc.desc}}
+        </div>
+
+</div>
 </div>
