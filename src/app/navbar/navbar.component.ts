@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
-import {Project, Type} from "../project";
+import {Project} from "../project";
 import {PROJECTS} from "../mock-projects";
+import {NavigationStart, Router} from "@angular/router";
 
 
 @Component({
@@ -14,6 +15,23 @@ import {PROJECTS} from "../mock-projects";
 export class NavbarComponent implements OnInit {
 
   public projects: Project[];
+
+  component = 'default';
+  inverseColor = false;
+
+  constructor(
+    private router: Router,
+  ) {
+    // subscribe to router navigation
+    this.router.events.subscribe(event => {
+      // filter `NavigationEnd` events
+      if (event instanceof NavigationStart) {
+        console.log(event.url);
+        this.inverseColor = (event.url === '/contact') || (event.url ==='/hobbies');
+        console.log(this.inverseColor)
+      }
+    });
+  }
 
     ngOnInit(){
       this.projects = PROJECTS;

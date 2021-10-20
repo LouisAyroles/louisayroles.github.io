@@ -3,6 +3,7 @@
 // Bootstrap and its default variables
 @import 'variables';
 @import "node_modules/bootstrap/scss/bootstrap";/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
 $navbar-dark-color:rgba(white, .55);
 $navbar-dark-hover-color: rgba(white, .75);
 
