@@ -37,7 +37,7 @@
   <div class="card shadow-sm p-3 mb-5 bg-body rounded" routerLink="project/{{projects[2].id}}">
     <div class="card-body">
       <div class="row">
-        <div class="col">
+        <div class="col img3">
           <img src="{{projects[2].profilPicture}}" alt="{{projects[2].name}}">
         </div>
         <div class="col desc">
@@ -65,4 +65,22 @@
   </div>
 </div>
   </div>
+
+  <div class="card shadow-sm p-3 mb-5 bg-body rounded" routerLink="project/{{projects[4].id}}">
+    <div class="card-body">
+      <div class="row">
+        <div class="col img3">
+          <img src="{{projects[4].profilPicture}}" alt="{{projects[4].name}}">
+        </div>
+        <div class="col desc">
+          <div class="title">
+            {{projects[4].name}}
+          </div>
+          {{projects[4].description}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 </div>

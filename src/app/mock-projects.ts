@@ -83,13 +83,17 @@ export const PROJECTS: Project[] = [
         profilPicture: "../assets/projects/passionfleur/passionfleur.png",
        pictures: [
         {
-          src: "blabla",
-          desc: "test"
+          src: "../assets/projects/passionfleur/passionfleur.svg",
+          desc: "Un site developpé à l'aide de Shopify qui permet de construire facilement un site e-commerce sécurisé et responsive. Ce projet avait pour but de bien comprendre le referencement google et comment ofnctionner l'e-commerce."
         },
         {
-          src: "src",
-          desc: "blabla",
+          src: "../assets/projects/passionfleur/responsivecontent.png",
+          desc: "On peut voir le contenu ici qui s'affiche parfaitement sur mobile. En effet le côté responsive est tres important pour un site e-commerce puisque maintenant plus de la moitié des utilisateurs utilisent leur telephone pour naviguer sur internet.",
         },
+         {
+           src: "../assets/projects/passionfleur/responsivemenu.png",
+           desc: "Le menu qui est normalement un mega-menu, se reduit sur mobile et propose un volet lateral tres pratique à utiliser. Les logos sont aussi differents pour mieux s'adapter au device qui est utilisé.",
+         },
       ],
       techno: ["../assets/techno/seo.png",
         "../assets/techno/ecommerce.png",
@@ -115,11 +119,47 @@ export const PROJECTS: Project[] = [
         desc: "blabla"
       },
     ],
-    techno: ["../assets/techno/android.png",
-      "../assets/techno/bitbucket.png",
-      "../assets/techno/kotlin.png",
+    techno: ["../assets/techno/Intellij.svg",
+      "../assets/techno/angular.png",
+      "../assets/techno/github.png",
+      "../assets/techno/materialize.svg",
+      "../assets/techno/html.png",
+      "../assets/techno/css3.png",
+      "../assets/techno/typescript.png",
+    ],
+    created: new Date()
+  },
+  {
+    id: 5,
+    name: "GitSupervisor",
+    type: Type.Pro,
+    short_description: "Un projet de 6 mois réalisé pendant le Master 1.",
+    description : "Git Supervisor est un outil d'analyse de depots GitLab ou GitHub. Il permet de centraliser des informations concernant les repos et de voir les contributeurs aux projets, les commits qui ont été effectués, comment les issues ont été gérées etc." +
+      " Cette application web est faite d'une API developpée en Python couplée à un frontend TypeScript Angular. Nous avons évolué 6 mois sur ce projet proposé par Jean-Michel Bruel, professeur à l'IRIT dans un contexte agile. Je tiens à remercier les M2 qui nous ont encadrés pour ce projet. ",
+    profilPicture: "../assets/projects/gitsupervisor/gitsupervisor.png",
+    pictures: [
+      {
+        src: "../assets/projects/gitsupervisor/contributors-module.png",
+        desc: "Le contributors module permet de voir tout les contributeurs au projet et de voir des détails sur leur collaboration, le nombre de commits, d'issues etc."
+      },
+      {
+        src: "../assets/projects/gitsupervisor/evaluator-module.png",
+        desc: "Les regles de l'evaluator module sont définis dans les réglages et permet de noter automatiquement des éleves selon des criteres particuliés."
+      },
+      {
+        src: "../assets/projects/gitsupervisor/example.gif",
+        desc: "Voici un gif representant une intéraction utilisateur qui crée un workspace, ajoute un de ses dépôts et ajoute les modules d'analyse."
+      },
+    ],
+    techno: ["../assets/techno/Intellij.svg",
+      "../assets/techno/angular.png",
+      "../assets/techno/github.png",
+      "../assets/techno/gitlab.png",
       "../assets/techno/scrum.png",
-      "../assets/techno/xml.png",
+      "../assets/techno/html.png",
+      "../assets/techno/css3.png",
+      "../assets/techno/typescript.png",
+      "../assets/techno/python.png",
     ],
     created: new Date()
   }

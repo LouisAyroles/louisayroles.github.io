@@ -37,6 +37,7 @@ span{
 .img-right img{
   float:right;
   justify-content:center;
+  max-width: 700px;
  }
 
 .img-desc{
@@ -56,6 +57,7 @@ span{
 .img-left img{
   display: flex;
   align-items: center;
+  max-width: 700px;
 }
 
 .text-right{
