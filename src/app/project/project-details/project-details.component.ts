@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Project} from "../project";
+import {Project} from "../../domain/project";
 import {ActivatedRoute} from "@angular/router";
 
 @Component({

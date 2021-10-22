@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-hobbies',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HobbiesComponent implements OnInit {
 
+  public isLoading: boolean = true;
   constructor() { }
 
   ngOnInit(): void {

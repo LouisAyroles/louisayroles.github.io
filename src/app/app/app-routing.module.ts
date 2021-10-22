@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {HomepageComponent} from "./homepage/homepage.component";
-import {ProjectDetailsComponent} from "./project/project-details.component";
-import {ProjectResolver} from "./resolver/project.resolver";
-import {CvComponent} from "./cv/cv.component";
-import {ContactComponent} from "./contact/contact.component";
-import {HobbiesComponent} from "./hobbies/hobbies.component";
+import {HomepageComponent} from "../homepage/homepage.component";
+import {ProjectDetailsComponent} from "../project/project-details/project-details.component";
+import {ProjectResolver} from "../resolver/project.resolver";
+import {CvComponent} from "../cv/cv.component";
+import {ContactComponent} from "../contact/contact.component";
+import {HobbiesComponent} from "../hobbies/hobbies.component";
 
 const appRoutes: Routes = [
   {

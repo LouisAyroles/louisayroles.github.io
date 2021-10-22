@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
-import {Project} from "../project";
-import {PROJECTS} from "../mock-projects";
+import {Project} from "../domain/project";
+import {PROJECTS} from "../domain/mock-projects";
 import {NavigationStart, Router} from "@angular/router";
 
 

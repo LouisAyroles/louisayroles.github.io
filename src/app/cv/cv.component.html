@@ -1,5 +1,9 @@
 <div class="custom-container">
-  <iframe src="https://drive.google.com/file/d/1SC-uLnFqVLHmogvnn4XhiGTTOxXdZZ-W/preview" width=100% height="auto" allow="autoplay"></iframe>
+  <div *ngIf="isLoading" class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
+    <div class="spinner-border text-primary" role="status">
+    </div>
+  </div>
+  <iframe (load)="isLoading=false" [class.d-none]="isLoading" src="https://drive.google.com/file/d/1SC-uLnFqVLHmogvnn4XhiGTTOxXdZZ-W/preview" width=100% height="auto" allow="autoplay"></iframe>
 </div>
 
 

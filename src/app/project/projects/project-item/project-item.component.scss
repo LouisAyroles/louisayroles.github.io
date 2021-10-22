@@ -1,21 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
-
-h2{
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 4rem;
-}
-
-hr {
-  margin-top: 2rem;
-  margin-bottom: 5rem;
-  border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
 img{
-    max-width: 700px;
-    height: auto;
+  max-width: 700px;
+  height: auto;
 }
 
 .container{
@@ -25,6 +10,7 @@ img{
 
 .desc{
   font-family: 'Montserrat', sans-serif;
+  text-align: justify;
 }
 
 
@@ -33,7 +19,6 @@ img{
   box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
   transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
   cursor: pointer;
-
 }
 
 .card:hover{
