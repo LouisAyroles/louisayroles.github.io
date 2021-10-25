@@ -19,6 +19,8 @@ export class NavbarComponent implements OnInit {
   component = 'default';
   inverseColor = false;
   isUnderlined = '';
+  public isCollapsed = true;
+  public navbarOpen = false;
 
   constructor(
     private router: Router,
@@ -33,6 +35,13 @@ export class NavbarComponent implements OnInit {
       }
     });
   }
+
+
+
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
+  }
+
 
     ngOnInit(){
       this.projects = PROJECTS;
