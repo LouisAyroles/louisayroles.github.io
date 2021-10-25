@@ -1,30 +1,30 @@
 <div class="card shadow-sm p-3 mb-5 bg-body rounded" routerLink="project/{{project.id}}">
   <div class="card-body">
-    <div class="row">
+    <div class="container">
+      <div class="row">
 
-      <!-- Project display with picture on left and text on right -->
-      <div *ngIf="getBool()" class="col desc">
-        <div class="title">
-          {{project.name}}
+        <!-- Project display with picture on left and text on right -->
+        <div *ngIf="project.id%2==0" class="col desc">
+          <div class="title">
+            {{project.name}}
+          </div>
+          {{project.description}}
         </div>
-        {{project.description}}
-      </div>
-      <div *ngIf="getBool()" class="col img2">
-        <img src="{{project.profilPicture}}" alt="{{project.name}}">
-      </div>
-
-      <!-- Project display with picture on right and text on left -->
-      <div *ngIf="invertBool()" class="col img3">
-        <img src="{{project.profilPicture}}" alt="{{project.name}}">
-      </div>
-      <div *ngIf="getBool()" class="col desc">
-        <div class="title">
-          {{project.name}}
+        <div *ngIf="project.id%2==0" class="col img2 ">
+          <img src="{{project.profilPicture}}" alt="{{project.name}}">
         </div>
-        {{project.description}}
+
+        <!-- Project display with picture on right and text on left-->
+        <div *ngIf="project.id%2==1" class="col img">
+          <img src="{{project.profilPicture}}" alt="{{project.name}}">
+        </div>
+        <div *ngIf="project.id%2==1" class="col desc">
+          <div class="title">
+            {{project.name}}
+          </div>
+          {{project.description}}
+        </div>
+
       </div>
-
-
-    </div>
   </div>
 </div>

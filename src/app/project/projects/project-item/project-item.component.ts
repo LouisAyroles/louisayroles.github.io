@@ -24,7 +24,6 @@ export class ProjectItemComponent implements OnInit {
   }
 
   public invertBool(): boolean{
-    this.invert = !this.invert;
-    return this.invert;
+    return !this.invert;
   }
 }
