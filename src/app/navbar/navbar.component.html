@@ -1,8 +1,10 @@
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <img src="/assets/logo.png" alt="Louis Ayroles">
         </a>
+        <a *ngIf="mobileView" class="btn btn-outline-light" href="https://github.com/LouisAyroles/portfolio" target="_blank" role="button">
+          <span class="fa fa-github hide"></span> <span class="ro">  View on Github</span></a>
         <button class="navbar-toggler d-lg-none" type="button btn-light" (click)="toggleNavbar()" [attr.aria-expanded]="!isCollapsed" aria-controls="navbarsExampleDefault" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -38,7 +40,7 @@
             </ul>
       </div>
       </div>
-      <a class="btn btn-outline-light" href="https://github.com/LouisAyroles/portfolio" target="_blank" role="button">
-        <span class="fa fa-github"></span> View on Github</a>
-    </div>
+      <a *ngIf="!mobileView" class="btn btn-outline-light" href="https://github.com/LouisAyroles/portfolio" target="_blank" role="button">
+        <span class="fa fa-github hide"></span> <span class="ro">  View on Github</span></a>
+</div>
 </nav>

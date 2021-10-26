@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import {Project} from "../domain/project";
 import {PROJECTS} from "../domain/mock-projects";
 import {NavigationStart, Router} from "@angular/router";
@@ -21,10 +20,17 @@ export class NavbarComponent implements OnInit {
   isUnderlined = '';
   public isCollapsed = true;
   public navbarOpen = false;
+  public mobileView: boolean;
 
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event? : any) {
+   this.mobileView = window.innerWidth <= 425;
+}
   constructor(
     private router: Router,
   ) {
+    this.onResize();
     // subscribe to router navigation
     this.router.events.subscribe(event => {
       // filter `NavigationEnd` events
