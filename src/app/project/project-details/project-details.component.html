@@ -2,11 +2,11 @@
   <h2>{{project.name}}</h2>
   <span>«{{project.short_description}}»</span>
   <div class="row infos">
+      <div class="col img-desc">
+          <img src="{{project.profilPicture}}" alt="{{project.name}}">
+        </div>
     <div class="col general-desc">
       {{project.description}}
-    </div>
-    <div class="col img-desc">
-      <img src="{{project.profilPicture}}" alt="{{project.name}}">
     </div>
   </div>
   <hr/>
@@ -14,7 +14,7 @@
     <img *ngFor="let techno of project.techno" src="{{techno}}" alt="">
   </div>
 
-    <div class="row full-desc" *ngFor="let picdesc of project.pictures">
+    <div class="row full-desc py-2" *ngFor="let picdesc of project.pictures">
         <div *ngIf="getBool()" class="col desc">
           {{picdesc.desc}}
         </div>
@@ -24,7 +24,7 @@
         <div *ngIf="invertBool()" class="col img-left">
           <img src="{{picdesc.src}}" alt="{{project.name}}">
         </div>
-        <div *ngIf="getBool()" class="col desc">
+        <div *ngIf="getBool2()" class="col desc">
             {{picdesc.desc}}
         </div>
 

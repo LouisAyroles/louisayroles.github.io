@@ -97,3 +97,40 @@ hr{
   cursor: pointer;
 }
 
+@media only screen and (max-width: 768px) {
+
+  .row{
+    display: block;
+  }
+
+  .infos{
+    display: block;
+  }
+
+  .img-right img, .img-left img {
+    text-align:center;
+    margin:auto;
+    display:flex;
+    max-width: 100%;
+    padding-top: 5rem;
+  }
+
+
+  .img-desc{
+    margin-bottom: 3rem;
+    padding-top: 0;
+  }
+
+  .img-desc img{
+    margin-bottom: 3rem;
+    padding-top: 0;
+    max-width: 100%;
+  }
+
+  .techno {
+    text-align:center;
+    margin:auto;
+    display: block;
+  }
+}
+

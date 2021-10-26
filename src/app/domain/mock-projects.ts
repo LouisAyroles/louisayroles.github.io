@@ -83,7 +83,7 @@ export const PROJECTS: Project[] = [
         profilPicture: "../assets/projects/passionfleur/passionfleur.png",
        pictures: [
         {
-          src: "../assets/projects/passionfleur/passionfleur.svg",
+          src: "../assets/projects/passionfleur/passionfleur2.png",
           desc: "Un site developpé à l'aide de Shopify qui permet de construire facilement un site e-commerce sécurisé et responsive. Ce projet avait pour but de bien comprendre le referencement google et comment ofnctionner l'e-commerce."
         },
         {
@@ -110,14 +110,6 @@ export const PROJECTS: Project[] = [
     + " Angular est un framework client-side, open source, basé sur TypeScript, et co-dirigé par l'équipe du projet « Angular » à Google et par une communauté de particuliers et de sociétés. Angular est le descendant d'AngularJS, framework construit par la même équipe.",
     profilPicture: "../assets/projects/pokedex/angular.png",
     pictures: [
-      {
-        src: "blabla",
-        desc: "test"
-      },
-      {
-        src: "src",
-        desc: "blabla"
-      },
     ],
     techno: ["../assets/techno/Intellij.svg",
       "../assets/techno/angular.png",
