@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 
 @Component({
@@ -8,6 +7,17 @@ import { OnInit } from '@angular/core';
     styleUrls: [`./header.scss`]
 })
 export class HeaderComponent implements OnInit {
+
+  public mobileView: boolean;
+
+  constructor() {
+    this.onResize();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event? : any) {
+   this.mobileView = window.innerWidth <= 768;
+}
 
     ngOnInit(){
     }
