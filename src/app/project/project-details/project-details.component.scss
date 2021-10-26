@@ -130,7 +130,13 @@ hr{
   .techno {
     text-align:center;
     margin:auto;
-    display: block;
+    display: inline-block;
+  }
+
+  .techno img{
+    width: 50px;
+    height: 50px;
+    margin: 20px;
   }
 }
 
