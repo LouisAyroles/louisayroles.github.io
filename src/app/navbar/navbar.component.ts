@@ -37,7 +37,6 @@ export class NavbarComponent implements OnInit {
       if (event instanceof NavigationStart) {
         this.inverseColor = (event.url === '/contact') || (event.url ==='/hobbies') || event.url.startsWith('/project');
         this.isUnderlined = event.url;
-        console.log(event.url);
       }
     });
   }
