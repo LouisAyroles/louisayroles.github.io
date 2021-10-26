@@ -80,7 +80,9 @@ hr{
 }
 
 .techno{
-  display: inline-flex;
+  text-align:center;
+  margin:auto;
+  display: block;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -130,7 +132,7 @@ hr{
   .techno {
     text-align:center;
     margin:auto;
-    display: inline-block;
+    display: block;
   }
 
   .techno img{
@@ -138,5 +140,15 @@ hr{
     height: 50px;
     margin: 20px;
   }
+
+
+
+}
+
+@media only screen and (max-width: 1024px) {
+  .desc{
+    font-size: 1.5rem;
+  }
+
 }
 
