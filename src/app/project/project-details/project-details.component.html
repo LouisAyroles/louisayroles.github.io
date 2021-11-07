@@ -9,10 +9,12 @@
       {{project.description}}
     </div>
   </div>
+  <h2>Technologies & Outils</h2>
   <hr/>
   <div  class="techno">
     <img *ngFor="let techno of project.techno" src="{{techno}}" alt="">
   </div>
+  <hr/>
 
     <div class="row full-desc py-2" *ngFor="let picdesc of project.pictures">
         <div *ngIf="getBool()" class="col desc">

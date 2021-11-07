@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import {Project} from "../../domain/project";
 import {ActivatedRoute} from "@angular/router";
 import { HostListener } from "@angular/core";
@@ -11,9 +11,7 @@ import { HostListener } from "@angular/core";
 export class ProjectDetailsComponent implements OnInit {
 
   public project : Project;
-  public invert: boolean = false;
-  public screenHeight: any;
-  public screenWidth: any;
+  public invert: boolean;
   public mobileView: boolean;
 
   constructor(private route: ActivatedRoute) {
@@ -22,9 +20,7 @@ export class ProjectDetailsComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   onResize(event? : any) {
-   this.screenHeight = window.innerHeight;
-   this.screenWidth = window.innerWidth;
-   this.mobileView = this.screenWidth <= 768;
+   this.mobileView = window.innerWidth <= 768;
 }
 
   ngOnInit(): void {

@@ -8,7 +8,6 @@
   border-color: white;
 }
 
-
 .contact{
   background: white !important;
   height: 100%;
@@ -91,4 +90,11 @@ nav .navbar-nav li a {
 img{
   width: 30px;
   height: 30px;
+}
+
+
+@media only screen and (max-width: 768px) {
+  nav .navbar-nav li a {
+    text-align: center;
+  }
 }
