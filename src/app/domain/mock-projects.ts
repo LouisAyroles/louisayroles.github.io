@@ -179,24 +179,22 @@ export const PROJECTS: Project[] = [
     profilPicture: "../assets/projects/learnocaml/learnocaml.png",
     pictures: [
       {
-        src: "../assets/projects/gitsupervisor/contributors1.png",
-        desc: "Le contributors module permet de voir tout les contributeurs au projet et de voir des détails sur leur collaboration. Il se compose de 2 parties, la premiere est la liste des utilisaturs. On peut se renseigner sur  le nombre de commits, d'issues etc."
+        src: "../assets/projects/learnocaml/client.png",
+        desc: "Le mode learn-ocaml interagit avec le serveur au travers d’un client en ligne de commande. Le client et le serveur ont tout les 2 une version qui est incrementé à chaque release. "
       },
       {
-        src: "../assets/projects/gitsupervisor/contributors2.png",
-        desc: "La 2eme partie du contributors module est composé d'un graphe representant les commits de tout les collaborateurs ou si on selectionne un collaborateur dans la liste, on peut voir le détail."
+        src: "../assets/projects/learnocaml/emacs2.png",
+        desc: "La principale partie de mon stage a ete concentré sur la mise en place de l'authentification par login et mot de passe au la place d'un token. J'ai mis en place une pop-up qui propose les choix adéquat suivant la version du client et du serveur."
       },
       {
-        src: "../assets/projects/gitsupervisor/evaluator-module.png",
-        desc: "Les regles de l'evaluator module sont définis dans les réglages et permet de noter automatiquement des éleves selon des criteres particuliés."
-      },
-      {
-        src: "../assets/projects/gitsupervisor/example.gif",
-        desc: "Voici un gif representant une intéraction utilisateur qui crée un workspace, ajoute un de ses dépôts et ajoute les modules d'analyse."
-      },
+        src: "../assets/projects/learnocaml/emacs.png",
+        desc: "L'interface Emacs propose donc un plugin learn-ocaml qui permet d'integrer les fonctionnalités directement au navigateur."
+        + " On a acces aux différents exercices et on peut les ouvrir pour proposer une solution. Quand on les soumet au serveur pour notation, il renvoie une page html nous indiquant les tests qui sont validés ou non."
+      }
     ],
     techno: [{photo: "../assets/techno/ocaml.png", url: "https://ocaml.org/index.fr.html"},
-      {photo: "../assets/techno/elisp.png", url: "https://www.gnu.org/software/emacs/manual/html_node/elisp/"}
+      {photo: "../assets/techno/elisp.png", url: "https://www.gnu.org/software/emacs/manual/html_node/elisp/"},
+      {photo: "../assets/techno/github.png", url: "https://www.github.com"}
     ],
     created: new Date(),
     code: "https://github.com/pfitaxel",
