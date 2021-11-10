@@ -88,7 +88,7 @@ export const PROJECTS: Project[] = [
        pictures: [
         {
           src: "../assets/projects/passionfleur/passionfleur2.png",
-          desc: "Un site developpé à l'aide de Shopify qui permet de construire facilement un site e-commerce sécurisé et responsive. Ce projet avait pour but de bien comprendre le referencement google et comment ofnctionner l'e-commerce."
+          desc: "Un site developpé à l'aide de Shopify qui permet de construire facilement un site e-commerce sécurisé et responsive. Ce projet avait pour but de bien comprendre le referencement google et comment fonctionner l'e-commerce."
         },
         {
           src: "../assets/projects/passionfleur/responsivecontent.png",
@@ -139,8 +139,12 @@ export const PROJECTS: Project[] = [
     profilPicture: "../assets/projects/gitsupervisor/gitsupervisor.png",
     pictures: [
       {
-        src: "../assets/projects/gitsupervisor/contributors-module.png",
-        desc: "Le contributors module permet de voir tout les contributeurs au projet et de voir des détails sur leur collaboration, le nombre de commits, d'issues etc."
+        src: "../assets/projects/gitsupervisor/contributors1.png",
+        desc: "Le contributors module permet de voir tout les contributeurs au projet et de voir des détails sur leur collaboration. Il se compose de 2 parties, la premiere est la liste des utilisaturs. On peut se renseigner sur  le nombre de commits, d'issues etc."
+      },
+      {
+        src: "../assets/projects/gitsupervisor/contributors2.png",
+        desc: "La 2eme partie du contributors module est composé d'un graphe representant les commits de tout les collaborateurs ou si on selectionne un collaborateur dans la liste, on peut voir le détail."
       },
       {
         src: "../assets/projects/gitsupervisor/evaluator-module.png",
