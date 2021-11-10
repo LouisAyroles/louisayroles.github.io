@@ -30,13 +30,8 @@
 
   </div>
 
-  <h2>Technologies & Outils</h2>
   <hr/>
-  <div class="techno">
-  <a *ngFor="let techno of project.techno" href="{{techno.url}}" target="blank">
-    <img  src="{{techno.photo}}" alt="" >
-  </a>
-  </div>
+  <h2>Détails du projet</h2>
   <hr/>
 
     <div class="row full-desc py-2" *ngFor="let picdesc of project.pictures">
@@ -53,5 +48,14 @@
             {{picdesc.desc}}
         </div>
 
+</div>
+
+<hr/>
+<h2>Technologies & Outils</h2>
+<hr/>
+<div class="techno">
+<a *ngFor="let techno of project.techno" href="{{techno.url}}" target="blank">
+  <img  src="{{techno.photo}}" alt="" >
+</a>
 </div>
 </div>
