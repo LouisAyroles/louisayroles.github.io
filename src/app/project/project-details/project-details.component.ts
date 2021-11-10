@@ -13,6 +13,7 @@ export class ProjectDetailsComponent implements OnInit {
   public project : Project;
   public invert: boolean;
   public mobileView: boolean;
+  public isLoading: boolean = true;
 
   constructor(private route: ActivatedRoute) {
     this.onResize();

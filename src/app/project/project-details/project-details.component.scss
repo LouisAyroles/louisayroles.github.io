@@ -125,6 +125,24 @@ hr{
   cursor: pointer;
 }
 
+body {
+  margin: 0;            /* Reset default margin */
+}
+
+iframe {
+  display: block;       /* iframes are inline by default */
+  background: #000;
+  border: none;         /* Reset default border */
+  height: 84vh;        /* Viewport-relative units */
+  overflow: scroll;
+}
+
+.spinner-border{
+  width: 10rem;
+  height: 10rem;
+}
+
+
 
 @media only screen and (max-width: 768px) {
 

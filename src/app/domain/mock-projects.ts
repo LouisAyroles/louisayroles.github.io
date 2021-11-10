@@ -168,5 +168,38 @@ export const PROJECTS: Project[] = [
     created: new Date(),
     code: "https://gitlab.com/jeroli.co/git-supervisor",
     site: "https://git-supervisor.herokuapp.com/home"
+  },
+  {
+    id: 6,
+    name: "LearnOcaml",
+    type: Type.Pro,
+    short_description: "Un projet de 6 mois réalisé pendant le stage de fin de Master 1.",
+    description : "Depuis l’année 2016-2017, l’Unité d’Enseignement PFITA de la Licence 3 Informatique de l’Université Paul Sabatier utilise un outil d’évaluation automatique à base de tests unitaires et d’analyse statique," +
+    "et du moteur de MOOC ( Massive Open Online Course) learn-ocaml développé par OCamlPro puis par la fondation OCaml. La plateforme d’apprentissage PFITAXEL comprend plusieurs projets qui sont tous hébergés sur GitHub. Cet outil génère un rapport HTML indiquant les erreurs ou les motifs de code à éviter.",
+    profilPicture: "../assets/projects/learnocaml/learnocaml.png",
+    pictures: [
+      {
+        src: "../assets/projects/gitsupervisor/contributors1.png",
+        desc: "Le contributors module permet de voir tout les contributeurs au projet et de voir des détails sur leur collaboration. Il se compose de 2 parties, la premiere est la liste des utilisaturs. On peut se renseigner sur  le nombre de commits, d'issues etc."
+      },
+      {
+        src: "../assets/projects/gitsupervisor/contributors2.png",
+        desc: "La 2eme partie du contributors module est composé d'un graphe representant les commits de tout les collaborateurs ou si on selectionne un collaborateur dans la liste, on peut voir le détail."
+      },
+      {
+        src: "../assets/projects/gitsupervisor/evaluator-module.png",
+        desc: "Les regles de l'evaluator module sont définis dans les réglages et permet de noter automatiquement des éleves selon des criteres particuliés."
+      },
+      {
+        src: "../assets/projects/gitsupervisor/example.gif",
+        desc: "Voici un gif representant une intéraction utilisateur qui crée un workspace, ajoute un de ses dépôts et ajoute les modules d'analyse."
+      },
+    ],
+    techno: [{photo: "../assets/techno/ocaml.png", url: "https://ocaml.org/index.fr.html"},
+      {photo: "../assets/techno/elisp.png", url: "https://www.gnu.org/software/emacs/manual/html_node/elisp/"}
+    ],
+    created: new Date(),
+    code: "https://github.com/pfitaxel",
+    site: "https://pfitaxel.univ-tlse3.fr/"
   }
 ];
