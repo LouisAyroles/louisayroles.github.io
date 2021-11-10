@@ -25,12 +25,14 @@ export const PROJECTS: Project[] = [
             " Il est possible de load un fichier à parit d'un pc hôte vers le systeme ou d'exporter un fichier du systeme vers le pc hôte."
         },
       ],
-      techno: ["../assets/techno/c.png",
-        "../assets/techno/atom.png",
-        "../assets/techno/github.png",
-        "../assets/techno/scrum.png",
+      techno: [{ photo: "../assets/techno/c.png", url: "https://fr.wikipedia.org/wiki/C_(langage)"},
+        { photo: "../assets/techno/atom.png", url: "https://atom.io/"},
+        { photo: "../assets/techno/github.png", url: "https://github.com"},
+        { photo: "../assets/techno/scrum.png", url: "https://fr.wikipedia.org/wiki/Scrum_(d%C3%A9veloppement)"}
       ],
         created: new Date(),
+        code: "https://github.com/LouisAyroles/PROJET_S4",
+        site: undefined
     },
     {
         id: 2,
@@ -63,14 +65,16 @@ export const PROJECTS: Project[] = [
             " Elle vous permet d'acceder à quelques infos pratiques comme les horaires d'ouvertures ou l'accès."
         }
       ],
-      techno: ["../assets/techno/android.png",
-                "../assets/techno/bitbucket.png",
-                "../assets/techno/kotlin.png",
-                "../assets/techno/scrum.png",
-                "../assets/techno/xml.png",
+      techno: [ { photo: "../assets/techno/android.png", url: "https://www.android.com/intl/fr_fr/"},
+                { photo: "../assets/techno/bitbucket.png", url: "https://bitbucket.org/"},
+                { photo: "../assets/techno/kotlin.png", url: "https://kotlinlang.org/"},
+                { photo: "../assets/techno/scrum.png", url: "https://fr.wikipedia.org/wiki/Scrum_(d%C3%A9veloppement)"},
+                { photo: "../assets/techno/xml.png", url: "https://fr.wikipedia.org/wiki/Extensible_Markup_Language"}
       ],
 
-        created: new Date()
+        created: new Date(),
+        code: undefined,
+        site: "https://www.irit.fr/neocampus/fr/"
     },
     {
         id: 3,
@@ -95,11 +99,13 @@ export const PROJECTS: Project[] = [
            desc: "Le menu qui est normalement un mega-menu, se reduit sur mobile et propose un volet lateral tres pratique à utiliser. Les logos sont aussi differents pour mieux s'adapter au device qui est utilisé.",
          },
       ],
-      techno: ["../assets/techno/seo.png",
-        "../assets/techno/ecommerce.png",
-        "../assets/techno/shopify.png",
+      techno: [{photo: "../assets/techno/seo.png", url : "https://developers.google.com/search/docs/beginner/seo-starter-guide?hl=fr"},
+        { photo: "../assets/techno/ecommerce.png", url: "https://www.doofinder.com/fr/blog/qu-est-ce-que-le-ecommerce"},
+        { photo: "../assets/techno/shopify.png", url: "https://www.shopify.fr/"}
       ],
-        created: new Date()
+        created: new Date(),
+        code: undefined,
+        site: "https://passion-fleur.fr/"
     },
   {
     id: 4,
@@ -111,15 +117,17 @@ export const PROJECTS: Project[] = [
     profilPicture: "../assets/projects/pokedex/angular.png",
     pictures: [
     ],
-    techno: ["../assets/techno/Intellij.svg",
-      "../assets/techno/angular.png",
-      "../assets/techno/github.png",
-      "../assets/techno/materialize.svg",
-      "../assets/techno/html.png",
-      "../assets/techno/css3.png",
-      "../assets/techno/typescript.png",
-    ],
-    created: new Date()
+    techno: [ {photo: "../assets/techno/Intellij.svg", url: "https://www.jetbrains.com/fr-fr/idea/"},
+    {photo: "../assets/techno/angular.png", url: "https://angular.io/"},
+    {photo: "../assets/techno/github.png", url: "https://github.com"},
+    {photo: "../assets/techno/materialize.svg", url: "https://materializecss.com/"},
+    {photo: "../assets/techno/html.png", url: "https://fr.wikipedia.org/wiki/HTML5"},
+    {photo: "../assets/techno/css3.png", url: "https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade"},
+    {photo: "../assets/techno/typescript.png", url: "https://fr.wikipedia.org/wiki/TypeScript"}
+  ],
+    created: new Date(),
+    code: "https://github.com/LouisAyroles/Pokemon",
+    site: undefined
   },
   {
     id: 5,
@@ -143,16 +151,18 @@ export const PROJECTS: Project[] = [
         desc: "Voici un gif representant une intéraction utilisateur qui crée un workspace, ajoute un de ses dépôts et ajoute les modules d'analyse."
       },
     ],
-    techno: ["../assets/techno/Intellij.svg",
-      "../assets/techno/angular.png",
-      "../assets/techno/github.png",
-      "../assets/techno/gitlab.png",
-      "../assets/techno/scrum.png",
-      "../assets/techno/html.png",
-      "../assets/techno/css3.png",
-      "../assets/techno/typescript.png",
-      "../assets/techno/python.png",
+    techno: [{photo: "../assets/techno/Intellij.svg", url: "https://www.jetbrains.com/fr-fr/idea/"},
+      {photo: "../assets/techno/angular.png", url: "https://angular.io/"},
+      {photo: "../assets/techno/github.png", url: "https://docs.github.com/en/rest"},
+      {photo: "../assets/techno/gitlab.png", url: "https://docs.gitlab.com/ee/api/"},
+      {photo: "../assets/techno/scrum.png", url: "https://fr.wikipedia.org/wiki/Scrum_(d%C3%A9veloppement)"},
+      {photo: "../assets/techno/html.png", url: "https://fr.wikipedia.org/wiki/HTML5"},
+      {photo: "../assets/techno/css3.png", url: "https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade"},
+      {photo: "../assets/techno/typescript.png", url: "https://fr.wikipedia.org/wiki/TypeScript"},
+      {photo: "../assets/techno/python.png", url: "https://www.python.org/"}
     ],
-    created: new Date()
+    created: new Date(),
+    code: "https://gitlab.com/jeroli.co/git-supervisor",
+    site: "https://git-supervisor.herokuapp.com/home"
   }
 ];

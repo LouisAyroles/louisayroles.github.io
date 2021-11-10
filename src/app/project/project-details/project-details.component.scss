@@ -1,16 +1,39 @@
 h2{
-  padding-top: 3rem;
   font-family: 'Montserrat', sans-serif;
   font-size: xxx-large;
   text-align: center;
   color: #355c7d;
+  padding-top: 2rem;
 }
 
-span{
+#subtitle{
   color: lightgrey;
   display: flex;
   justify-content: center;
 }
+
+#buttons{
+  margin-bottom: 2rem;
+}
+
+
+.btn-blue {
+  color: white;
+  background-color: #355c7d;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 3rem;
+}
+.btn-blue:hover, .btn-blue:focus, .btn-blue:active, .btn-blue.active, .open>.dropdown-toggle.btn-blue {
+  color: #355c7d;
+  background-color: white;
+  border-color: #355c7d;
+}
+
+span .fa{
+  outline: none;
+}
+
 
 .general-desc{
   font-size: large;
@@ -99,7 +122,22 @@ hr{
   cursor: pointer;
 }
 
+
 @media only screen and (max-width: 768px) {
+
+  #buttons{
+    justify-content: center;
+    display: flex;
+  }
+
+
+  .btn-blue {
+    margin-top: 3rem;
+  }
+
+  span{
+    text-align: center;
+  }
 
   .row{
     display: block;
@@ -149,6 +187,18 @@ hr{
   .desc{
     font-size: 1.5rem;
   }
+}
 
+@media only screen and (max-width: 320px) {
+
+  h2{
+    font-size: xx-large;
+  }
+
+
+  #buttons{
+    justify-content: center;
+    display: flex;
+  }
 }
 
