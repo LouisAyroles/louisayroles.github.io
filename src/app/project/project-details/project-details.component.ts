@@ -11,8 +11,9 @@ import { HostListener } from "@angular/core";
 export class ProjectDetailsComponent implements OnInit {
 
   public project : Project;
-  public invert: boolean;
-  public mobileView: boolean;
+  public invert: boolean = true;
+  public mobileView: boolean = false;
+  public isLoading: boolean = true;
 
   constructor(private route: ActivatedRoute) {
     this.onResize();

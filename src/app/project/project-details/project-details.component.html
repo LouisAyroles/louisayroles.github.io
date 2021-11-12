@@ -50,6 +50,17 @@
 
 </div>
 
+<div *ngIf="project.name.includes('LearnOcaml')" class="custom-container">
+    <hr/>
+    <h2>Rapport de Stage</h2>
+    <hr/>
+  <div *ngIf="isLoading" class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
+    <div class="spinner-border text-primary" role="status">
+    </div>
+  </div>
+  <iframe (load)="isLoading=false" [class.d-none]="isLoading" src="https://drive.google.com/file/d/10KdhMkc7GQ2fuc-uVLYPxqXZ8UBLQoA8/preview" width=100% height="auto" allow="autoplay"></iframe>
+</div>
+
 <hr/>
 <h2>Technologies & Outils</h2>
 <hr/>

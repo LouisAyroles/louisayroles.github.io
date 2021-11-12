@@ -168,5 +168,36 @@ export const PROJECTS: Project[] = [
     created: new Date(),
     code: "https://gitlab.com/jeroli.co/git-supervisor",
     site: "https://git-supervisor.herokuapp.com/home"
+  },
+  {
+    id: 6,
+    name: "LearnOcaml",
+    type: Type.Pro,
+    short_description: "Un projet de 6 mois réalisé pendant le stage de fin de Master 1.",
+    description : "Depuis l’année 2016-2017, l’Unité d’Enseignement PFITA de la Licence 3 Informatique de l’Université Paul Sabatier utilise un outil d’évaluation automatique à base de tests unitaires et d’analyse statique," +
+    "et du moteur de MOOC ( Massive Open Online Course) learn-ocaml développé par OCamlPro puis par la fondation OCaml. La plateforme d’apprentissage PFITAXEL comprend plusieurs projets qui sont tous hébergés sur GitHub. Cet outil génère un rapport HTML indiquant les erreurs ou les motifs de code à éviter.",
+    profilPicture: "../assets/projects/learnocaml/learnocaml.png",
+    pictures: [
+      {
+        src: "../assets/projects/learnocaml/client.png",
+        desc: "Le mode learn-ocaml interagit avec le serveur au travers d’un client en ligne de commande. Le client et le serveur ont tout les 2 une version qui est incrementé à chaque release. "
+      },
+      {
+        src: "../assets/projects/learnocaml/emacs2.png",
+        desc: "La principale partie de mon stage a ete concentré sur la mise en place de l'authentification par login et mot de passe au la place d'un token. J'ai mis en place une pop-up qui propose les choix adéquat suivant la version du client et du serveur."
+      },
+      {
+        src: "../assets/projects/learnocaml/emacs.png",
+        desc: "L'interface Emacs propose donc un plugin learn-ocaml qui permet d'integrer les fonctionnalités directement au navigateur."
+        + " On a acces aux différents exercices et on peut les ouvrir pour proposer une solution. Quand on les soumet au serveur pour notation, il renvoie une page html nous indiquant les tests qui sont validés ou non."
+      }
+    ],
+    techno: [{photo: "../assets/techno/ocaml.png", url: "https://ocaml.org/index.fr.html"},
+      {photo: "../assets/techno/elisp.png", url: "https://www.gnu.org/software/emacs/manual/html_node/elisp/"},
+      {photo: "../assets/techno/github.png", url: "https://www.github.com"}
+    ],
+    created: new Date(),
+    code: "https://github.com/pfitaxel",
+    site: "https://pfitaxel.univ-tlse3.fr/"
   }
 ];
