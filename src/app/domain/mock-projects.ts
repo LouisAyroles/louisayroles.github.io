@@ -173,9 +173,8 @@ export const PROJECTS: Project[] = [
     id: 6,
     name: "LearnOcaml",
     type: Type.Pro,
-    short_description: "Un projet de 6 mois réalisé pendant le stage de fin de Master 1.",
-    description : "Depuis l’année 2016-2017, l’Unité d’Enseignement PFITA de la Licence 3 Informatique de l’Université Paul Sabatier utilise un outil d’évaluation automatique à base de tests unitaires et d’analyse statique," +
-    "et du moteur de MOOC ( Massive Open Online Course) learn-ocaml développé par OCamlPro puis par la fondation OCaml. La plateforme d’apprentissage PFITAXEL comprend plusieurs projets qui sont tous hébergés sur GitHub. Cet outil génère un rapport HTML indiquant les erreurs ou les motifs de code à éviter.",
+    short_description: "Un projet de 3 mois réalisé pendant le stage de fin de Master 1.",
+    description : "Learn-OCaml est un logiciel libre et une plateforme d'apprentissage du langage OCaml, développé initialement par OCamlPro pour déployer le MOOC OCaml, et maintenant développé par la fondation OCaml. Depuis l’année 2016-2017, l’Unité d’Enseignement PFITA de la Licence 3 Informatique de l’Université Paul Sabatier s'appuie sur cette plateforme pour fournir aux élèves des rapports de tests : dans le cadre du projet PFITAXEL, des nouvelles fonctionnalités ont été développées pour étendre la plateforme Learn-OCaml et répondre à des besoins identifiés dans l'UE PFITA. J'ai rejoint le projet durant mon stage de M1 (encadré par Erik Martin-Dorel et soutenu par la fondation OCaml).",
     profilPicture: "../assets/projects/learnocaml/learnocaml.png",
     pictures: [
       {
