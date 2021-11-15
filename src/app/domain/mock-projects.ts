@@ -146,8 +146,42 @@ export const PROJECTS: Project[] = [
         code: undefined,
         site: "https://www.irit.fr/neocampus/fr/"
     },
+  {
+    id: 5,
+    name: "Veterinaire",
+    type: Type.Perso,
+    short_description: "Un projet Angular de gestion d'animal et de veterinaires.",
+    description : "Veterinaire est un projet developpé en cours que j'ai perfectionné et deployé. Le but de ce cours était simplement de mettre en oeuvre un front efficace avec des services, des composants, des pipes et d'autres fonctionnalités qu'offrent Angular. Nous avons simulé un backend avec un json server que j'ai deployé aussi." +
+      " J'ai donc rendu le tout utilisable en y rajoutant un peu de style.",
+    profilPicture: "../assets/projects/veterinary/veterinary.jpg",
+    pictures: [
+      {
+        src: "../assets/projects/veterinary/carte.png",
+        desc: "Voici une carte qui represente un animal avec les infos importantes et la presence d'un bouton qui redirige vers la page detaillé d'un animal et qui permet de mettre à jour les informations de cet animal.  "
+      },
+      {
+        src: "../assets/projects/veterinary/modification.png",
+        desc: "Le formulaire permet de modifier les valeurs existantes de l'animal. Il est pré rempli avec les informations existantes sur l'animal. Sur cette page detaillée de l'animal, on peut aussi supprimer la fiche liée à l'animal."
+      },
+      {
+        src: "../assets/projects/veterinary/creation.png",
+        desc: "C'est le meme formulaire qui est utilisé pour la modification et la création, ici il est vide puisque c'est une création. Une série de vérification sont faites sur ce formulaire, comme on peut le voir, des champs sont requis et il est impossible de valider avant de les avoir remplis."
+      }
+    ],
+    techno: [
+      {photo: "../assets/techno/angular.png", url: "https://angular.io/"},
+      {photo: "../assets/techno/github.png", url: "https://github.com"},
+      {photo: "../assets/techno/html.png", url: "https://fr.wikipedia.org/wiki/HTML5"},
+      {photo: "../assets/techno/css3.png", url: "https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade"},
+      {photo: "../assets/techno/typescript.png", url: "https://fr.wikipedia.org/wiki/TypeScript"},
+      {photo: "../assets/techno/json.png", url: "https://veterinaryapi.herokuapp.com/"},
+    ],
+    created: new Date(),
+    code: "https://github.com/LouisAyroles/animals",
+    site: "https://veterinaire.herokuapp.com/"
+  },
     {
-        id: 5,
+        id: 6,
         name: "Passion Fleur",
         type: Type.Perso,
         short_description: "Un projet personnel d'un site e-commerce.",
@@ -178,7 +212,7 @@ export const PROJECTS: Project[] = [
         site: "https://passion-fleur.fr/"
     },
   {
-    id: 6,
+    id: 7,
     name: "Pokédex",
     type: Type.Perso,
     short_description: "Un projet personnel pour apprendre la technologie Angular.",
@@ -198,39 +232,5 @@ export const PROJECTS: Project[] = [
     created: new Date(),
     code: "https://github.com/LouisAyroles/Pokemon",
     site: undefined
-  },
-  {
-    id: 7,
-    name: "Veterinaire",
-    type: Type.Perso,
-    short_description: "Un projet Angular de gestion d'animal et de veterinaires.",
-    description : "Veterinaire est un projet developpé en cours que j'ai perfectionné et deployé. Le but de ce cours était simplement de mettre en oeuvre un front efficace avec des services, des composants, des pipes et d'autres fonctionnalités qu'offrent Angular. Nous avons simulé un backend avec un json server que j'ai deployé aussi." +
-      " J'ai donc rendu le tout utilisable en y rajoutant un peu de style.",
-    profilPicture: "../assets/projects/veterinary/veterinary.png",
-    pictures: [
-      {
-        src: "../assets/projects/veterinary/carte.png",
-        desc: "Voici une carte qui represente un animal avec les infos importantes et la presence d'un bouton qui redirige vers la page detaillé d'un animal et qui permet de mettre à jour les informations de cet animal.  "
-      },
-      {
-        src: "../assets/projects/veterinary/modification.png",
-        desc: "Le formulaire permet de modifier les valeurs existantes de l'animal. Il est pré rempli avec les informations existantes sur l'animal. Sur cette page detaillée de l'animal, on peut aussi supprimer la fiche liée à l'animal."
-      },
-      {
-        src: "../assets/projects/veterinary/creation.png",
-        desc: "C'est le meme formulaire qui est utilisé pour la modification et la création, ici il est vide puisque c'est une création. Une série de vérification sont faites sur ce formulaire, comme on peut le voir, des champs sont requis et il est impossible de valider avant de les avoir remplis."
-      }
-    ],
-    techno: [
-      {photo: "../assets/techno/angular.png", url: "https://angular.io/"},
-      {photo: "../assets/techno/github.png", url: "https://github.com"},
-      {photo: "../assets/techno/html.png", url: "https://fr.wikipedia.org/wiki/HTML5"},
-      {photo: "../assets/techno/css3.png", url: "https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade"},
-      {photo: "../assets/techno/typescript.png", url: "https://fr.wikipedia.org/wiki/TypeScript"},
-      {photo: "../assets/techno/json.png", url: "https://veterinaryapi.herokuapp.com/"},
-    ],
-    created: new Date(),
-    code: "https://github.com/LouisAyroles/animals",
-    site: "https://veterinaire.herokuapp.com/"
   }
 ];
