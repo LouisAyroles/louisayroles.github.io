@@ -160,6 +160,10 @@ export const PROJECTS: Project[] = [
         desc: "Voici une carte qui represente un animal avec les infos importantes et la presence d'un bouton qui redirige vers la page detaillé d'un animal et qui permet de mettre à jour les informations de cet animal.  "
       },
       {
+        src: "../assets/projects/veterinary/json.png",
+        desc: "Le backend est une fausse API REST qui a été simulé à l'aide d'un json server. Les données ne sont donc pas persistentes entre les sessions. Ce choix a été fait pour utiliser quand meme des requetes asynchrones mais en restant concentré sur la logique du front de maniere à ne pas perdre trop de temps à developper un back.",
+      },
+      {
         src: "../assets/projects/veterinary/modification.png",
         desc: "Le formulaire permet de modifier les valeurs existantes de l'animal. Il est pré rempli avec les informations existantes sur l'animal. Sur cette page detaillée de l'animal, on peut aussi supprimer la fiche liée à l'animal."
       },
@@ -201,7 +205,7 @@ export const PROJECTS: Project[] = [
          {
            src: "../assets/projects/passionfleur/responsivemenu.png",
            desc: "Le menu qui est normalement un mega-menu, se reduit sur mobile et propose un volet lateral tres pratique à utiliser. Les logos sont aussi differents pour mieux s'adapter au device qui est utilisé.",
-         },
+         }
       ],
       techno: [{photo: "../assets/techno/seo.png", url : "https://developers.google.com/search/docs/beginner/seo-starter-guide?hl=fr"},
         { photo: "../assets/techno/ecommerce.png", url: "https://www.doofinder.com/fr/blog/qu-est-ce-que-le-ecommerce"},
