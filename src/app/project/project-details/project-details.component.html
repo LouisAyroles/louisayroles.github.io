@@ -20,10 +20,11 @@
       </a>
   </div>
   <div class="row infos">
-      <div class="col img-desc">
+      <div class="col img-desc" data-aos="zoom-in">
           <img src="{{project.profilPicture}}" alt="{{project.name}}">
         </div>
-    <div class="col general-desc">
+
+    <div class="col general-desc" data-aos="zoom-out-left">
       {{project.description}}
 
     </div>
@@ -33,21 +34,19 @@
   <hr/>
   <h2>Détails du projet</h2>
   <hr/>
-
-    <div class="row full-desc py-2" *ngFor="let picdesc of project.pictures">
-        <div *ngIf="getBool()" class="col desc">
+  <div class="row full-desc py-2" *ngFor="let picdesc of project.pictures; let i = index">
+      <div *ngIf="notMobileDescription(i)" class="col desc" data-aos="zoom-in-left">
+        {{picdesc.desc}}
+      </div>
+      <div *ngIf="notMobileDescription(i)" class="col img-right" data-aos="fade-right">
+        <img src="{{picdesc.src}}" alt="{{project.name}}">
+      </div>
+      <div *ngIf="mobileDescription(i)" class="col img-left" data-aos="fade-left">
+        <img src="{{picdesc.src}}" alt="{{project.name}}">
+      </div>
+      <div *ngIf="mobileDescription(i)" class="col desc" data-aos="zoom-in-right">
           {{picdesc.desc}}
-        </div>
-        <div *ngIf="getBool()" class="col img-right">
-          <img src="{{picdesc.src}}" alt="{{project.name}}">
-        </div>
-        <div *ngIf="invertBool()" class="col img-left">
-          <img src="{{picdesc.src}}" alt="{{project.name}}">
-        </div>
-        <div *ngIf="getBool2()" class="col desc">
-            {{picdesc.desc}}
-        </div>
-
+      </div>
 </div>
 
 <div *ngIf="project.name.includes('LearnOcaml')" class="custom-container">
@@ -64,8 +63,8 @@
 <hr/>
 <h2>Technologies & Outils</h2>
 <hr/>
-<div class="techno">
-<a *ngFor="let techno of project.techno" href="{{techno.url}}" target="blank">
+<div class="techno " data-aos="flip-left">
+<a *ngFor="let techno of project.techno" href="{{techno.url}}" target="blank" >
   <img  src="{{techno.photo}}" alt="" >
 </a>
 </div>
