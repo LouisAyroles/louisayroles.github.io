@@ -11,7 +11,6 @@ import { HostListener } from "@angular/core";
 export class ProjectDetailsComponent implements OnInit {
 
   public project : Project;
-  public invert: boolean = true;
   public mobileView: boolean = false;
   public isLoading: boolean = true;
 
@@ -28,28 +27,18 @@ export class ProjectDetailsComponent implements OnInit {
     this.route.data.subscribe((data) => {this.project = data.project});
   }
 
-  public getBool(): boolean {
+  mobileDescription(i: number): boolean{
     if(this.mobileView){
-      return false
+      return true;
     }
-    return this.invert;
+    return i%2 == 1;
   }
 
-  public getBool2(): boolean {
+  notMobileDescription(i: number): boolean{
     if(this.mobileView){
-      return true
+      return false;
     }
-    return this.invert;
+    return i%2 == 0;
   }
-
-  public invertBool(): boolean{
-    if(this.mobileView){
-      return true
-    }
-    this.invert = !this.invert;
-    return this.invert;
-  }
-
-
 
 }
