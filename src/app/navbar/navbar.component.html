@@ -1,4 +1,4 @@
-  <nav class="navbar navbar-expand-md navbar-light bg-light">
+  <nav class="navbar navbar-expand-md navbar-dark bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <img src="/assets/logo.png" alt="Louis Ayroles">
@@ -7,7 +7,7 @@
           <span class="fa fa-github hide"></span></a>
       <a *ngIf="mobileView" class="btn btn-linkedin" href="https://www.linkedin.com/in/louis-ayroles-4123b9200/" target="_blank" role="button">
         <span class="fa fa-linkedin hide"></span></a>
-        <button class="navbar-toggler d-lg-none" type="button btn-light" (click)="toggleNavbar()" [attr.aria-expanded]="!isCollapsed" aria-controls="navbarsExampleDefault" aria-label="Toggle navigation">
+        <button class="navbar-toggler d-lg-none" type="button" (click)="toggleNavbar()" [attr.aria-expanded]="!isCollapsed" aria-controls="navbarsExampleDefault" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
       <div *ngIf="!mobileView" class="d-md-flex d-block flex-row mx-md-auto mx-0">
