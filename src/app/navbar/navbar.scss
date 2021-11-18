@@ -17,6 +17,31 @@ nav .navbar-nav li a{
   color: white;
 }
 
+
+.btn-linkedin{
+  margin-left: 1rem;
+
+  background: white;
+  color: #0e76a8;
+}
+
+.btn-linkedin:hover{
+  color: white;
+  background-color: #0e76a8
+}
+
+.btn-github{
+  margin-left: 1rem;
+  background: white;
+  color: #1f335b;
+  outline: none !important;
+}
+
+.btn-github:hover{
+  color: white;
+  background-color: #1f335b;
+}
+
 ul.dropdown-menu.show {
   backdrop-filter: blur(6px);
   background: transparent;
