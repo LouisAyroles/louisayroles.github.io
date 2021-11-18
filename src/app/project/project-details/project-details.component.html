@@ -63,9 +63,15 @@
 <hr/>
 <h2>Technologies & Outils</h2>
 <hr/>
-<div class="techno " data-aos="flip-left">
-<a *ngFor="let techno of project.techno" href="{{techno.url}}" target="blank" >
+<div class="techno">
+
+<a *ngFor="let techno of project.techno; let i = index" href="{{techno.url}}" target="blank" >
+  <div *ngIf="i%2==0" class="techno-block" data-aos="flip-left">
   <img  src="{{techno.photo}}" alt="" >
+  </div>
+  <div *ngIf="i%2==1" class="techno-block" data-aos="fade-down">
+    <img  src="{{techno.photo}}" alt="" >
+  </div>
 </a>
 </div>
 </div>
