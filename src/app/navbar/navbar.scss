@@ -1,3 +1,4 @@
+
 .navbar{
     background: #355C7D;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
@@ -42,19 +43,37 @@ nav .navbar-nav li a{
   background-color: #1f335b;
 }
 
-ul.dropdown-menu.show {
-  backdrop-filter: blur(6px);
-  background: transparent;
-  border-color: white;
-  border-radius: 8px;
-  padding: 4px;
+@supports not (backdrop-filter: blur(2px)) {
+
+  a.dropdown-item {
+    color: #ad6882 !important;
+    background: transparent;
+    border-radius: 10px;
+  }
+
+  ul.dropdown-menu.show {
+    backdrop-filter: blur(0);
+    background: #FFFFFFD0;
+    border-radius: 8px;
+    padding: 4px;
+  }
 }
 
-ul.dropdown-menu.show.inverse{
-  backdrop-filter: blur(0);
-  background: white;
-  border-color: #ad6882;
-  border-radius: 8px;
+@supports (backdrop-filter: blur(2px)) {
+  ul.dropdown-menu.show {
+    backdrop-filter: blur(6px);
+    background: transparent;
+    border-color: white;
+    border-radius: 8px;
+    padding: 4px;
+  }
+
+  ul.dropdown-menu.show.inverse{
+    backdrop-filter: blur(0);
+    background: white;
+    border-color: #ad6882;
+    border-radius: 8px;
+  }
 }
 
 a.dropdown-item{
