@@ -13,14 +13,17 @@ export class ProjectItemComponent implements OnInit {
   project: Project;
   invert: boolean;
   public mobileView: boolean;
+  public tabletView: boolean;
 
 
-  constructor() {    this.onResize();
+  constructor() {
+    this.onResize();
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event? : any) {
-   this.mobileView = window.innerWidth <= 768;
+   this.mobileView = window.innerWidth <= 425;
+   this.tabletView = window.innerWidth <= 768 && window.innerWidth > 425;
 }
 
 

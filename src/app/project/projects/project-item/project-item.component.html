@@ -4,33 +4,33 @@
       <div class="row">
 
         <!-- Project display with picture on left and text on right -->
-        <div *ngIf="project.id%2==0 && !mobileView" class="col desc">
+        <div *ngIf="project.id%2==0 && !mobileView && !tabletView" class="col desc">
           <div class="title">
             {{project.name}}
           </div>
           {{project.description}}
         </div>
-        <div *ngIf="project.id%2==0 && !mobileView" class="col img2 ">
+        <div *ngIf="project.id%2==0 && !mobileView && !tabletView" class="col img2 ">
           <div  class="h-100 d-flex justify-content-center align-items-center">
             <img class="img-fluid" src="{{project.profilPicture}}" alt="{{project.name}}">
         </div>
         </div>
 
         <!-- Project display with picture on right and text on left-->
-        <div *ngIf="project.id%2==1 && !mobileView" class="col  align-items-center justify-content-center img">
+        <div *ngIf="project.id%2==1 && !mobileView && !tabletView" class="col  align-items-center justify-content-center img">
           <div  class="h-100 d-flex justify-content-center align-items-center">
             <img class="img-fluid" src="{{project.profilPicture}}" alt="{{project.name}}">
           </div>
         </div>
-        <div *ngIf="project.id%2==1 && !mobileView" class="col desc">
+        <div *ngIf="project.id%2==1 && !mobileView && !tabletView" class="col desc">
           <div class="title">
             {{project.name}}
           </div>
           {{project.description}}
         </div>
 
-        <!-- Project display for mobile view-->
-        <div *ngIf="mobileView" class="col img">
+        <!-- Project display for tablet view-->
+        <div *ngIf="tabletView" class="col img">
             <div class="title">
                 {{project.name}}
               </div>
@@ -38,8 +38,21 @@
              <img class="img-fluid" src="{{project.profilPicture}}" alt="{{project.name}}">
           </div>
         </div>
-        <div *ngIf="mobileView" class="col desc">
+        <div *ngIf="tabletView" class="col desc">
           {{project.description}}
+        </div>
+
+        <!-- Project display for mobile view-->
+        <div *ngIf="mobileView" class="col img">
+          <div class="title">
+            {{project.name}}
+          </div>
+          <div  class="h-100 d-flex justify-content-center align-items-center">
+            <img class="img-fluid" src="{{project.profilPicture}}" alt="{{project.name}}">
+          </div>
+        </div>
+        <div *ngIf="mobileView" class="col desc">
+          {{project.short_description}}
         </div>
 
       </div>

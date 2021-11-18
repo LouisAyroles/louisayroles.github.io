@@ -30,14 +30,21 @@ img{
   font-size: 3rem;
 }
 
+@media only screen and (max-width: 425px) {
+  .title{
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+
 
 @media only screen and (max-width: 768px) {
 
   .row{
     display: block;
   }
-
-  .title{
+  .title {
     text-align: center;
   }
+
 }
