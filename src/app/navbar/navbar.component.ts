@@ -6,7 +6,7 @@ import {NavigationStart, Router} from "@angular/router";
 
 @Component({
     selector: 'navbar-app',
-    templateUrl: `./navbar.component.html`,
+    templateUrl: `./navbar-component.html`,
     styleUrls: [`./navbar.scss`]
 })
 
