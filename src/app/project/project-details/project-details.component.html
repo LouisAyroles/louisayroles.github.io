@@ -38,10 +38,10 @@
       <div *ngIf="notMobileDescription(i)" class="col desc" data-aos="zoom-in-left">
         {{picdesc.desc}}
       </div>
-      <div *ngIf="notMobileDescription(i)" class="col img-right" data-aos="fade-right">
+      <div *ngIf="notMobileDescription(i)" class="col img-right" data-aos="fade-down">
         <img src="{{picdesc.src}}" alt="{{project.name}}">
       </div>
-      <div *ngIf="mobileDescription(i)" class="col img-left" data-aos="fade-left">
+      <div *ngIf="mobileDescription(i)" class="col img-left" data-aos="fade-up" >
         <img src="{{picdesc.src}}" alt="{{project.name}}">
       </div>
       <div *ngIf="mobileDescription(i)" class="col desc" data-aos="zoom-in-right">
