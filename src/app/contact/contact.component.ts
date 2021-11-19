@@ -47,7 +47,7 @@ export class ContactComponent implements OnInit {
   public onSubmit(form: FormGroup, e: Event) {
 
     this.messageName = form.controls['name'].errors?.required;
-    this.messageEmail = form.controls['email'].errors?.required;
+    this.messageEmail = form.controls['email'].errors?.required || form.controls['email'].errors?.email;
     this.messageSubject = form.controls['subject'].errors?.required;
     this.messageText = form.controls['text'].errors?.required;
 
