@@ -24,9 +24,11 @@
           <img src="{{project.profilPicture}}" alt="{{project.name}}">
         </div>
 
-    <div class="col general-desc" data-aos="zoom-out-left">
+    <div *ngIf="!mobileView" class="col general-desc" data-aos="zoom-out-left">
       {{project.description}}
-
+    </div>
+    <div *ngIf="mobileView" class="col general-desc" data-aos="zoom-out-up">
+      {{project.description}}
     </div>
 
   </div>
