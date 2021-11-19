@@ -14,11 +14,14 @@ import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 import { HobbiesComponent } from '../hobbies/hobbies.component';
 import {ProjectModule} from "../project/project.module";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {FormsModule} from "@angular/forms";
+import { ToastComponent } from './toast/toast.component';
+import {NgbToastModule} from "@ng-bootstrap/ng-bootstrap";
 @NgModule({
   imports: [BrowserModule,
     RouterModule,
     AppRoutingModule,
-    NgxExtendedPdfViewerModule, ProjectModule, FontAwesomeModule],
+    NgxExtendedPdfViewerModule, ProjectModule, FontAwesomeModule, FormsModule, NgbToastModule],
   declarations: [ AppComponent,
     HeaderComponent,
     NavbarComponent,
@@ -26,7 +29,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HomepageComponent,
     CvComponent,
     ContactComponent,
-    HobbiesComponent],
+    HobbiesComponent,
+    ToastComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
