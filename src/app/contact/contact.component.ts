@@ -18,6 +18,7 @@ export class ContactComponent implements OnInit {
   messageEmail = false;
   messageSubject = false;
   messageText = false;
+  isSubmit = false;
 
   showSuccessEmail() {
     this.toastService.show('Your email has been successfully sent', {
@@ -35,7 +36,6 @@ export class ContactComponent implements OnInit {
     });
   }
 
-
   constructor(private router: Router,
               public toastService: ToastService) { }
 
@@ -46,6 +46,7 @@ export class ContactComponent implements OnInit {
 
   public onSubmit(form: FormGroup, e: Event) {
 
+    this.isSubmit = true;
     this.messageName = form.controls['name'].errors?.required;
     this.messageEmail = form.controls['email'].errors?.required || form.controls['email'].errors?.email;
     this.messageSubject = form.controls['subject'].errors?.required;
