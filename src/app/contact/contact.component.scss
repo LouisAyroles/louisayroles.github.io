@@ -1,6 +1,10 @@
-.container-fluid{
-  width:50%;
+@media only screen and (min-width: 960px) {
+  .container-fluid{
+    width:50%;
+  }
 }
+
+
 
 .form-group{
   margin-left: auto;
