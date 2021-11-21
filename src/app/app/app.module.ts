@@ -17,12 +17,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {FormsModule} from "@angular/forms";
 import { ToastComponent } from './toast/toast.component';
 import {NgbToastModule} from "@ng-bootstrap/ng-bootstrap";
+import { CloseMenuDirective } from './close-menu.directive';
 @NgModule({
   imports: [BrowserModule,
     RouterModule,
     AppRoutingModule,
     NgxExtendedPdfViewerModule, ProjectModule, FontAwesomeModule, FormsModule, NgbToastModule],
-  declarations: [ AppComponent,
+  declarations: [AppComponent,
     HeaderComponent,
     NavbarComponent,
     FooterComponent,
@@ -30,7 +31,8 @@ import {NgbToastModule} from "@ng-bootstrap/ng-bootstrap";
     CvComponent,
     ContactComponent,
     HobbiesComponent,
-    ToastComponent],
+    ToastComponent,
+     CloseMenuDirective],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
