@@ -102,10 +102,10 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 - [x] Add Cv page
 - [x] Add Contact page
-- [] Make a client to automatically send email
-- [] Multi-language Support
-    - [] French
-    - [] English
+- [x] Make a client to automatically send email
+- [ ] Multi-language Support
+    - [ ] French
+    - [ ] English
 
 See the [open issues](https://github.com/LouisAyroles/portfolio/issues) for a full list of proposed features (and known issues).
 
