@@ -1,7 +1,10 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import {Project} from "../domain/project";
-import {PROJECTS} from "../domain/mock-projects";
+import {PROJECTS_FR} from "../domain/mock-projects";
+import {PROJECTS_EN} from "../domain/mock-project-en";
 import {NavigationStart, Router} from "@angular/router";
+import {TranslateService} from '@ngx-translate/core';
+import {ProjectService} from "../project/project.service";
 
 
 @Component({
@@ -29,11 +32,11 @@ export class NavbarComponent implements OnInit {
 }
   constructor(
     private router: Router,
+    public translate: TranslateService,
+    public projectService : ProjectService
   ) {
     this.onResize();
-    // subscribe to router navigation
     this.router.events.subscribe(event => {
-      // filter `NavigationEnd` events
       if (event instanceof NavigationStart) {
         this.inverseColor = (event.url === '/contact') || (event.url ==='/hobbies') || event.url.startsWith('/project');
         this.isUnderlined = event.url;
@@ -49,7 +52,7 @@ export class NavbarComponent implements OnInit {
 
 
     ngOnInit(){
-      this.projects = PROJECTS;
+      this.projects = PROJECTS_FR;
     }
 
     public getProItems() : Project[]{
@@ -58,5 +61,16 @@ export class NavbarComponent implements OnInit {
 
   public getPersoItems() : Project[] {
     return this.projects.filter((item) => item.type === 1);
+  }
+
+  switchToFrench(){
+    this.translate.use('fr');
+    this.projectService.setProject(PROJECTS_FR);
+  }
+
+  switchToEnglish(){
+    this.translate.use('en');
+    this.projectService.setProject(PROJECTS_EN);
+    console.log(this.projectService.project);
   }
 }

@@ -3,6 +3,12 @@
         <a class="navbar-brand" href="#">
             <img src="/assets/logo.png" alt="Louis Ayroles">
         </a>
+        <a (click)="switchToFrench()" class="btn btn-language">
+          <span  class="flag-icon flag-icon-fr flag-icon-squared flag-icon-left"></span>
+        </a>
+        <a (click)="switchToEnglish()" class="btn btn-language">
+            <span  class="flag-icon flag-icon-gb flag-icon-squared"></span>
+        </a>
         <a *ngIf="mobileView" class="btn btn-github" href="https://github.com/LouisAyroles/portfolio" target="_blank" role="button">
           <span class="fa fa-github hide"></span></a>
       <a *ngIf="mobileView" class="btn btn-linkedin" href="https://www.linkedin.com/in/louis-ayroles-4123b9200/" target="_blank" role="button">

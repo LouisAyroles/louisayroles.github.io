@@ -1,13 +1,13 @@
 import { Project } from './project';
 import { Type } from './project';
 
-export const PROJECTS: Project[] = [
+export const PROJECTS_FR: Project[] = [
     {
         id: 1,
         name: "RAID 5",
         type: Type.Pro,
-        short_description: "Un magnifique projet réalisé en L2 Informatique.",
-        description: "    Le RAID est un ensemble de techniques de virtualisation du stockage permettant de répartir des données sur plusieurs disques durs afin d'améliorer soit les performances, soit la sécurité ou la tolérance aux pannes de l'ensemble du ou des systèmes." +
+        short_description: 'RAID5.SHORT',
+        description: "Le RAID est un ensemble de techniques de virtualisation du stockage permettant de répartir des données sur plusieurs disques durs afin d'améliorer soit les performances, soit la sécurité ou la tolérance aux pannes de l'ensemble du ou des systèmes." +
       "Le RAID 5 utilise au moins trois disques durs et répartit les données sur plusieurs disques durs pour gagner en performance grâce à l’accès simultané, mais à la différence du RAID 0, le RAID 5 inclut des codes de correction (les bits de parité) entre les données.",
         profilPicture: "../assets/projects/raid5/raid5.png",
       pictures: [

@@ -1,7 +1,7 @@
 import { Project } from './project';
 import { Type } from './project';
 
-export const PROJECTS: Project[] = [
+export const PROJECTS_EN: Project[] = [
     {
         id: 1,
         name: "RAID 5",
