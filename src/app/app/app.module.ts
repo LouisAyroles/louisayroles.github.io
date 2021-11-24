@@ -1,5 +1,8 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {TranslateModule,TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {HttpClientModule, HttpClient, HttpBackend} from '@angular/common/http';
 
 import { AppComponent }  from './app.component';
 import {HeaderComponent} from "../header/header.component";
@@ -18,12 +21,34 @@ import {FormsModule} from "@angular/forms";
 import { ToastComponent } from './toast/toast.component';
 import {NgbToastModule} from "@ng-bootstrap/ng-bootstrap";
 import { CloseMenuDirective } from './close-menu.directive';
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
+
+
 @NgModule({
-  imports: [BrowserModule,
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: createTranslateLoader,
+        deps: [HttpClient]
+      }
+  }),
     RouterModule,
     AppRoutingModule,
-    NgxExtendedPdfViewerModule, ProjectModule, FontAwesomeModule, FormsModule, NgbToastModule],
-  declarations: [AppComponent,
+    NgxExtendedPdfViewerModule,
+    ProjectModule,
+    FontAwesomeModule,
+    FormsModule,
+    NgbToastModule
+  ],
+  declarations: [
+    AppComponent,
     HeaderComponent,
     NavbarComponent,
     FooterComponent,
@@ -32,7 +57,8 @@ import { CloseMenuDirective } from './close-menu.directive';
     ContactComponent,
     HobbiesComponent,
     ToastComponent,
-     CloseMenuDirective],
+     CloseMenuDirective
+    ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

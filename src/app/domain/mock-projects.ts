@@ -13,16 +13,16 @@ export const PROJECTS: Project[] = [
       pictures: [
         {
           src: "../assets/projects/raid5/raid5Disk.png",
-          desc: "Le principe du RAID 5 est de repartir les données en couche sur plusieurs disques et de faire la parité des 3 sur le dernier disque. De cette maniere là, il est possible de retrouver les données en cas de panne. "
+          desc: "Le principe du RAID 5 est de repartir les données en couche sur plusieurs disques et de faire la parité des 3 sur le dernier disque. De cette manière là, il est possible de retrouver les données en cas de panne. "
         },
         {
           src: "../assets/projects/raid5/raid5couche1.png",
-          desc: "L'ensemble du projet a été codé en langage C. Nous avons utilisés des primitives tel que fread ou fwrite. Une attention particuliere a ete donnée sur les commentaires puisque ceux ci permettaient de generer automatiquement un documenation. "
+          desc: "L'ensemble du projet a été codé en langage C. Nous avons utilisés des primitives tel que fread ou fwrite. Une attention particulière a été donnée sur les commentaires puisque ceux ci permettaient de générer automatiquement un documentation."
         },
         {
           src: "../assets/projects/raid5/raidPrompt.png",
-          desc: "Voici l'interface en ligne de commande du RAID5. Nous avons donc developpé plusieurs commandes que vous pouvez retrouver avec un help." +
-            " Il est possible de load un fichier à parit d'un pc hôte vers le systeme ou d'exporter un fichier du systeme vers le pc hôte."
+          desc: "Voici l'interface en ligne de commande du RAID5. Nous avons donc développé plusieurs commandes que vous pouvez retrouver avec un help." +
+          " Il est possible de load un fichier à partir d'un pc hôte vers le système ou d'exporter un fichier du système vers le pc hôte."
         },
       ],
       techno: [{ photo: "../assets/techno/c.png", url: "https://fr.wikipedia.org/wiki/C_(langage)"},
@@ -39,25 +39,25 @@ export const PROJECTS: Project[] = [
     name: "GitSupervisor",
     type: Type.Pro,
     short_description: "Un projet de 6 mois réalisé pendant le Master 1.",
-    description : "Git Supervisor est un outil d'analyse de depots GitLab ou GitHub. Il permet de centraliser des informations concernant les repos et de voir les contributeurs aux projets, les commits qui ont été effectués, comment les issues ont été gérées etc." +
-      " Cette application web est faite d'une API developpée en Python couplée à un frontend TypeScript Angular. Nous avons évolué 6 mois sur ce projet proposé par Jean-Michel Bruel, professeur à l'IRIT dans un contexte agile. Je tiens à remercier les M2 qui nous ont encadrés pour ce projet. ",
+    description : "Git Supervisor est un outil d'analyse de dépôts GitLab ou GitHub. Il permet de centraliser des informations concernant les repos et de voir les contributeurs aux projets, les commits qui ont été effectués, comment les issues ont été gérées etc." +
+    " Cette application web est faite d'une API développée en Python couplée à un frontend TypeScript Angular. Nous avons évolué 6 mois sur ce projet proposé par Jean-Michel Bruel, professeur à l'IRIT dans un contexte agile. Je tiens à remercier les M2 qui nous ont encadrés pour ce projet.",
     profilPicture: "../assets/projects/gitsupervisor/gitsupervisor.png",
     pictures: [
       {
         src: "../assets/projects/gitsupervisor/contributors1.png",
-        desc: "Le contributors module permet de voir tout les contributeurs au projet et de voir des détails sur leur collaboration. Il se compose de 2 parties, la premiere est la liste des utilisaturs. On peut se renseigner sur  le nombre de commits, d'issues etc."
+        desc: "Le contributors module permet de voir tout les contributeurs au projet et de voir des détails sur leur collaboration. Il se compose de 2 parties, la première est la liste des utilisateurs. On peut se renseigner sur  le nombre de commits, d'issues etc."
       },
       {
         src: "../assets/projects/gitsupervisor/contributors2.png",
-        desc: "La 2eme partie du contributors module est composé d'un graphe representant les commits de tout les collaborateurs ou si on selectionne un collaborateur dans la liste, on peut voir le détail."
+        desc: "La 2ème partie du contributors module est composé d'un graphe représentant les commits de tout les collaborateurs ou si on sélectionne un collaborateur dans la liste, on peut voir le détail."
       },
       {
         src: "../assets/projects/gitsupervisor/evaluator-module.png",
-        desc: "Les regles de l'evaluator module sont définis dans les réglages et permet de noter automatiquement des éleves selon des criteres particuliés."
+        desc: "Les règles de l'evaluator module sont définis dans les réglages et permet de noter automatiquement des élèves selon des critères particuliers."
       },
       {
         src: "../assets/projects/gitsupervisor/example.gif",
-        desc: "Voici un gif representant une intéraction utilisateur qui crée un workspace, ajoute un de ses dépôts et ajoute les modules d'analyse."
+        desc: "Voici un gif représentant une interaction utilisateur qui crée un workspace, ajoute un de ses dépôts et ajoute les modules d'analyse."
       },
     ],
     techno: [{photo: "../assets/techno/Intellij.svg", url: "https://www.jetbrains.com/fr-fr/idea/"},
@@ -84,16 +84,16 @@ export const PROJECTS: Project[] = [
     pictures: [
       {
         src: "../assets/projects/learnocaml/client.png",
-        desc: "Le mode learn-ocaml interagit avec le serveur au travers d’un client en ligne de commande. Le client et le serveur ont tout les 2 une version qui est incrementé à chaque release. "
+        desc: "Le mode learn-ocaml interagit avec le serveur au travers d’un client en ligne de commande. Le client et le serveur ont tout les 2 une version qui est incrémentée à chaque release."
       },
       {
         src: "../assets/projects/learnocaml/emacs2.png",
-        desc: "La principale partie de mon stage a ete concentré sur la mise en place de l'authentification par login et mot de passe au la place d'un token. J'ai mis en place une pop-up qui propose les choix adéquat suivant la version du client et du serveur."
+        desc: "La principale partie de mon stage a été concentré sur la mise en place de l'authentification par login et mot de passe au la place d'un token. J'ai mis en place une pop-up qui propose les choix adéquat suivant la version du client et du serveur."
       },
       {
         src: "../assets/projects/learnocaml/emacs.png",
-        desc: "L'interface Emacs propose donc un plugin learn-ocaml qui permet d'integrer les fonctionnalités directement au navigateur."
-          + " On a acces aux différents exercices et on peut les ouvrir pour proposer une solution. Quand on les soumet au serveur pour notation, il renvoie une page html nous indiquant les tests qui sont validés ou non."
+        desc: "L'interface Emacs propose donc un plugin learn-ocaml qui permet d'intégrer les fonctionnalités directement au navigateur."
+        + " On a accès aux différents exercices et on peut les ouvrir pour proposer une solution. Quand on les soumet au serveur pour notation, il renvoie une page html nous indiquant les tests qui sont validés ou non."
       }
     ],
     techno: [{photo: "../assets/techno/ocaml.png", url: "https://ocaml.org/index.fr.html"},
@@ -150,26 +150,26 @@ export const PROJECTS: Project[] = [
     id: 5,
     name: "Veterinaire",
     type: Type.Perso,
-    short_description: "Un projet Angular de gestion d'animal et de veterinaires.",
-    description : "Veterinaire est un projet developpé en cours que j'ai perfectionné et deployé. Le but de ce cours était simplement de mettre en oeuvre un front efficace avec des services, des composants, des pipes et d'autres fonctionnalités qu'offrent Angular. Nous avons simulé un backend avec un json server que j'ai deployé aussi." +
-      " J'ai donc rendu le tout utilisable en y rajoutant un peu de style.",
+    short_description: "Un projet Angular de gestion d'animaux et de veterinaires.",
+    description : "Veterinaire est un projet développé en cours que j'ai perfectionné et déployé. Le but de ce cours était simplement de mettre en œuvre un front efficace avec des services, des composants, des pipes et d'autres fonctionnalités qu'offrent Angular. Nous avons simulé un backend avec un json server que j'ai déployé aussi." +
+    " Le déploiement étant fait sur Heroku avec un compte non premium, ce sont des serveurs 'lazy' qui se réveillent quand on les appelle. Ne vous étonnez pas si c'est un peu long à charger au lancement!",
     profilPicture: "../assets/projects/veterinary/veterinary.jpg",
     pictures: [
       {
         src: "../assets/projects/veterinary/carte.png",
-        desc: "Voici une carte qui represente un animal avec les infos importantes et la presence d'un bouton qui redirige vers la page detaillé d'un animal et qui permet de mettre à jour les informations de cet animal.  "
+        desc: "Voici une carte qui représente un animal avec les infos importantes et la présence d'un bouton qui redirige vers la page détaillée d'un animal et qui permet de mettre à jour les informations de cet animal."
       },
       {
         src: "../assets/projects/veterinary/json.png",
-        desc: "Le backend est une fausse API REST qui a été simulé à l'aide d'un json server. Les données ne sont donc pas persistentes entre les sessions. Ce choix a été fait pour utiliser quand meme des requetes asynchrones mais en restant concentré sur la logique du front de maniere à ne pas perdre trop de temps à developper un back.",
+        desc: "Le backend est une fausse API REST qui a été simulé à l'aide d'un json server. Les données ne sont donc pas persistantes entre les sessions. Ce choix a été fait pour manipuler des requêtes asynchrones mais en restant concentré sur la logique du front de manière à ne pas perdre trop de temps à développer un back.",
       },
       {
         src: "../assets/projects/veterinary/modification.png",
-        desc: "Le formulaire permet de modifier les valeurs existantes de l'animal. Il est pré rempli avec les informations existantes sur l'animal. Sur cette page detaillée de l'animal, on peut aussi supprimer la fiche liée à l'animal."
+        desc: "Le formulaire permet de modifier les valeurs existantes de l'animal. Il est pré rempli avec les informations existantes sur l'animal. Sur cette page détaillée de l'animal, on peut aussi supprimer la fiche liée à l'animal."
       },
       {
         src: "../assets/projects/veterinary/creation.png",
-        desc: "C'est le meme formulaire qui est utilisé pour la modification et la création, ici il est vide puisque c'est une création. Une série de vérification sont faites sur ce formulaire, comme on peut le voir, des champs sont requis et il est impossible de valider avant de les avoir remplis."
+        desc: "C'est le même  formulaire qui est utilisé pour la modification et la création, ici il est vide puisque c'est une création. Une série de vérification sont faites sur ce formulaire, comme on peut le voir, des champs sont requis et il est impossible de valider avant de les avoir remplis."
       }
     ],
     techno: [
@@ -189,22 +189,21 @@ export const PROJECTS: Project[] = [
         name: "Passion Fleur",
         type: Type.Perso,
         short_description: "Un projet personnel d'un site e-commerce.",
-        description : "   Passion Fleur est un projet personnel d'un site web e-commerce. Il vous permettra de commander tout types de fleurs sechées ou fleurs artificielles à des prix abordable." +
-      "Avec une large gamme de fleurs séchées ainsi que ses gammes de fleurs et des plantes artificielles, cette boutique spécialisée dans l'arrangement et les bouquets s'engage à vous offrir constamment des nouveautés.\n" +
-          "Passionné des fleurs séchées et artificielles depuis des années, Passion Fleur s'éloigne des sentiers battus : au lieu de vendre des fleurs banales que les grandes surfaces vous proposent, nous vous proposons des produits originaux.",
+        description : "" +
+      "Plusieurs outils ont été utilisés pour mettre à bien ce projet, notamment grâce à la plateforme shopify, on peut utiliser un thème qui permettra de construire un site entièrement responsive très rapidement. J'a fait quelques ajustements dans le code du thème et j'ai ensuite utilisé des plugins pour gérer tout le côté commerce avec le paiement, les commandes etc.",
         profilPicture: "../assets/projects/passionfleur/passionfleur.png",
        pictures: [
         {
           src: "../assets/projects/passionfleur/passionfleur2.png",
-          desc: "Un site developpé à l'aide de Shopify qui permet de construire facilement un site e-commerce sécurisé et responsive. Ce projet avait pour but de bien comprendre le referencement google et comment fonctionner l'e-commerce."
+          desc: "Un site développé à l'aide de Shopify qui permet de construire facilement un site e-commerce sécurisé et responsive. Ce projet avait pour but de bien comprendre le référencement google et comment fonctionner l'e-commerce."
         },
         {
           src: "../assets/projects/passionfleur/responsivecontent.png",
-          desc: "On peut voir le contenu ici qui s'affiche parfaitement sur mobile. En effet le côté responsive est tres important pour un site e-commerce puisque maintenant plus de la moitié des utilisateurs utilisent leur telephone pour naviguer sur internet.",
+          desc: "On peut voir le contenu ici qui s'affiche parfaitement sur mobile. En effet le côté responsive est très important pour un site e-commerce puisque maintenant plus de la moitié des utilisateurs utilisent leur téléphone pour naviguer sur internet.",
         },
          {
            src: "../assets/projects/passionfleur/responsivemenu.png",
-           desc: "Le menu qui est normalement un mega-menu, se reduit sur mobile et propose un volet lateral tres pratique à utiliser. Les logos sont aussi differents pour mieux s'adapter au device qui est utilisé.",
+           desc: "Le menu qui est normalement un méga-menu, se réduit sur mobile et propose un volet latéral très pratique à utiliser. Les logos sont aussi différents pour mieux s'adapter au device qui est utilisé.",
          }
       ],
       techno: [{photo: "../assets/techno/seo.png", url : "https://developers.google.com/search/docs/beginner/seo-starter-guide?hl=fr"},
