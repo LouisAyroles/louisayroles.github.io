@@ -1,19 +1,20 @@
 import {Injectable, OnInit} from '@angular/core';
 import {Project} from "../domain/project";
-import {PROJECTS} from "../domain/mock-projects";
+import {PROJECTS_FR} from "../domain/mock-projects";
 import {Observable, of} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProjectService implements OnInit{
+export class ProjectService {
 
-  private project : Project[] = PROJECTS;
+  public project : Project[];
 
-  constructor() { }
+  constructor() {
+    this.project = PROJECTS_FR;
+   }
 
-  ngOnInit(): void {
-  }
+
 
   public getProjectById(index: string | null): Observable<Project>{
     if(index == null){
@@ -24,5 +25,13 @@ export class ProjectService implements OnInit{
       return of();
     }
     return of(projectFind);
+  }
+
+  public getAllProjects(): Project[]{
+    return this.project;
+  }
+
+  public setProject(project: Project[]){
+    this.project = project;
   }
 }

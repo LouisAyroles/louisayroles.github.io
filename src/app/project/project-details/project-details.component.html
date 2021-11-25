@@ -10,7 +10,7 @@
 
   <h2>{{project.name}}</h2>
 
-  <span id="subtitle">«{{project.short_description}}»</span>
+  <span id="subtitle">«{{"PROJECT.SHORT" | translate: {value1: project.short_description, value2: project.short_description_en} }}»</span>
   <div *ngIf="mobileView"  id="buttons">
       <a *ngIf="project.site" class="btn btn-blue float-right" href="{{project.site}}" target="_blank" role="button">
           <span class="fa fa-globe hide"></span> <span> View site</span>
@@ -25,20 +25,20 @@
         </div>
 
     <div *ngIf="!mobileView" class="col general-desc" data-aos="zoom-out-left">
-      {{project.description}}
+      {{"PROJECT.DESC" | translate: {value1: project.description, value2: project.description_en} }}
     </div>
     <div *ngIf="mobileView" class="col general-desc" data-aos="fade-right">
-      {{project.description}}
+      {{"PROJECT.DESC" | translate: {value1: project.description, value2: project.description_en} }}
     </div>
 
   </div>
 
   <hr/>
-  <h2>Détails du projet</h2>
+  <h2>{{"PROJECT.DETAILS" | translate }}</h2>
   <hr/>
   <div class="row full-desc py-2" *ngFor="let picdesc of project.pictures; let i = index">
       <div *ngIf="notMobileDescription(i)" class="col desc" data-aos="zoom-in-left">
-        {{picdesc.desc}}
+        {{ "PHOTO.DESC"  | translate: {value1: picdesc.desc, value2: picdesc.desc_en} }}
       </div>
       <div *ngIf="notMobileDescription(i)" class="col img-right" data-aos="fade-down">
         <img src="{{picdesc.src}}" alt="{{project.name}}">
@@ -47,7 +47,7 @@
         <img src="{{picdesc.src}}" alt="{{project.name}}">
       </div>
       <div *ngIf="mobileDescription(i)" class="col desc" data-aos="zoom-in-right">
-          {{picdesc.desc}}
+          {{ "PHOTO.DESC" | translate: {value1: picdesc.desc, value2: picdesc.desc_en} }}
       </div>
 </div>
 
@@ -63,7 +63,7 @@
 </div>
 
 <hr/>
-<h2>Technologies & Outils</h2>
+<h2>{{"PROJECT.TECHNO" | translate}}</h2>
 <hr/>
 <div class="techno">
 

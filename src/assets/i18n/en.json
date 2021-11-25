@@ -1,0 +1,32 @@
+{
+  "NAVBAR" : {
+    "HOME" : "Home",
+    "PROJECTS" : "Projects",
+    "HOBBIES" : "Hobbies"
+  },
+  "HEADER": {
+    "TITLE": "I'm a young <b>Web Engineer</b>. Passionate about coding, I created this <b>Portfolio</b> to introduce myself."
+  },
+  "HOME": {
+    "PROJECTS" : "My Projects"
+  },
+  "PROJECT" : {
+    "SHORT" : "{{value2}}",
+    "DESC" : "{{value2}}",
+    "DETAILS" : "Project details",
+    "TECHNO" : "Technologies & Tools"
+  },
+  "PHOTO" : {
+    "DESC" : "{{value2}}"
+  },
+  "HOBBIES" : {
+    "TRAVEL" : "Travel"
+  },
+  "CONTACT" : {
+    "MESSAGE": "Drop Me a Message ",
+    "SUBJECT": "Subject",
+    "NAME": "Name *",
+    "WRITE": "Write you message here... *",
+    "SEND" : "Send"
+  }
+}

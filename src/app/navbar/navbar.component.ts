@@ -1,7 +1,8 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import {Project} from "../domain/project";
-import {PROJECTS} from "../domain/mock-projects";
+import {PROJECTS_FR} from "../domain/mock-projects";
 import {NavigationStart, Router} from "@angular/router";
+import {TranslateService} from '@ngx-translate/core';
 
 
 @Component({
@@ -21,19 +22,22 @@ export class NavbarComponent implements OnInit {
   public isCollapsed = true;
   public navbarOpen = false;
   public mobileView: boolean;
+  public tabletView: boolean;
+  public french: boolean = true;
+  public english: boolean = false;
 
 
   @HostListener('window:resize', ['$event'])
   onResize(event? : any) {
    this.mobileView = window.innerWidth <= 425;
+   this.tabletView = window.innerWidth <= 768 && window.innerWidth > 425;
 }
   constructor(
     private router: Router,
+    public translate: TranslateService
   ) {
     this.onResize();
-    // subscribe to router navigation
     this.router.events.subscribe(event => {
-      // filter `NavigationEnd` events
       if (event instanceof NavigationStart) {
         this.inverseColor = (event.url === '/contact') || (event.url ==='/hobbies') || event.url.startsWith('/project');
         this.isUnderlined = event.url;
@@ -49,7 +53,7 @@ export class NavbarComponent implements OnInit {
 
 
     ngOnInit(){
-      this.projects = PROJECTS;
+      this.projects = PROJECTS_FR;
     }
 
     public getProItems() : Project[]{
@@ -58,5 +62,17 @@ export class NavbarComponent implements OnInit {
 
   public getPersoItems() : Project[] {
     return this.projects.filter((item) => item.type === 1);
+  }
+
+  switchToFrench(){
+    this.translate.use('fr');
+    this.french = true;
+    this.english = false;
+  }
+
+  switchToEnglish(){
+    this.translate.use('en');
+    this.french = false;
+    this.english = true;
   }
 }

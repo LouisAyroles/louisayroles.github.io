@@ -1,7 +1,13 @@
   <nav class="navbar navbar-expand-md navbar-dark bg-light">
-    <div class="container-fluid">
+    <div class="container-fluid ">
         <a class="navbar-brand" href="#">
             <img src="/assets/logo.png" alt="Louis Ayroles">
+        </a>
+        <a (click)="switchToFrench()" class="btn btn-language" [ngClass]="{'outlined' : french}">
+          <span  class="flag-icon flag-icon-fr flag-icon-squared flag-icon-left"></span>
+        </a>
+        <a (click)="switchToEnglish()" class="btn btn-language btn-last" [ngClass]="{'outlined' : english}">
+            <span  class="flag-icon flag-icon-gb flag-icon-squared"></span>
         </a>
         <a *ngIf="mobileView" class="btn btn-github" href="https://github.com/LouisAyroles/portfolio" target="_blank" role="button">
           <span class="fa fa-github hide"></span></a>
@@ -14,11 +20,11 @@
         <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a [class.underlined]="isUnderlined === '/'" class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a [class.underlined]="isUnderlined === '/'" class="nav-link active" aria-current="page" href="#"> {{"NAVBAR.HOME" | translate}} </a>
                 </li>
               <li class="nav-item dropdown">
                 <a [class.underlined]="isUnderlined.startsWith('/project/')" class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Projects
+                  {{"NAVBAR.PROJECTS" | translate}}
                 </a>
                 <ul  [class.inverse] ="inverseColor" class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li  *ngFor="let project of getProItems()">
@@ -34,7 +40,7 @@
                     <a [class.underlined]="isUnderlined === '/cv'" class="nav-link" routerLink="cv">CV</a>
                 </li>
               <li class="nav-item">
-                <a class="nav-link" [class.underlined]="isUnderlined === '/hobbies'" routerLink="hobbies">Hobbies</a>
+                <a class="nav-link" [class.underlined]="isUnderlined === '/hobbies'" routerLink="hobbies">{{"NAVBAR.HOBBIES" | translate}}</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" [class.underlined]="isUnderlined === '/contact'" routerLink="contact">Contact</a>
@@ -74,10 +80,16 @@
                 </li>
               </ul>
         </div>
-      <a *ngIf="!mobileView" class="btn btn-linkedin" href="https://www.linkedin.com/in/louis-ayroles-4123b9200/" target="_blank" role="button">
+      <a *ngIf="!mobileView && !tabletView" class="btn btn-linkedin" href="https://www.linkedin.com/in/louis-ayroles-4123b9200/" target="_blank" role="button">
         <span class="fa fa-linkedin hide"></span> <span class="ro"> LinkedIn</span></a>
 
-      <a *ngIf="!mobileView" class="btn btn-github" href="https://github.com/LouisAyroles/portfolio" target="_blank" role="button">
+      <a *ngIf="!mobileView && tabletView" class="btn btn-linkedin" href="https://www.linkedin.com/in/louis-ayroles-4123b9200/" target="_blank" role="button">
+        <span class="fa fa-linkedin hide"></span> <span class="ro"></span></a>
+
+      <a *ngIf="!mobileView && !tabletView" class="btn btn-github" href="https://github.com/LouisAyroles/portfolio" target="_blank" role="button">
         <span class="fa fa-github hide"></span> <span class="ro">  View on Github</span></a>
+
+      <a *ngIf="!mobileView && tabletView" class="btn btn-github" href="https://github.com/LouisAyroles/portfolio" target="_blank" role="button">
+        <span class="fa fa-github hide"></span> <span class="ro"> </span></a>
 </div>
 </nav>
