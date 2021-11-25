@@ -9,7 +9,9 @@ export class Project {
     name: string;
     type: Type;
     short_description: string;
+    short_description_en: string;
     description: string;
+    description_en: string;
     profilPicture: string;
     pictures: Array<Photo>;
     techno: Array<Techno>;

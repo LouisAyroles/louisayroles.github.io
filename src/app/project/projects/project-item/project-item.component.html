@@ -8,7 +8,7 @@
           <div class="title">
             {{project.name}}
           </div>
-          {{project.description}}
+          {{"PROJECT.DESC" | translate: {value1: project.description, value2: project.description_en} }}
         </div>
         <div *ngIf="project.id%2==0 && !mobileView && !tabletView" class="col img2 ">
           <div  class="h-100 d-flex justify-content-center align-items-center">
@@ -26,7 +26,7 @@
           <div class="title">
             {{project.name}}
           </div>
-          {{project.description}}
+          {{"PROJECT.DESC" | translate: {value1: project.description, value2: project.description_en} }}
         </div>
 
         <!-- Project display for tablet view-->
@@ -39,7 +39,7 @@
           </div>
         </div>
         <div *ngIf="tabletView" class="col desc">
-          {{project.description}}
+          {{"PROJECT.DESC" | translate: {value1: project.description, value2: project.description_en} }}
         </div>
 
         <!-- Project display for mobile view-->
@@ -52,7 +52,7 @@
           </div>
         </div>
         <div *ngIf="mobileView" class="col desc">
-          {{project.short_description}}
+          {{"PROJECT.SHORT" | translate: {value1: project.short_description, value2: project.short_description_en} }}
         </div>
 
       </div>

@@ -4,6 +4,7 @@ import {ProjectDetailsComponent} from "./project-details/project-details.compone
 import { ProjectListComponent } from './projects/project-list/project-list.component';
 import { ProjectItemComponent } from './projects/project-item/project-item.component';
 import {RouterModule} from "@angular/router";
+import {TranslateModule} from "@ngx-translate/core";
 
 
 
@@ -13,10 +14,11 @@ import {RouterModule} from "@angular/router";
     ProjectListComponent,
     ProjectItemComponent
   ],
-  imports: [
-    CommonModule,
-    RouterModule
-  ],
+    imports: [
+        CommonModule,
+        RouterModule,
+        TranslateModule
+    ],
   exports: [
     ProjectListComponent
   ]

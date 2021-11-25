@@ -1,9 +1,32 @@
 {
+  "NAVBAR" : {
+    "HOME" : "Accueil",
+    "PROJECTS" : "Projets",
+    "HOBBIES" : "Loisirs"
+  },
   "HEADER": {
     "TITLE": "Je suis un jeune <b>Ingénieur Logiciel</b>. Passionée par le développement, j'ai crée ce <b>Portfolio</b> pour me présenter."
-  }
-  ,
-  "RAID5" : {
-    "SHORT" : "Un magnifique projet réalisé en L2 Informatique."
-  }
+  },
+  "HOME": {
+    "PROJECTS" : "Mes projets"
+  },
+  "PROJECT" : {
+    "SHORT" : "{{value1}}",
+    "DESC" : "{{value1}}",
+    "DETAILS" : "Détails du projet",
+    "TECHNO" : "Technologies & Outils"
+  },
+ "PHOTO" : {
+   "DESC" : "{{value1}}"
+ },
+  "HOBBIES" : {
+    "TRAVEL" : "Voyages"
+  },
+  "CONTACT" : {
+    "MESSAGE": "Envoie moi un message ",
+    "SUBJECT": "Sujet",
+    "NAME": "Nom *",
+    "WRITE": "Écris ton message ici... *",
+    "SEND" : "Envoyer"
+}
 }

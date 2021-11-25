@@ -1,10 +1,8 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import {Project} from "../domain/project";
 import {PROJECTS_FR} from "../domain/mock-projects";
-import {PROJECTS_EN} from "../domain/mock-project-en";
 import {NavigationStart, Router} from "@angular/router";
 import {TranslateService} from '@ngx-translate/core';
-import {ProjectService} from "../project/project.service";
 
 
 @Component({
@@ -24,16 +22,19 @@ export class NavbarComponent implements OnInit {
   public isCollapsed = true;
   public navbarOpen = false;
   public mobileView: boolean;
+  public tabletView: boolean;
+  public french: boolean = true;
+  public english: boolean = false;
 
 
   @HostListener('window:resize', ['$event'])
   onResize(event? : any) {
    this.mobileView = window.innerWidth <= 425;
+   this.tabletView = window.innerWidth <= 768 && window.innerWidth > 425;
 }
   constructor(
     private router: Router,
-    public translate: TranslateService,
-    public projectService : ProjectService
+    public translate: TranslateService
   ) {
     this.onResize();
     this.router.events.subscribe(event => {
@@ -65,12 +66,13 @@ export class NavbarComponent implements OnInit {
 
   switchToFrench(){
     this.translate.use('fr');
-    this.projectService.setProject(PROJECTS_FR);
+    this.french = true;
+    this.english = false;
   }
 
   switchToEnglish(){
     this.translate.use('en');
-    this.projectService.setProject(PROJECTS_EN);
-    console.log(this.projectService.project);
+    this.french = false;
+    this.english = true;
   }
 }

@@ -17,6 +17,7 @@
   border-color: white;
 }
 
+
 .contact{
   background: white !important;
   height: 100%;
@@ -51,15 +52,22 @@ nav .navbar-nav li a{
 }
 
 .btn-language{
-  margin-left: 1rem;
+  margin-right: 1rem;
   background: white;
   color: #1f335b;
-  outline: none !important;
+}
+.btn-last{
+  margin-right: 0 !important;
 }
 
 .btn-language:hover{
   color: white;
   background-color: #1f335b;
+}
+
+.outlined{
+  color: white;
+  outline: 3px solid #1f335b;
 }
 
 @supports not (backdrop-filter: blur(2px)) {
@@ -159,5 +167,21 @@ img{
 @media only screen and (max-width: 768px) {
   nav .navbar-nav li a {
     text-align: center;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .btn-language{
+    margin-right: 0.2rem;
+  }
+  .btn-linkedin{
+    margin-left: 0.2rem;
+  }
+  .btn-github{
+    margin-left: 0.2rem;
+  }
+
+  .navbar-brand{
+    margin-right: 0 !important;
   }
 }

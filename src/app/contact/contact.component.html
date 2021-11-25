@@ -4,7 +4,7 @@
     <img class="img-fluid" src="assets/contact.png" alt="rocket_contact"/>
   </div>
   <form class="contact-form" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm.form, $event)">
-    <h3>Drop Me a Message</h3>
+    <h3>{{"CONTACT.MESSAGE" | translate }}</h3>
         <div class="form-group">
               <input type="email" placeholder="Email *"
                      [class.is-valid]="!(emailControl.errors?.required || emailControl.errors?.email)"
@@ -14,10 +14,10 @@
               <div *ngIf="messageEmail && emailControl.errors?.email" class="invalid-feedback">Désolé mais c'est pas une adresse mail que vous avez rentrer là! 🙊</div>
         </div>
         <div class="form-group ">
-            <input type="text" placeholder="Subject" class="form-control" aria-describedby="subjectHelp" [(ngModel)]="email.subject" name="subject" #subjectControl="ngModel">
+            <input type="text" placeholder="{{'CONTACT.SUBJECT' | translate}}" class="form-control" aria-describedby="subjectHelp" [(ngModel)]="email.subject" name="subject" #subjectControl="ngModel">
           </div>
         <div class="form-group">
-            <input placeholder="Name *" type="text" class="form-control"
+            <input placeholder="{{'CONTACT.NAME' | translate}}" type="text" class="form-control"
                    [class.is-valid]="!(nameControl.errors?.required)"
                    [class.is-invalid]="messageName && nameControl.errors?.required"
                    [(ngModel)]="email.name" name="name" required #nameControl="ngModel">
@@ -26,15 +26,14 @@
             </div>
         </div>
         <div class="form-group">
-            <textarea aria-describedby="textHelp"  placeholder="Write your message here... *"
+            <textarea aria-describedby="textHelp"  placeholder="{{'CONTACT.WRITE' | translate}}"
                       [class.is-valid]="!(textControl.errors?.required)"
                       [class.is-invalid]="messageText && textControl.errors?.required"
                       [(ngModel)]="email.text" name="text" required #textControl="ngModel" class="form-control" rows="3"></textarea>
             <div *ngIf="messageText && textControl.errors?.required" class="invalid-feedback" >Un mail sans message, ca perd de son intérêt. 😅</div>
         </div>
         <div class="form-group d-flex justify-content-end">
-          <button type="submit" class="btn btn-submit">Send</button>
-
+          <button type="submit" class="btn btn-submit">{{"CONTACT.SEND" | translate}}</button>
         </div>
   </form>
 </div>
