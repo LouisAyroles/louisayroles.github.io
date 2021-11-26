@@ -27,6 +27,15 @@
     "SUBJECT": "Sujet",
     "NAME": "Nom *",
     "WRITE": "Écris ton message ici... *",
-    "SEND" : "Envoyer"
+    "SEND" : "Envoyer",
+    "ERROR_MAIL_1" : "Hop! N'oubliez pas l'e-mail si vous voulez une réponse.",
+    "ERROR_MAIL_2" : "Désolé mais c'est pas une adresse mail que vous avez rentrer là!",
+    "ERROR_NAME" : "C'est quand même mieux si je peux vous appeler par votre nom!",
+    "ERROR_MESSAGE" : "Un mail sans message, ca perd de son intérêt.",
+    "GOOD_MAIL" : "Merci pour votre adresse mail, je ne manquerai pas de vous répondre!",
+    "GOOD_NAME" : "Waouh c'est un joli nom que vous avez là!",
+    "GOOD_MESSAGE" : "Merci pour votre message, je le lirai avec attention!",
+    "TOAST_ERROR" : "Oups, il semble qu'il y ait un petit problème avec l'envoi de l'email.",
+    "TOAST_OK" : "Votre courriel a été envoyé avec succès."
 }
 }

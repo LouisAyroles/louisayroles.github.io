@@ -278,6 +278,21 @@ export const PROJECTS_FR: Project[] = [
       + "Angular is an open source, client-side framework based on TypeScript, and co-led by the «Angular» project team at Google and a community of individuals and companies. Angular is the descendant of AngularJS, a framework built by the same team.",
     profilPicture: "../assets/projects/pokedex/angular.png",
     pictures: [
+      {
+        src: "../assets/projects/pokedex/cards.png",
+        desc: "Un design vraiment épuré grâce au framework CSS Materialize qui permet de construire rapidement des composants très proche d’objets qu'on a dans la vraie vie.",
+        desc_en: "An really clean design thanks to the CSS Materialize framework that allows you to quickly build components very close to real life objects.",
+      },
+      {
+        src: "../assets/projects/pokedex/mock.png",
+        desc: "Cette application utilise simplement un fichier json pour récupérer les caractéristiques d'un Pokemon.",
+        desc_en: "This application simply uses a json file to retrieve the characteristics of a Pokemon.",
+      },
+      {
+        src: "../assets/projects/pokedex/serverjs.png",
+        desc: "C'est une application ultra simpliste avec une seule page, je n'ai pas utilisé la fonction routeur d'Angular dans ce projet. Ce bout de code montre le server.js.",
+        desc_en: "This is an ultra simplistic application with only one page, I didn't use Angular's router function in this project. This code snippet shows the server.js.",
+      }
     ],
     techno: [ {photo: "../assets/techno/Intellij.svg", url: "https://www.jetbrains.com/fr-fr/idea/"},
     {photo: "../assets/techno/angular.png", url: "https://angular.io/"},
@@ -289,6 +304,6 @@ export const PROJECTS_FR: Project[] = [
   ],
     created: new Date(),
     code: "https://github.com/LouisAyroles/Pokemon",
-    site: undefined
+    site: "https://pokemon-ng-cards.herokuapp.com/"
   }
 ];

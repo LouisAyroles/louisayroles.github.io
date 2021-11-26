@@ -4,6 +4,7 @@ import {FormGroup} from "@angular/forms";
 import {Email} from "../domain/email";
 import {Router} from "@angular/router";
 import { ToastService } from '../app/toast/toast.service';
+import {TranslateService} from "@ngx-translate/core";
 
 
 @Component({
@@ -21,7 +22,7 @@ export class ContactComponent implements OnInit {
   isSubmit = false;
 
   showSuccessEmail() {
-    this.toastService.show('Your email has been successfully sent', {
+    this.toastService.show(this.translate.instant('CONTACT.TOAST_OK'), {
       classname: 'bg-success text-light',
       delay: 5000 ,
       autohide: true,
@@ -29,7 +30,7 @@ export class ContactComponent implements OnInit {
   }
 
   showErrorEmail() {
-    this.toastService.show('Oops, it looks like there is a little problem with sending the email', {
+    this.toastService.show(this.translate.instant('CONTACT.TOAST_ERROR'), {
       classname: 'bg-danger text-light',
       delay: 5000 ,
       autohide: true,
@@ -37,7 +38,8 @@ export class ContactComponent implements OnInit {
   }
 
   constructor(private router: Router,
-              public toastService: ToastService) { }
+              public toastService: ToastService,
+              private translate: TranslateService) { }
 
   ngOnInit(): void {
   }

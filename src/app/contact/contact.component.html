@@ -10,8 +10,9 @@
                      [class.is-valid]="!(emailControl.errors?.required || emailControl.errors?.email)"
                      [class.is-invalid]="messageEmail && (emailControl.errors?.required || emailControl.errors?.email)"
                      class="form-control" aria-describedby="emailHelp" [(ngModel)]="email.email" name="email" required email #emailControl="ngModel">
-              <div *ngIf="messageEmail && emailControl.errors?.required" class="invalid-feedback">Hop! N'oubliez pas l'e-mail si vous voulez une réponse. 😉</div>
-              <div *ngIf="messageEmail && emailControl.errors?.email" class="invalid-feedback">Désolé mais c'est pas une adresse mail que vous avez rentrer là! 🙊</div>
+              <div *ngIf="messageEmail && emailControl.errors?.required" class="invalid-feedback">{{"CONTACT.ERROR_MAIL_1" | translate }} 😉</div>
+              <div *ngIf="messageEmail && emailControl.errors?.email" class="invalid-feedback">{{"CONTACT.ERROR_MAIL_2" | translate }} 🙊</div>
+          <div class="valid-feedback">{{"CONTACT.GOOD_MAIL" | translate }} </div>
         </div>
         <div class="form-group ">
             <input type="text" placeholder="{{'CONTACT.SUBJECT' | translate}}" class="form-control" aria-describedby="subjectHelp" [(ngModel)]="email.subject" name="subject" #subjectControl="ngModel">
@@ -22,15 +23,19 @@
                    [class.is-invalid]="messageName && nameControl.errors?.required"
                    [(ngModel)]="email.name" name="name" required #nameControl="ngModel">
             <div class="invalid-feedback">
-              C'est quand même mieux si je peux vous appeler par votre nom!
+              {{"CONTACT.ERROR_NAME" | translate }}
             </div>
+          <div class="valid-feedback">
+            {{"CONTACT.GOOD_NAME" | translate }}
+          </div>
         </div>
         <div class="form-group">
             <textarea aria-describedby="textHelp"  placeholder="{{'CONTACT.WRITE' | translate}}"
                       [class.is-valid]="!(textControl.errors?.required)"
                       [class.is-invalid]="messageText && textControl.errors?.required"
                       [(ngModel)]="email.text" name="text" required #textControl="ngModel" class="form-control" rows="3"></textarea>
-            <div *ngIf="messageText && textControl.errors?.required" class="invalid-feedback" >Un mail sans message, ca perd de son intérêt. 😅</div>
+            <div *ngIf="messageText && textControl.errors?.required" class="invalid-feedback" >{{"CONTACT.ERROR_MESSAGE" | translate }} 😅</div>
+          <div class="valid-feedback" >{{"CONTACT.GOOD_MESSAGE" | translate }} </div>
         </div>
         <div class="form-group d-flex justify-content-end">
           <button type="submit" class="btn btn-submit">{{"CONTACT.SEND" | translate}}</button>
