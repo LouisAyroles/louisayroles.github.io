@@ -27,6 +27,15 @@
     "SUBJECT": "Subject",
     "NAME": "Name *",
     "WRITE": "Write you message here... *",
-    "SEND" : "Send"
+    "SEND" : "Send",
+    "ERROR_MAIL_1" : "Hop! Don't forget the e-mail if you want an answer.",
+    "ERROR_MAIL_2" : "Sorry, but that's not an e-mail address you entered here!",
+    "ERROR_NAME" : "It's better if I can call you by your name!",
+    "ERROR_MESSAGE" : "A mail without a message, it loses its interest.",
+    "GOOD_MAIL" : "Thank you for your email address, I will be sure to reply!",
+    "GOOD_NAME" : "Wow that's a nice name you have there!",
+    "GOOD_MESSAGE" : "Thank you for your message, I will read it with attention!",
+    "TOAST_ERROR" : "Oops, it looks like there is a little problem with sending the email",
+    "TOAST_OK" : "Your email has been successfully sent"
   }
 }
