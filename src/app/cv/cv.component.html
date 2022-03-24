@@ -1,9 +1,34 @@
-<div class="custom-container">
-  <div *ngIf="isLoading" class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
-    <div class="spinner-border text-primary" role="status">
+ <div class="container-fluid">
+  <div class="row">
+    <div class="col-sm">
+      <div class="chart">
+        <canvas baseChart
+                [data]="pieChartDataLanguages"
+                [type]="pieChartType"
+                [options]="pieChartOptions">
+        </canvas>
+      </div>
+    </div>
+
+    <div class="col-sm">
+      <div class="chart">
+        <canvas baseChart
+                [data]="pieChartDataTools"
+                [type]="pieChartType"
+                [options]="pieChartOptions">
+        </canvas>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="chart">
+        <canvas baseChart
+                [data]="pieChartDataFrameworks"
+                [type]="pieChartType"
+                [options]="pieChartOptions">
+        </canvas>
+      </div>
     </div>
   </div>
-  <iframe (load)="isLoading=false" [class.d-none]="isLoading" src="https://drive.google.com/file/d/1SC-uLnFqVLHmogvnn4XhiGTTOxXdZZ-W/preview" width=100% height="auto" allow="autoplay"></iframe>
-</div>
+ </div>
 
 

@@ -21,6 +21,8 @@ import {FormsModule} from "@angular/forms";
 import { ToastComponent } from './toast/toast.component';
 import {NgbToastModule} from "@ng-bootstrap/ng-bootstrap";
 import { CloseMenuDirective } from './close-menu.directive';
+import {NgApexchartsModule} from "ng-apexcharts";
+import { NgChartsModule } from 'ng2-charts';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -31,6 +33,8 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
   imports: [
     BrowserModule,
+    NgApexchartsModule,
+    NgChartsModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
