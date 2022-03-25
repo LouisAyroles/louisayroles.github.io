@@ -46,15 +46,15 @@ export class CvComponent implements OnInit {
   public pieChartDataLanguages: ChartData<'pie', number[], string | string[]> = {
     labels: [ 'C, C#', 'JAVA' , 'Kotlin', 'HTML & CSS', 'OCaml', 'Python', 'SQL'],
     datasets: [ {
-      data: [ 300, 500, 100, 200,200,200, 200 ],
+      data: [ 500, 500, 200, 300,200,200, 200 ],
       backgroundColor: [
-        '#E3B9FF','#A5C1E5', '#CCFFCC', '#FEE1A0', '#FFCCBC', '#EBF0F9', '#FFFF99'
+       '#52cffe', '#69bff8', '#79b3f4', '#8aa7ec', '#9a9ae1','#aa8fd8', '#ba83ca'
       ],
       hoverBackgroundColor: [
-        '#BF5FFF','#3063A5', '#9AFF9A', '#FCB514', '#FF8C69', '#567FCE', '#FFFF00'
+        '#10bcfd','#26a2f4', '#368dee', '#4a77e1', '#6060cf', '#825ac5', '#a055b6'
       ],
       hoverBorderColor: [
-        '#BF5FFF','#3063A5', '#9AFF9A', '#FCB514', '#FF8C69', '#567FCE', '#FFFF00'
+        '#10bcfd','#26a2f4', '#368dee', '#4a77e1', '#6060cf', '#825ac5', '#a055b6'
       ]
     } ]
   };
@@ -63,15 +63,15 @@ export class CvComponent implements OnInit {
   public pieChartDataTools: ChartData<'pie', number[], string | string[]> = {
     labels: [ 'Git', 'Android Studio' , 'IntelliJ', 'Eclipse', 'Jira & Trello', 'Jenkins', 'Netbeans', 'Visual Studio', 'SSMS'],
     datasets: [ {
-      data: [ 300, 500, 100, 200,200,200, 200 ],
+      data: [ 500, 200, 400, 300,200,100, 200, 200, 200 ],
       backgroundColor: [
        '#d16ba5', '#c777b9', '#ba83ca','#aa8fd8', '#9a9ae1', '#8aa7ec', '#79b3f4', '#69bff8','#52cffe'
       ],
       hoverBackgroundColor: [
-        '#A2627A','#3063A5', '#9AFF9A', '#FCB514', '#FF8C69', '#567FCE', '#FFFF00'
+        '#c13c88','#b44aa2', '#a055b6', '#825ac5', '#6060cf', '#4a77e1', '#368dee',  '#26a2f4','#10bcfd'
       ],
       hoverBorderColor: [
-        '#BF5FFF','#3063A5', '#9AFF9A', '#FCB514', '#FF8C69', '#567FCE', '#FFFF00'
+        '#c13c88','#b44aa2', '#a055b6', '#825ac5', '#6060cf', '#4a77e1', '#368dee',  '#26a2f4','#10bcfd'
       ]
     } ]
   };
@@ -79,15 +79,15 @@ export class CvComponent implements OnInit {
   public pieChartDataFrameworks: ChartData<'pie', number[], string | string[]> = {
     labels: [ 'Spring', 'Angular' , 'VueJS', '.NET', 'Tailwind', 'Bootstrap', 'React', 'NuxtJs'],
     datasets: [ {
-      data: [ 300, 500, 100, 200,200,200, 200 ],
+      data: [ 500, 500, 400, 300,200,200, 100, 300 ],
       backgroundColor: [
-        '#04f696', '#0ce37e', '#0fcf66', '#10bd4e', '#0faa36', '#09a032', '#04952d', '#008b29'
+        '#8aa7ec', '#9a9ae1','#aa8fd8', '#ba83ca','#c777b9',  '#d16ba5',  '#52cffe', '#69bff8'
       ],
       hoverBackgroundColor: [
-        '#A2627A','#3063A5', '#9AFF9A', '#FCB514', '#FF8C69', '#567FCE', '#FFFF00'
+        '#668ce6','#7979d7', '#825ac5', '#a055b6', '#b44aa2', '#c13c88', '#10bcfd', '#26a2f4'
       ],
       hoverBorderColor: [
-        '#BF5FFF','#3063A5', '#9AFF9A', '#FCB514', '#FF8C69', '#567FCE', '#FFFF00'
+        '#668ce6','#7979d7', '#825ac5', '#a055b6', '#b44aa2', '#c13c88', '#10bcfd', '#26a2f4'
       ]
     } ]
   };

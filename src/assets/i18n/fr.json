@@ -22,6 +22,11 @@
   "HOBBIES" : {
     "TRAVEL" : "Voyages"
   },
+  "CV" : {
+    "TITLE_FRAMEWORK" : "Framework",
+    "TITLE_LANGUAGE" : "Langages de programmation",
+    "TITLE_TOOL" : "Outils utilisés"
+  },
   "CONTACT" : {
     "MESSAGE": "Envoie moi un message ",
     "SUBJECT": "Sujet",
