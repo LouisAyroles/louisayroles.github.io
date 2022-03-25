@@ -1,7 +1,11 @@
  <div class="container-fluid">
   <div class="row justify-content-evenly">
+    <div class="center">
+      <img class="icon" src="assets/skills.png" alt="skills">
+      <h1> {{"CV.SKILLS.TITLE" | translate }}</h1>
+    </div>
     <div class="col-sm-3">
-      <h1> {{"CV.TITLE_LANGUAGE" | translate }} </h1>
+      <h2> {{"CV.SKILLS.TITLE_LANGUAGE" | translate }} </h2>
       <div class="chart">
         <canvas baseChart
                 [data]="pieChartDataLanguages"
@@ -13,7 +17,7 @@
 
 
     <div class="col-sm-3">
-      <h1> {{"CV.TITLE_TOOL" | translate }} </h1>
+      <h2> {{"CV.SKILLS.TITLE_TOOL" | translate }} </h2>
       <div class="chart">
         <canvas baseChart
                 [data]="pieChartDataTools"
@@ -24,7 +28,7 @@
     </div>
 
     <div class="col-sm-3">
-      <h1> {{"CV.TITLE_FRAMEWORK" | translate }} </h1>
+      <h2> {{"CV.SKILLS.TITLE_FRAMEWORK" | translate }} </h2>
       <div class="chart">
         <canvas baseChart
                 [data]="pieChartDataFrameworks"
@@ -34,6 +38,10 @@
       </div>
     </div>
   </div>
+   <div class="center">
+     <img class="icon" src="assets/education.png" alt="skills">
+     <h1> {{"CV.EDUCATION.TITLE" | translate }}</h1>
+   </div>
  </div>
 
 

@@ -23,10 +23,16 @@
     "TRAVEL" : "Voyages"
   },
   "CV" : {
-    "TITLE_FRAMEWORK" : "Framework",
-    "TITLE_LANGUAGE" : "Langages de programmation",
-    "TITLE_TOOL" : "Outils utilisés"
-  },
+    "SKILLS" : {
+      "TITLE" : "Compétences",
+      "TITLE_FRAMEWORK" : "Framework",
+      "TITLE_LANGUAGE" : "Langages de programmation",
+      "TITLE_TOOL" : "Outils utilisés"
+    },
+    "EDUCATION" : {
+      "TITLE" : "Formation"
+    }
+},
   "CONTACT" : {
     "MESSAGE": "Envoie moi un message ",
     "SUBJECT": "Sujet",

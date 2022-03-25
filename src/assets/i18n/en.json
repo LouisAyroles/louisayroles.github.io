@@ -23,9 +23,15 @@
     "TRAVEL" : "Travel"
   },
   "CV" : {
-    "TITLE_FRAMEWORK" : "Framework",
-    "TITLE_LANGUAGE" : "Programming languages",
-    "TITLE_TOOL" : "Tools used"
+    "SKILLS" : {
+      "TITLE" : "Skills",
+      "TITLE_FRAMEWORK" : "Framework",
+      "TITLE_LANGUAGE" : "Programming languages",
+      "TITLE_TOOL" : "Tools used"
+    },
+    "EDUCATION" : {
+      "TITLE" : "Education"
+    }
   },
   "CONTACT" : {
     "MESSAGE": "Drop Me a Message ",
