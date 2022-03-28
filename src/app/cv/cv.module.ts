@@ -1,15 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {DiplomaComponent} from "./diploma/diploma.component";
+import { WorkComponent } from './work/work.component';
+import { HobbiesComponent } from './hobbies/hobbies.component';
 
 
 
 @NgModule({
   declarations: [
-    DiplomaComponent
+    DiplomaComponent,
+    WorkComponent,
+    HobbiesComponent
   ],
   exports: [
-    DiplomaComponent
+    DiplomaComponent,
+    WorkComponent,
+    WorkComponent,
+    HobbiesComponent
   ],
   imports: [
     CommonModule

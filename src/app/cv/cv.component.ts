@@ -1,6 +1,10 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import { ChartConfiguration, ChartData, ChartType } from 'chart.js';
 import {BaseChartDirective} from "ng2-charts";
+import {CvService} from "./cv.service";
+import {Education} from "../domain/education";
+import {Experience} from "../domain/experience";
+import {Hobie} from "../domain/hobie";
 
 @Component({
   selector: 'app-cv',
@@ -10,10 +14,21 @@ import {BaseChartDirective} from "ng2-charts";
 
 export class CvComponent implements OnInit {
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
+  education : Education[]
+  experience : Experience[]
+  hobbies : Hobie[]
+
+  constructor(private cvService : CvService){
+
+  }
+
 
   public isLoading : boolean = true;
 
   ngOnInit(): void {
+    this.education = this.cvService.getAllEducation()
+    this.experience = this.cvService.getAllExperience()
+    this.hobbies = this.cvService.getAllHobbies()
   }
 
   titlesLanguage = [ 'C, C#', 'JAVA' , 'Kotlin', 'HTML & CSS', 'OCaml', 'Python', 'SQL'];

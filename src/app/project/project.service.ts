@@ -1,6 +1,6 @@
 import {Injectable, OnInit} from '@angular/core';
 import {Project} from "../domain/project";
-import {PROJECTS_FR} from "../domain/mock-projects";
+import {PROJECTS_FR} from "../domain/datas";
 import {Observable, of} from "rxjs";
 
 @Injectable({

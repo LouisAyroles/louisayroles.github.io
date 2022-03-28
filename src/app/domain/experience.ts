@@ -5,4 +5,5 @@ export class Experience {
   city: string;
   occupation: string;
   description: Array<string>;
+  company_logo: string;
 }

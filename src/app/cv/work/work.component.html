@@ -1,29 +1,26 @@
-
-
 <div class="single-timeline-area">
   <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
-    <p>{{diploma.year}}</p>
+    <p>{{work.year}}</p>
   </div>
   <div class="row">
     <div class="col-6">
       <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
         <div class="timeline-icon">
-          <img class="" src="{{diploma.logo}}" alt="{{diploma.logo}}">
+          <img class="" src="{{work.company_logo}}" alt="{{work.company}}">
         </div>
         <div class="timeline-text">
-          <h6>{{diploma.diploma}}</h6>
-          <p>{{diploma.place}}</p>
-          <p>{{diploma.city}}</p>
+          <h6>{{work.occupation}}</h6>
+          <p>{{work.year}}</p>
+          <p>{{work.city}}</p>
         </div>
       </div>
-
     </div>
     <div class="col-6">
       <div class="single-timeline-content wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-        <div *ngFor="let desc of diploma.description" class="timeline-text">
-          <h6>{{desc}}</h6>
+        <div *ngFor="let desc of work.description" class="row">
+          <p>{{desc}}</p>
         </div>
       </div>
+    </div>
   </div>
-</div>
 </div>

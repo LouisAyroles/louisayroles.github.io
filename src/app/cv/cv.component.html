@@ -1,4 +1,24 @@
- <div class="container-fluid">
+<!--- Education -->
+<div class="center">
+  <img class="icon" src="assets/cv/education.png" alt="skills">
+  <h1> {{"CV.EDUCATION.TITLE" | translate }}</h1>
+</div>
+<section class="timeline_area section_padding_130">
+  <div class="container">
+    <div class="row">
+      <!-- Timeline Area-->
+      <div class="apland-timeline-area">
+        <div *ngFor="let eduItem of education">
+          <app-diploma
+            [diploma]="eduItem">
+          </app-diploma>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container-fluid">
   <div class="row justify-content-evenly">
     <div class="center">
       <img class="icon" src="assets/cv/skills.png" alt="skills">
@@ -38,26 +58,49 @@
       </div>
     </div>
   </div>
-   <div class="center">
-     <img class="icon" src="assets/cv/education.png" alt="skills">
-     <h1> {{"CV.EDUCATION.TITLE" | translate }}</h1>
-   </div>
-   <div *ngFor=""> </div>
-   <app-diploma>
 
-   </app-diploma>
-   <div class="center">
-     <img class="icon" src="assets/cv/hobbies.png" alt="skills">
-     <h1> {{"CV.HOBBIES.TITLE" | translate }}</h1>
-   </div>
-   <div class="center">
-     <img class="icon" src="assets/cv/projects.png" alt="skills">
-     <h1> {{"CV.PROJECTS.TITLE" | translate }}</h1>
-   </div>
+
+
    <div class="center">
      <img class="icon" src="assets/cv/work.png" alt="skills">
      <h1> {{"CV.WORK.TITLE" | translate }}</h1>
    </div>
+   <section class="timeline_area section_padding_130">
+     <div class="container">
+       <div class="row">
+         <!-- Timeline Area-->
+         <div class="apland-timeline-area">
+           <div *ngFor="let expItem of experience">
+             <app-work
+               [work]="expItem">
+             </app-work>
+           </div>
+         </div>
+       </div>
+     </div>
+   </section>
+
+
+
+
+   <div class="center">
+     <img class="icon" src="assets/cv/hobbies.png" alt="skills">
+     <h1> {{"CV.HOBBIES.TITLE" | translate }}</h1>
+   </div>
+   <section class="wrapper">
+     <div class="container">
+         <div  class="row">
+           <app-cv-hobbies *ngFor="let hobie of hobbies" class="col-1 col-lg-3"
+             [hobie]="hobie">
+           </app-cv-hobbies>
+       </div>
+     </div>
+   </section>
+   <div class="center">
+     <img class="icon" src="assets/cv/projects.png" alt="skills">
+     <h1> {{"CV.PROJECTS.TITLE" | translate }}</h1>
+   </div>
+
  </div>
 
 

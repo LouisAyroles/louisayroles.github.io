@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import {Observable, of} from "rxjs";
 import {Education} from "../domain/education";
-import {EDUCATION} from "../domain/mock-education";
 import {Experience} from "../domain/experience";
-import {EXPERIENCE} from "../domain/mock-experience";
+import {Hobie} from "../domain/hobie";
+import {EDUCATION, EXPERIENCE, HOBBIES} from "../domain/datas";
 
 @Injectable({
   providedIn: 'root'
@@ -12,10 +12,12 @@ export class CvService {
 
   public education: Education[];
   public experience: Experience[];
+  public hobbies : Hobie[];
 
   constructor() {
     this.education = EDUCATION;
     this.experience = EXPERIENCE
+    this.hobbies = HOBBIES
   }
 
 
@@ -55,5 +57,10 @@ export class CvService {
 
   public setExperience(experience: Experience[]) {
     this.experience = experience;
+  }
+
+
+  public getAllHobbies(): Hobie[] {
+    return this.hobbies;
   }
 }
