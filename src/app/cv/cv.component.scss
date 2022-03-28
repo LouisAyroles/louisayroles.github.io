@@ -1,5 +1,4 @@
 h1{
-  padding-top: 1rem;
   font-size: 3rem;
   font-family: 'Montserrat',sans-serif;
 }
@@ -12,8 +11,10 @@ h2{
 
 .icon{
  float: left;
+  max-width: 52px;
+  max-height: 52px;
 }
 
 .center{
-  margin: auto;
+  padding-top: 2rem;
 }

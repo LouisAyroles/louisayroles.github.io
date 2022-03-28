@@ -23,6 +23,7 @@ import {NgbToastModule} from "@ng-bootstrap/ng-bootstrap";
 import { CloseMenuDirective } from './close-menu.directive';
 import {NgApexchartsModule} from "ng-apexcharts";
 import { NgChartsModule } from 'ng2-charts';
+import {CvModule} from "../cv/cv.module";
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -31,26 +32,27 @@ export function createTranslateLoader(http: HttpClient) {
 
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    NgApexchartsModule,
-    NgChartsModule,
-    HttpClientModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: createTranslateLoader,
-        deps: [HttpClient]
-      }
-  }),
-    RouterModule,
-    AppRoutingModule,
-    NgxExtendedPdfViewerModule,
-    ProjectModule,
-    FontAwesomeModule,
-    FormsModule,
-    NgbToastModule
-  ],
+    imports: [
+        BrowserModule,
+        NgApexchartsModule,
+        NgChartsModule,
+        HttpClientModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: createTranslateLoader,
+                deps: [HttpClient]
+            }
+        }),
+        RouterModule,
+        AppRoutingModule,
+        NgxExtendedPdfViewerModule,
+        ProjectModule,
+        FontAwesomeModule,
+        FormsModule,
+        NgbToastModule,
+        CvModule
+    ],
   declarations: [
     AppComponent,
     HeaderComponent,

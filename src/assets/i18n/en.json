@@ -31,6 +31,15 @@
     },
     "EDUCATION" : {
       "TITLE" : "Education"
+    },
+    "PROJECTS" : {
+      "TITLE" : "Projects"
+    },
+    "HOBBIES" : {
+      "TITLE" : "Hobbies"
+    },
+    "WORK" : {
+      "TITLE" : "Works"
     }
   },
   "CONTACT" : {

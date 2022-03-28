@@ -31,6 +31,14 @@
     },
     "EDUCATION" : {
       "TITLE" : "Formation"
+    },"PROJECTS" : {
+      "TITLE" : "Projets"
+    },
+    "HOBBIES" : {
+      "TITLE" : "Centres d'intérêt"
+    },
+    "WORK" : {
+      "TITLE" : "Experience"
     }
 },
   "CONTACT" : {
