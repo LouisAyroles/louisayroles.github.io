@@ -55,7 +55,7 @@ body {
   width: 11px;
   height: 11px;
   border-radius: 50%;
-  background-color: #f1c40f;
+  background-color: #aa8fd8;
   content: "";
   top: 50%;
   right: 26px;
@@ -105,4 +105,9 @@ body {
 .single-timeline-area .single-timeline-content .timeline-text p {
   font-size: 13px;
   margin-bottom: 0;
+}
+
+.timeline-text-desc li{
+  font-size: small;
+  font-family: 'Montserrat', sans-serif;
 }

@@ -1,8 +1,9 @@
 body{
   background-color:#FCBF49;
 }
-.wrapper{margin:10vh}
-//post card styles
+.wrapper{
+  margin:10vh
+}
 
 .card{
   border: none;
@@ -35,7 +36,6 @@ body{
       background: inherit;
       -webkit-filter: grayscale(1);
       -moz-filter: grayscale(100%);
-      -ms-filter: grayscale(100%);
       -o-filter: grayscale(100%);
       filter: grayscale(100%);}
 

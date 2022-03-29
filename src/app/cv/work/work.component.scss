@@ -11,6 +11,12 @@ body {
     padding-left: 100px;
   }
 }
+
+.timeline-text-desc li{
+  font-size: small;
+  font-family: 'Montserrat', sans-serif;
+}
+
 .single-timeline-area .timeline-date {
   position: absolute;
   width: 180px;
@@ -50,7 +56,7 @@ body {
   width: 11px;
   height: 11px;
   border-radius: 50%;
-  background-color: #f1c40f;
+  background-color: #014d93;
   content: "";
   top: 50%;
   right: 26px;

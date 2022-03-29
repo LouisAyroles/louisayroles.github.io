@@ -1,10 +1,10 @@
 <div class="single-timeline-area">
-  <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+  <div class="timeline-date">
     <p>{{work.year}}</p>
   </div>
   <div class="row">
     <div class="col-6">
-      <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+      <div class="single-timeline-content d-flex">
         <div class="timeline-icon">
           <img class="" src="{{work.company_logo}}" alt="{{work.company}}">
         </div>
@@ -16,10 +16,10 @@
       </div>
     </div>
     <div class="col-6">
-      <div class="single-timeline-content wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-        <div *ngFor="let desc of work.description" class="row">
-          <p>{{desc}}</p>
-        </div>
+      <div class="single-timeline-content">
+        <ul *ngFor="let desc of work.description" class="timeline-text-desc">
+          <li>{{desc}}</li>
+        </ul>
       </div>
     </div>
   </div>

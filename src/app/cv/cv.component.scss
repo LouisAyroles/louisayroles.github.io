@@ -1,6 +1,18 @@
 h1{
   font-size: 3rem;
   font-family: 'Montserrat',sans-serif;
+  &.education{
+    color: #5c5b7c
+  }
+  &.skills{
+    color: #355c7a
+  }
+  &.work{
+    color: #014d93
+  }
+  &.hobbies{
+    color: #002649
+  }
 }
 
 h2{
@@ -11,12 +23,29 @@ h2{
 
 .icon{
  float: left;
+  margin-right: 2em;
   max-width: 52px;
   max-height: 52px;
+  &.education{
+    filter: invert(37%) sepia(9%) saturate(1334%) hue-rotate(203deg) brightness(96%) contrast(94%);
+  }
+  &.skills{
+    filter: invert(27%) sepia(71%) saturate(376%) hue-rotate(167deg) brightness(101%) contrast(88%);
+  }
+  &.work{
+    filter: invert(19%) sepia(85%) saturate(1856%) hue-rotate(193deg) brightness(94%) contrast(99%);
+  }
+  &.hobbies{
+    filter: invert(12%) sepia(32%) saturate(3685%) hue-rotate(188deg) brightness(90%) contrast(103%);
+  }
 }
 
 .center{
-  padding-top: 2rem;
+  text-align: center;
+}
+
+.title-container{
+ display: inline-flex;
 }
 
 .timeline_area {
