@@ -66,9 +66,14 @@ body {
 .single-timeline-area .timeline-date p {
   margin-bottom: 0;
   color: #020710;
-  font-size: 13px;
+  font-size: 1rem;
   text-transform: uppercase;
   font-weight: 500;
+}
+@media only screen and (max-width: 575px) {
+  .single-timeline-area .timeline-date p {
+    font-size: 0.6rem;
+  }
 }
 .single-timeline-area .single-timeline-content {
   z-index: 1;
@@ -82,7 +87,8 @@ body {
 }
 @media only screen and (max-width: 575px) {
   .single-timeline-area .single-timeline-content {
-    padding: 20px;
+    padding: 30px 0 30px 0;
+    text-align: center;
   }
 }
 .single-timeline-area .single-timeline-content .timeline-icon {
@@ -92,11 +98,11 @@ body {
   -ms-flex: 0 0 30px;
   flex: 0 0 30px;
   text-align: center;
-  margin-right: 15px;
 }
 .single-timeline-area .single-timeline-content .timeline-icon img {
   max-height: 80px;
-  max-width: 250px;
+  max-width: 120px;
+  margin-bottom: 20px ;
 }
 .single-timeline-area .single-timeline-content .timeline-text h6 {
   -webkit-transition-duration: 500ms;
