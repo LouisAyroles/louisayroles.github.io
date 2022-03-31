@@ -31,19 +31,23 @@
     },
     "EDUCATION" : {
       "TITLE" : "Education",
-      "DIPLOMA" : {
-        "TITLE" : "{{value2}}",
-        "YEAR" : "{{value2}}",
-        "STATE" : "{{value2}}",
-        "PLACE" : "{{value2}}",
-        "DESCRIPTION" : "{{value2}}"
-      }
+      "DIPLOMA" : "{{value2}}",
+      "YEAR" : "{{value2}}",
+      "STATE" : "{{value2}}",
+      "PLACE" : "{{value2}}",
+      "DESCRIPTION" : "{{value2}}"
     },
     "PROJECTS" : {
       "TITLE" : "Projects"
     },
     "HOBBIES" : {
       "TITLE" : "Hobbies"
+    },
+    "WORK" : {
+      "TITLE" : "Experience",
+      "YEAR" : "{{value2}}",
+      "OCCUPATION" : "{{value2}}",
+      "DESCRIPTION" : "{{value2}}"
     }
   },
   "CONTACT" : {

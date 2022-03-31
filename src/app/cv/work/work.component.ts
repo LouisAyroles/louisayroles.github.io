@@ -1,5 +1,6 @@
 import {Component, HostListener, Input, OnInit} from '@angular/core';
 import {Experience} from "../../domain/experience";
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-work',
@@ -14,7 +15,7 @@ export class WorkComponent implements OnInit {
   public mobileView : boolean
   public tabletView : boolean
 
-  constructor() {
+  constructor(public translate : TranslateService) {
 
   }
 

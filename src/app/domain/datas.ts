@@ -98,68 +98,157 @@ export const EXPERIENCE : Experience[] = [
   {
     id: 1,
     company: "INFOTEL",
-    year: "Septembre 2021",
+    year: "Septembre 2021 - Aujourd'hui",
+    year_en: "September 2021 - Today",
     city: "Toulouse",
     occupation: "Ingénieur Logiciel",
+    occupation_en: "Software Engineer",
     description: [
       "Développement application web en .NET et Angular",
       "Utilisation des outils de déploiement continu (Jenkins)",
       "Mise en oeuvre de la méthode Agile"
+    ],
+    description_en: [
+      "Web application development in .NET and Angular",
+      "Use of continuous deployment tools (Jenkins)",
+      "Use of the Agile method"
     ],
     company_logo :"../assets/cv/infotel.png"
   },
   {
     id: 2,
     company: "IRIT / Equipe ACADIE",
-    year: "Summer 2021",
+    year: "Mai, Juin, Juillet 2021",
+    year_en: "May, June, July 2021",
     city: "Toulouse",
     occupation: "Stagiaire Développeur",
+    occupation_en: "Developer Trainee",
     description: [
-      "Développement application mobile",
-      "Utilisation des outils de travail en équipe (GIT)",
+      "Contributions front-end pour une plateforme d'apprentissage",
+      "Contribution Lisp pour un mode Emacs dédié",
       "Mise en oeuvre de la méthode Agile"
     ]
     ,
+    description_en: [
+      "Front-end contributions for a learning platform.",
+      "Lisp contribution for a dedicated Emacs mode",
+      "Use of the Agile method"
+    ],
     company_logo :"../assets/cv/irit.png"
   },
   {
     id: 3,
     company: "IRIT / Equipe SMAC",
-    year: "Avril/Mai 2020",
+    year: "Avril,Mai 2020",
+    year_en: "April, May 2020",
     city: "Toulouse",
     occupation: "Stagiaire Développeur",
+    occupation_en: "Developer Trainee",
     description: [
-      "Développement application mobile",
+      "Développement application mobile en Kotlin",
       "Utilisation des outils de travail en équipe (GIT)",
       "Mise en oeuvre de la méthode Agile"
+    ],
+    description_en: [
+      "Mobile application development in Kotlin",
+      "Use of teamwork tools (GIT)",
+      "Use of the Agile method"
     ],
     company_logo :"../assets/cv/irit.png"
   },
   {
     id: 4,
     company: "SYSCO FRANCE",
-    year: "Summer 2018/2019/2020",
+    year: "Étés 2018,2019 & 2020",
+    year_en: "Summer 2018,2019 & 2020",
     city: "Souillac",
     occupation: "Préparateur de commande",
+    occupation_en: "Order picker",
     description: [
-      "Développement application mobile",
-      "Utilisation des outils de travail en équipe (GIT)",
-      "Mise en oeuvre de la méthode Agile"
+      "Gestion de la chaine du froid",
+      "Utilisation d'un logiciel de stock",
+      "Préparation des commandes clients"
+    ],
+    description_en: [
+      "Cold chain management",
+      "Use of stock software",
+      "Preparation of customer orders"
     ],
     company_logo :"../assets/cv/sysco.png"
   },
   {
     id: 5,
     company: "COPEYRE CANOE",
-    year: "Summer 2015/2016",
+    year: "Étés 2015 & 2016",
+    year_en: "Summer 2015 & 2016",
     city: "Souillac",
     occupation: "Régisseur de base",
+    occupation_en: "Base manager",
     description: [
-      "Développement application mobile",
-      "Utilisation des outils de travail en équipe (GIT)",
-      "Mise en oeuvre de la méthode Agile"
+      "Accueil, départ, arrivée des clients",
+      "Encadrement de groupes (initation)",
+      "Encaissement, consigne (Français ou Anglais)"
+    ],
+    description_en: [
+      "Reception, departure, arrival of clients",
+      "Group supervision (initation)",
+      "Collection, deposit (French or English)"
     ],
     company_logo :"../assets/cv/copeyre.png"
+  },
+  {
+    id: 6,
+    company: "University Moto",
+    year: "Vacances 2014",
+    year_en: "Holidays 2014",
+    city: "Villefranche de Rouergue",
+    occupation: "Aide aux éducateurs motos",
+    occupation_en: "Support for motorbike educators",
+    description: [
+      "Entretien sur les machines du centre",
+      "Encadrement de groupes (initiaition ou competition)"
+    ],
+    description_en: [
+      "Maintenance on the centre's machines",
+      "Supervision of groups (initiation or competition)"
+    ],
+    company_logo :"../assets/cv/university.png"
+  },
+  {
+    id: 7,
+    company: "Garage Pompougnac",
+    year: "Étés 2013 & 2014",
+    year_en: "Summer 2015 & 2016",
+    city: "Le Vigan",
+    occupation: "Aide mécanique",
+    occupation_en: "Mechanical assistant",
+    description: [
+      "Mecanique rapide (pneus, plaquettes, vidanges)",
+      "Remise en etat de vehicules anciens"
+    ],
+    description_en: [
+      "Fast mechanics (tyres, brake pads, oil changes)",
+      "Restoration of old vehicles"
+    ],
+    company_logo :"../assets/cv/garage.png"
+  },
+  {
+    id: 8,
+    company: "Feronnerie Malbeth",
+    year: "Étés 2015/2016",
+    year_en: "Summer 2015/2016",
+    city: "Payrac",
+    occupation: "Aide feronnier",
+    occupation_en: "Ironworker's helper",
+    description: [
+      "Ponçage et peinture de portail, grilles etc.",
+      "Coupes de tubes pour la réalisaion de portail"
+    ],
+    description_en: [
+      "Sanding and painting of gates, fences etc.",
+      "Tube cuts for the construction of gates"
+    ],
+    company_logo :"../assets/cv/feronnerie.png"
   }
 ]
 

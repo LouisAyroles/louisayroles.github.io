@@ -31,21 +31,23 @@
     },
     "EDUCATION" : {
       "TITLE" : "Formation",
-      "DIPLOMA" : {
-        "TITLE" : "{{value1}}",
-        "YEAR" : "{{value1}}",
-        "STATE" : "{{value1}}",
-        "PLACE" : "{{value1}}",
-        "DESCRIPTION" : "{{value1}}"
-      }
-    },"PROJECTS" : {
+      "DIPLOMA" : "{{value1}}",
+      "YEAR" : "{{value1}}",
+      "STATE" : "{{value1}}",
+      "PLACE" : "{{value1}}",
+      "DESCRIPTION" : "{{value1}}"
+    },
+    "PROJECTS" : {
       "TITLE" : "Projets"
     },
     "HOBBIES" : {
       "TITLE" : "Centres d'intérêt"
     },
     "WORK" : {
-      "TITLE" : "Experience"
+      "TITLE" : "Experience",
+      "YEAR" : "{{value1}}",
+      "OCCUPATION" : "{{value1}}",
+      "DESCRIPTION" : "{{value1}}"
     }
 },
   "CONTACT" : {
