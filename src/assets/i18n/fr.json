@@ -41,7 +41,10 @@
       "TITLE" : "Projets"
     },
     "HOBBIES" : {
-      "TITLE" : "Centres d'intérêt"
+      "TITLE" : "Centres d'intérêt",
+      "NAME" : "{{value1}}",
+      "DESC" : "{{value1}}",
+      "EARNING" : "{{value1}}"
     },
     "WORK" : {
       "TITLE" : "Experience",

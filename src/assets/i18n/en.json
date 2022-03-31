@@ -41,7 +41,10 @@
       "TITLE" : "Projects"
     },
     "HOBBIES" : {
-      "TITLE" : "Hobbies"
+      "TITLE" : "Hobbies",
+      "NAME" : "{{value2}}",
+      "DESC" : "{{value2}}",
+      "EARNING" : "{{value2}}"
     },
     "WORK" : {
       "TITLE" : "Experience",

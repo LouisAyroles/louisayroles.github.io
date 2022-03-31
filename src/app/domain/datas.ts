@@ -255,30 +255,42 @@ export const EXPERIENCE : Experience[] = [
 export const HOBBIES : Hobie[] = [
   {
     name: "Football",
+    name_en: "Football",
     year: "2003-2008",
     desc: "Pratique en club",
+    desc_en: "Practice in a club",
     earning: "Beaucoup de medailles mais c'est tres lointain !",
+    earning_en: "Many medals but it's a long way off!",
     photo: "../assets/cv/hobbies/football.jpg"
   },
   {
     name: "Tennis de table",
+    name_en: "Table tennis",
     year: "2008-2012",
     desc: "Pratique en club",
+    desc_en: "Practice in a club",
     earning: "Champion departemental en 2010",
+    earning_en: "Departmental champion in 2010",
     photo: "../assets/cv/hobbies/ping.jpg"
   },
   {
     name: "Motocross",
+    name_en: "Motocross",
     year: "2012-2015",
     desc: "Loisirs et courses",
+    desc_en: "Hobie and race",
     earning: "Des bons souvenirs",
+    earning_en: "Good memories",
     photo: "../assets/cv/hobbies/mx.jpg"
   },
   {
     name: "Jeux vidéos",
+    name_en: "Videogames",
     year: "2017-2018",
     desc: "Compétition R6: Siege",
+    desc_en: "R6: Siege in competition",
     earning: "Top 3 Lan SFCO Paris",
+    earning_en: "Top 3 Lan SFCO Paris",
     photo: "../assets/cv/hobbies/videogame.jpg"
   }
 ]
