@@ -22,6 +22,37 @@
   "HOBBIES" : {
     "TRAVEL" : "Voyages"
   },
+  "CV" : {
+    "SKILLS" : {
+      "TITLE" : "Compétences",
+      "TITLE_FRAMEWORK" : "Framework",
+      "TITLE_LANGUAGE" : "Langages de programmation",
+      "TITLE_TOOL" : "Outils utilisés"
+    },
+    "EDUCATION" : {
+      "TITLE" : "Formation",
+      "DIPLOMA" : "{{value1}}",
+      "YEAR" : "{{value1}}",
+      "STATE" : "{{value1}}",
+      "PLACE" : "{{value1}}",
+      "DESCRIPTION" : "{{value1}}"
+    },
+    "PROJECTS" : {
+      "TITLE" : "Projets"
+    },
+    "HOBBIES" : {
+      "TITLE" : "Centres d'intérêt",
+      "NAME" : "{{value1}}",
+      "DESC" : "{{value1}}",
+      "EARNING" : "{{value1}}"
+    },
+    "WORK" : {
+      "TITLE" : "Experience",
+      "YEAR" : "{{value1}}",
+      "OCCUPATION" : "{{value1}}",
+      "DESCRIPTION" : "{{value1}}"
+    }
+},
   "CONTACT" : {
     "MESSAGE": "Envoie moi un message ",
     "SUBJECT": "Sujet",

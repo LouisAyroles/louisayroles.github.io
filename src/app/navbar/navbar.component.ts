@@ -1,6 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import {Project} from "../domain/project";
-import {PROJECTS_FR} from "../domain/mock-projects";
+import {PROJECTS_FR} from "../domain/datas";
 import {NavigationStart, Router} from "@angular/router";
 import {TranslateService} from '@ngx-translate/core';
 
