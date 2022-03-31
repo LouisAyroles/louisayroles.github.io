@@ -1,5 +1,6 @@
 import {Component, HostListener, Input, OnInit} from '@angular/core';
 import {Education} from "../../domain/education";
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-diploma',
@@ -12,7 +13,7 @@ export class DiplomaComponent implements OnInit {
   public mobileView : Boolean
   public tabletView : Boolean
 
-  constructor() { }
+  constructor(public translate: TranslateService) { }
 
   ngOnInit(): void {
   }

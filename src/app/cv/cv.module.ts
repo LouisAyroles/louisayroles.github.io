@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import {DiplomaComponent} from "./diploma/diploma.component";
 import { WorkComponent } from './work/work.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
+import {TranslateModule} from "@ngx-translate/core";
 
 
 
@@ -18,8 +19,9 @@ import { HobbiesComponent } from './hobbies/hobbies.component';
     WorkComponent,
     HobbiesComponent
   ],
-  imports: [
-    CommonModule
-  ]
+    imports: [
+        CommonModule,
+        TranslateModule
+    ]
 })
 export class CvModule { }

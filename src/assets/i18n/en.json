@@ -30,7 +30,14 @@
       "TITLE_TOOL" : "Tools used"
     },
     "EDUCATION" : {
-      "TITLE" : "Education"
+      "TITLE" : "Education",
+      "DIPLOMA" : {
+        "TITLE" : "{{value2}}",
+        "YEAR" : "{{value2}}",
+        "STATE" : "{{value2}}",
+        "PLACE" : "{{value2}}",
+        "DESCRIPTION" : "{{value2}}"
+      }
     },
     "PROJECTS" : {
       "TITLE" : "Projects"

@@ -9,10 +9,14 @@ export const EDUCATION : Education[] =
     {
       id: 1,
       diploma: "Master Développement Logiciel",
+      diploma_en: "Master degree in Software engineering",
       year: "2020-2022",
+      year_en: "2020-2022",
       city: "Toulouse",
-      state: "en cours",
+      state: "Diplôme en cours",
+      state_en: "Degree in progress",
       place: "Université Paul Sabatier",
+      place_en: "Paul Sabatier University",
       logo: "../assets/cv/master-dl.png",
       description: [
         "Conception centrée utilisateur",
@@ -21,40 +25,70 @@ export const EDUCATION : Education[] =
         "Management de projets informatiques.",
         "Web services/XML.",
         "Ingénierie des modèles, des systemes, architecture logicielle"
+      ],
+      description_en: [
+        "User-centered design",
+        "Computer design of interactive systems.",
+        "Collaborative development, quality, configuration management.",
+        "Management of IT projects.",
+        "Web services/XML.",
+        "Model and systems engineering, software architecture."
       ]
     },
     {
       id: 2,
       diploma: "Licence informatique",
+      diploma_en: "Bsc in Computer Science",
       year: "2020",
+      year_en: "2020",
       city: "Toulouse",
       state: "Diplôme obtenu mention Assez Bien",
+      state_en: "Graduated with honours",
       place: "Université Paul Sabatier",
+      place_en: "Paul Sabatier University",
       logo: "../assets/cv/paulsab.png",
       description: [
-        "Méthodologie de développement logiciel/Génie logiciel",
         "Fonctionnement de l'ordinateur et de son environnement",
-        "Langages de programmation",
+        "Méthodologie de développement logiciel/Génie logiciel",
+        "Langages de programmation (C, JAVA, Python...)",
         "Structures discrètes et algorithmes",
         "Bases de données, Interaction Homme-machine, Intelligence artificielle, Informatique graphique, Programmation parallèle",
         "Techniques de gestion de projet et outils de travail collaboratif"
+      ],
+      description_en: [
+        "Operation of the computer and its environment",
+        "Software Development Methodology/Software Engineering",
+        "Programming languages (C, JAVA, Python...)",
+        "Discrete structures and algorithms",
+        "Databases, Human-Computer Interaction, Artificial Intelligence, Graphics, Parallel Programming",
+        "Project management techniques and collaborative working tools"
       ]
     },
     {
       id: 3,
       diploma: "Baccalaureat Série Scientifique",
+      diploma_en: "Scientific Baccalaureate",
       year: "2015",
+      year_en: "2015",
       city: "Gourdon (46)",
       state: "Diplôme obtenu mention Assez Bien",
+      state_en: "Graduated whith honours",
       place: "Lycée Léo Ferré",
+      place_en: "High Scool Léo Ferré",
       logo: "../assets/cv/leoferre.jpg",
       description: [
-        "Conception centrée utilisateur",
-        "Conception informatique de systèmes interactifs.",
-        "Développement collaboratif, qualité, gestion de configurations.",
-        "Management de projets informatiques.",
-        "Web services/XML.",
-        "Ingénierie des modèles, des systemes, architecture logicielle"
+        "Spécialité Mathématiques",
+        "Participation au concours national de la résistance et de la déportation (2012-2013)",
+        "Délégué au conseil pour la vie lycéenne (2013-2015)",
+        "Délégué au conseil d'administration (2013-2014)",
+        "Membre du club de volley du lycée (2014-2015)"
+      ],
+      description_en: [
+        "Mathematics Specialty",
+        "Participation in the national resistance and deportation competition (2012-2013)",
+        "Delegate to the council for student life (2013-2015)",
+        "Board Delegate (2013-2014)",
+        "Member of the high school volleyball club (2014-2015)",
       ]
     }
   ]
@@ -64,7 +98,7 @@ export const EXPERIENCE : Experience[] = [
   {
     id: 1,
     company: "INFOTEL",
-    year: "Septmebre 2021",
+    year: "Septembre 2021",
     city: "Toulouse",
     occupation: "Ingénieur Logiciel",
     description: [

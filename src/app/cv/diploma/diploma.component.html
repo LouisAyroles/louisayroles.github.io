@@ -2,7 +2,7 @@
 
 <div class="single-timeline-area">
   <div class="timeline-date">
-    <p>{{diploma.year}}</p>
+    <p>{{"CV.EDUCATION.DIPLOMA.YEAR" | translate: {value1: diploma.year, value2: diploma.year_en} }}</p>
   </div>
   <div class="row">
     <div class="col-6">
@@ -11,16 +11,21 @@
           <img class="" src="{{diploma.logo}}" alt="{{diploma.logo}}">
         </div>
         <div class="timeline-text">
-          <h6>{{diploma.diploma}}</h6>
-          <p>{{diploma.place}}</p>
+          <h6>{{"CV.EDUCATION.DIPLOMA.TITLE" | translate: {value1: diploma.diploma, value2: diploma.diploma_en} }}</h6>
+          <p>{{"CV.EDUCATION.DIPLOMA.PLACE" | translate: {value1: diploma.place, value2: diploma.place_en} }}</p>
           <p>{{diploma.city}}</p>
         </div>
       </div>
 
     </div>
     <div class="col-6">
-      <div class="single-timeline-content">
+      <div *ngIf="translate.currentLang==='fr'" class="single-timeline-content">
         <ul *ngFor="let desc of diploma.description" class="timeline-text-desc">
+          <li>{{desc}}</li>
+        </ul>
+      </div>
+      <div *ngIf="translate.currentLang==='en'" class="single-timeline-content">
+        <ul *ngFor="let desc of diploma.description_en" class="timeline-text-desc">
           <li>{{desc}}</li>
         </ul>
       </div>

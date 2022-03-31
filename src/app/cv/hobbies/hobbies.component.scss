@@ -55,13 +55,8 @@ body{
   .card-footer{
     background: none;
     border-top: none;
-    .media{
-      img{
-        border:solid 3px rgba(234,95,0,0.3);
-      }
-    }
   }
-  .card-meta{color:orange}
+  .card-meta{color:#aa8fd8}
   .card-body{
     transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
   }
@@ -76,6 +71,6 @@ body{
   .card-img-overlay {
     transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
     background: rgb(35,79,109);
-    background: linear-gradient(0deg, rgba(35,79,109,0.3785889355742297) 0%, rgba(69,95,113,1) 100%);
+    background: linear-gradient(0deg, rgba(191,108,132,0.3785889355742297) 0%, rgba(54,92,125,1) 100%);
   }
 }
