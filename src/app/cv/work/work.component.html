@@ -1,10 +1,10 @@
 <div class="single-timeline-area">
-  <div class="timeline-date">
-    <p>{{"CV.WORK.YEAR" | translate: {value1: work.year, value2: work.year_en} }}</p>
+  <div class="timeline-date" >
+    <p data-aos="zoom-in">{{"CV.WORK.YEAR" | translate: {value1: work.year, value2: work.year_en} }}</p>
   </div>
   <div class="row">
     <div class="col-12 col-md-6">
-        <div class="row single-timeline-content">
+        <div class="row single-timeline-content" data-aos="fade-right">
             <div class="col-12 col-lg-6">
               <div class="timeline-icon">
                 <img class="img-fluid" src="{{work.company_logo}}" alt="{{work.company}}">
@@ -20,12 +20,12 @@
       </div>
     </div>
     <div class="col-12 col-md-6">
-      <div *ngIf="translate.currentLang==='fr'" class="single-timeline-content">
+      <div *ngIf="translate.currentLang==='fr'" class="single-timeline-content" data-aos="fade-left">
         <ul *ngFor="let desc of work.description" class="timeline-text-desc">
           <li>{{desc}}</li>
         </ul>
       </div>
-      <div *ngIf="translate.currentLang==='en'" class="single-timeline-content">
+      <div *ngIf="translate.currentLang==='en'" class="single-timeline-content" data-aos="fade-left">
         <ul *ngFor="let desc of work.description_en" class="timeline-text-desc">
           <li>{{desc}}</li>
         </ul>
