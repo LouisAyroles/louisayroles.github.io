@@ -479,6 +479,50 @@ export const PROJECTS_FR: Project[] = [
   },
   {
     id: 5,
+    name: "Destiny",
+    type: Type.Perso,
+    short_description: "Un projet d'application web visant à mettre en relation les starts-ups et les investisseurs.",
+    short_description_en: "A web application which aims to connect start-ups and investors.",
+    description : "   Destiny Connexion est un projet que j'ai co-developpé avec Axel Laffite dans le cadre d'un lancement d'activité d'un de mes amis.Ce projet a été developpé grace à l'aide de NuxtJS pour le frontend qui est l'equivalent de VueJS avec un pré-rendu des pages HTML côté serveur."
+      + " Ce choix a été fait pour permettre dans l'avenir de bien pouvoir referencer le site web sur les differents moteurs de recherche. Le backend a ete developpé en Kotlin avec le framework SpringBoot." +
+    "Nous avons utilisé Tailwind pour sa facilité d'utilisation sur le côté responsive étant donné que c'est un framework CSS mobile first.",
+    description_en : "Destiny Connexion is a project that I co-developed with Axel Laffite as part of a business start-up for a friend of mine, using NuxtJS for the frontend, which is the equivalent of VueJS with a server-side pre-rendering of HTML pages."
+      + "This choice was made to allow the website to be well referenced in the future on different search engines. The backend was developed in Kotlin with the SpringBoot framework." +
+      "We used Tailwind for its ease of use on the responsive side as it is a mobile-first CSS framework",
+    profilPicture: "../assets/projects/destiny/destiny.png",
+    pictures: [
+      {
+        src: "../assets/projects/destiny/home.png",
+        desc: "Voici la version pc de la page d'accueil, j'ai dessiné l'image sur inkscape, un outil de dessin vectoriel disponible sur Linux.",
+        desc_en: "Here is the desktop version of the home page, I drew the image on inkscape, a vector drawing tool available on Linux.",
+      },
+      {
+        src: "../assets/projects/destiny/mobile2.png",
+        desc: "Tailwind nous a permis d'être efficace dans le développement de l'interface grace au mobile-first.",
+        desc_en: "Tailwind allowed us to be efficient in the development of the interface thanks to mobile-first.",
+      },
+      {
+        src: "../assets/projects/destiny/mobile.png",
+        desc: "L'application comporte 2 formulaires  qui permettent aux investisseurs de proposer leur competences et aux start-ups de presenter leurs projets.",
+        desc_en: "The application has two forms that allow investors to offer their skills and start-ups to present their projects.",
+      }
+    ],
+    techno: [ {photo: "../assets/techno/Intellij.svg", url: "https://www.jetbrains.com/fr-fr/idea/"},
+      {photo: "../assets/techno/nuxtjs.png", url: "https://nuxtjs.org/"},
+      {photo: "../assets/techno/github.png", url: "https://github.com"},
+      {photo: "../assets/techno/tailwind.svg", url: "https://tailwindcss.com/"},
+      {photo: "../assets/techno/html.png", url: "https://fr.wikipedia.org/wiki/HTML5"},
+      {photo: "../assets/techno/css3.png", url: "https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade"},
+      {photo: "../assets/techno/typescript.png", url: "https://fr.wikipedia.org/wiki/TypeScript"},
+      { photo: "../assets/techno/kotlin.png", url: "https://kotlinlang.org/"},
+      { photo: "../assets/techno/spring.png", url: "https://spring.io/guides/tutorials/spring-boot-kotlin/"}
+    ],
+    created: new Date(),
+    code: "https://github.com/LouisAyroles/DestinyInvestment",
+    site: undefined
+  },
+  {
+    id: 6,
     name: "Veterinaire",
     type: Type.Perso,
     short_description: "Un projet Angular de gestion d'animaux et de veterinaires.",
@@ -525,7 +569,7 @@ export const PROJECTS_FR: Project[] = [
     site: "https://veterinaire.herokuapp.com/"
   },
   {
-    id: 6,
+    id: 7,
     name: "Passion Fleur",
     type: Type.Perso,
     short_description: "Un projet personnel d'un site e-commerce.",
@@ -561,7 +605,7 @@ export const PROJECTS_FR: Project[] = [
     site: "https://passion-fleur.fr/"
   },
   {
-    id: 7,
+    id: 8,
     name: "Pokédex",
     type: Type.Perso,
     short_description: "Un projet personnel pour apprendre la technologie Angular.",
