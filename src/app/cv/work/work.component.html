@@ -3,7 +3,7 @@
     <p data-aos="zoom-in">{{"CV.WORK.YEAR" | translate: {value1: work.year, value2: work.year_en} }}</p>
   </div>
   <div class="row">
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-6" style="overflow-x: hidden">
         <div class="row single-timeline-content" data-aos="fade-right">
             <div class="col-12 col-lg-6">
               <div class="timeline-icon">
@@ -19,7 +19,7 @@
             </div>
       </div>
     </div>
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-6" style="overflow-x: hidden">
       <div *ngIf="translate.currentLang==='fr'" class="single-timeline-content" data-aos="fade-left">
         <ul *ngFor="let desc of work.description" class="timeline-text-desc">
           <li>{{desc}}</li>
