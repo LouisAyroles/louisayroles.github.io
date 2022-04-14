@@ -39,7 +39,7 @@ export class NavbarComponent implements OnInit {
     this.onResize();
     this.router.events.subscribe(event => {
       if (event instanceof NavigationStart) {
-        this.inverseColor = (event.url === '/contact') || (event.url ==='/hobbies') || event.url.startsWith('/project');
+        this.inverseColor = (event.url === '/contact') || (event.url ==='/hobbies') || event.url.startsWith('/project') || event.url.startsWith('/cv');
         this.isUnderlined = event.url;
       }
     });
