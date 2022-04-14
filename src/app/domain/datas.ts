@@ -298,6 +298,56 @@ export const HOBBIES : Hobie[] = [
 export const PROJECTS_FR: Project[] = [
   {
     id: 1,
+    name: "Capture the fly",
+    type: Type.Pro,
+    short_description: "Un jeu android réalisé lors d'une journée challenge",
+    short_description_en: "A personal project of an e-commerce site.",
+    description : "Capture The Fly est un jeu 2D composé d’un joueur qui se promène dans une carte et de chauve-souris qui vont attaquer ce joueur. Le déroulement du jeu est organisé en vague, " +
+      "des vagues de chauve souris vont attaquer tour à tour le joueur. Plus le joueur progresse " +
+      "dans le jeu et plus les vagues sont fournies en chauve souris. " +
+     "Nous avons rélaisés ce projet dans le cadre d'une journée challenge à l'université. Nous avions 1 journée pour prendre connaissance du sujet et developpé un jeu android par groupe de 4.",
+    description_en : "Capture The Fly is a 2D game consisting of a player walking around a map and bats attacking that player. The game is organized in waves, waves of bats will attack the player in turn. The more the player progresses " + " in the game, the more waves of bats will attack the player" +
+    "the more bats are added to the waves. " +
+      "We did this project as part of a challenge day at the university. We had 1 day to learn about the subject and develop an android game in groups of 4.",
+  profilPicture: "../assets/projects/flies/logo.png",
+    pictures: [
+      {
+        src: "../assets/projects/flies/screen1.png",
+        desc: "Survivez aux différentes attaques de chauves-souris en vous déplaçant dans la carte et en tuant les chauves souris.",
+        desc_en: "Survive the various bat attacks by moving around the map and killing the bats."
+      },
+      {
+        src: "../assets/projects/flies/screen2.png",
+        desc: "La barre verte en haut à droite représente le pouvoir qui se remplit petit à petit aussi. " +
+          "Quand la barre est remplie, le joueur peut secouer le téléphone pour tuer toutes les mouches qui sont dans l’écran.",
+        desc_en: "The green bar at the top right represents power, which also fills up gradually. When the bar is full, the player can shake the phone to kill all the flies on the screen.",
+      },
+      {
+        src: "../assets/projects/flies/screen3.png",
+        desc: "Le joueur à la possibilité de cacher le capteur de luminosité pour étourdir les chauve-souris qui sont arrêtés jusqu'à ce que le joueur arrête de cacher le capteur.",
+        desc_en: "The player has the option of hiding the light sensor to stun the bats which are stopped until the player stops hiding the sensor.",
+      },
+      {
+        src: "../assets/projects/flies/roadmap.png",
+        desc: "La roadmap.",
+        desc_en: "The roadmap."
+      },
+      {
+        src: "../assets/projects/flies/team.png",
+        desc: "La dream team.",
+        desc_en: "The dream team."
+      }
+    ],
+    techno: [{ photo: "../assets/techno/android.png", url: "https://www.android.com/intl/fr_fr/"},
+      { photo: "../assets/techno/github.png", url: "https://github.com"},
+      { photo: "../assets/techno/kotlin.png", url: "https://kotlinlang.org/"},
+    ],
+    created: new Date(),
+    code: undefined,
+    site: "https://passion-fleur.fr/"
+  },
+  {
+    id: 2,
     name: "RAID 5",
     type: Type.Pro,
     short_description: 'Un magnifique projet réalisé en L2 Informatique.',
@@ -336,7 +386,7 @@ export const PROJECTS_FR: Project[] = [
     site: undefined
   },
   {
-    id: 2,
+    id: 3,
     name: "GitSupervisor",
     type: Type.Pro,
     short_description: "Un projet de 6 mois réalisé pendant le Master 1.",
@@ -384,7 +434,7 @@ export const PROJECTS_FR: Project[] = [
     site: "https://git-supervisor.herokuapp.com/home"
   },
   {
-    id: 3,
+    id: 4,
     name: "LearnOcaml",
     type: Type.Pro,
     short_description: "Un projet de 3 mois réalisé pendant le stage de fin de Master 1.",
@@ -421,7 +471,7 @@ export const PROJECTS_FR: Project[] = [
     site: "https://pfitaxel.univ-tlse3.fr/"
   },
   {
-    id: 4,
+    id: 5,
     name: "NeOCampus",
     type: Type.Pro,
     short_description: "Un magnifique projet réalisé en stage de fin de licence.",
@@ -478,7 +528,7 @@ export const PROJECTS_FR: Project[] = [
     site: "https://www.irit.fr/neocampus/fr/"
   },
   {
-    id: 5,
+    id: 6,
     name: "Destiny",
     type: Type.Perso,
     short_description: "Un projet d'application web visant à mettre en relation les starts-ups et les investisseurs.",
@@ -522,7 +572,7 @@ export const PROJECTS_FR: Project[] = [
     site: undefined
   },
   {
-    id: 6,
+    id: 7,
     name: "Veterinaire",
     type: Type.Perso,
     short_description: "Un projet Angular de gestion d'animaux et de veterinaires.",
@@ -569,7 +619,7 @@ export const PROJECTS_FR: Project[] = [
     site: "https://veterinaire.herokuapp.com/"
   },
   {
-    id: 7,
+    id: 8,
     name: "Passion Fleur",
     type: Type.Perso,
     short_description: "Un projet personnel d'un site e-commerce.",
@@ -605,7 +655,7 @@ export const PROJECTS_FR: Project[] = [
     site: "https://passion-fleur.fr/"
   },
   {
-    id: 8,
+    id: 9,
     name: "Pokédex",
     type: Type.Perso,
     short_description: "Un projet personnel pour apprendre la technologie Angular.",
