@@ -301,7 +301,7 @@ export const PROJECTS_FR: Project[] = [
     name: "Capture the fly",
     type: Type.Pro,
     short_description: "Un jeu android réalisé lors d'une journée challenge",
-    short_description_en: "A personal project of an e-commerce site.",
+    short_description_en: "An android game made during a challenge day",
     description : "Capture The Fly est un jeu 2D composé d’un joueur qui se promène dans une carte et de chauve-souris qui vont attaquer ce joueur. Le déroulement du jeu est organisé en vague, " +
       "des vagues de chauve souris vont attaquer tour à tour le joueur. Plus le joueur progresse " +
       "dans le jeu et plus les vagues sont fournies en chauve souris. " +
