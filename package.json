@@ -38,7 +38,6 @@
     "emailjs-com": "^3.2.0",
     "express": "^4.17.1",
     "file-saver": "^2.0.5",
-    "file-server": "^2.2.0",
     "flag-icon-css": "^4.1.5",
     "jquery": "^3.6.0",
     "ng-apexcharts": "^1.6.0",
