@@ -21,7 +21,7 @@ import {TranslateModule} from "@ngx-translate/core";
   ],
     imports: [
         CommonModule,
-        TranslateModule
+        TranslateModule,
     ]
 })
 export class CvModule { }

@@ -5,6 +5,8 @@ import {CvService} from "./cv.service";
 import {Education} from "../domain/education";
 import {Experience} from "../domain/experience";
 import {Hobie} from "../domain/hobie";
+import * as FileSaver from 'file-saver';
+
 
 @Component({
   selector: 'app-cv',
@@ -20,6 +22,12 @@ export class CvComponent implements OnInit {
 
   constructor(private cvService : CvService){
 
+  }
+
+  downloadPdf() {
+    const pdfUrl = './assets/cv/CV_EN_AYROLES_LOUIS.pdf';
+    const pdfName = 'CV_AYROLES_LOUIS.pdf';
+    FileSaver.saveAs(pdfUrl, pdfName);
   }
 
 
