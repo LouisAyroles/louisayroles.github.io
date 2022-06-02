@@ -26,7 +26,7 @@ export class CvComponent implements OnInit {
   }
 
   downloadPdf() {
-      const pdfUrl = this.translateService.currentLang === 'en'? './assets/cv/CV_EN_AYROLES_LOUIS.pdf' : './assets/cv/CV_AYROLES_LOUIS.pdf';
+      const pdfUrl = this.translateService.currentLang === 'en'? 'assets/cv/CV_EN_AYROLES_LOUIS.pdf' : 'assets/cv/CV_AYROLES_LOUIS.pdf';
       window.open(pdfUrl, '_blank');
   }
 

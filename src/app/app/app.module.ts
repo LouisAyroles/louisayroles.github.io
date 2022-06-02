@@ -26,7 +26,7 @@ import { NgChartsModule } from 'ng2-charts';
 import {CvModule} from "../cv/cv.module";
 
 export function createTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+  return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
 }
 
 
