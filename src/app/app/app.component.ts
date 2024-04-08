@@ -16,10 +16,10 @@ export class AppComponent implements OnInit {
     translate.setDefaultLang('fr');
 
     let browserLang = this.translate.getBrowserLang();
-    if (browserLang.match( /fr/ )) {
+    if (browserLang?.match( /fr/ )) {
       this.translate.use( 'fr' );
     }
-    else if (browserLang.match( /en/ )) {
+    else if (browserLang?.match( /en/ )) {
       this.translate.use( 'en' );
     } else {
       this.translate.use( 'fr' );
