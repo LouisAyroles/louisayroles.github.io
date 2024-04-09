@@ -25,6 +25,7 @@ import {NgApexchartsModule} from "ng-apexcharts";
 import { NgChartsModule } from 'ng2-charts';
 import {CvModule} from "../cv/cv.module";
 import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
+import {ThemeToggleComponent} from "../dark-mode/theme-toggle/theme-toggle.component";
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -67,8 +68,9 @@ export function createTranslateLoader(http: HttpClient) {
     ContactComponent,
     HobbiesComponent,
     ToastComponent,
-     CloseMenuDirective
-    ],
+    CloseMenuDirective,
+    ThemeToggleComponent
+  ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
