@@ -24,6 +24,7 @@ import { CloseMenuDirective } from './close-menu.directive';
 import {NgApexchartsModule} from "ng-apexcharts";
 import { NgChartsModule } from 'ng2-charts';
 import {CvModule} from "../cv/cv.module";
+import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -32,6 +33,9 @@ export function createTranslateLoader(http: HttpClient) {
 
 
 @NgModule({
+    providers: [
+      {provide : LocationStrategy , useClass: HashLocationStrategy}
+    ],
     imports: [
         BrowserModule,
         NgApexchartsModule,
