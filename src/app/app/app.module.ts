@@ -58,7 +58,6 @@ export function createTranslateLoader(http: HttpClient) {
     FormsModule,
     NgbToastModule,
     CvModule,
-    FloatingButtonComponent
   ],
   declarations: [
     AppComponent,
@@ -71,7 +70,8 @@ export function createTranslateLoader(http: HttpClient) {
     HobbiesComponent,
     ToastComponent,
     CloseMenuDirective,
-    ThemeToggleComponent
+    ThemeToggleComponent,
+    FloatingButtonComponent
   ],
   bootstrap:    [ AppComponent ]
 })

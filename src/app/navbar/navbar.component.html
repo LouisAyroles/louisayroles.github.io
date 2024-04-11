@@ -101,17 +101,11 @@
         </li>
       </ul>
     </div>
-    <a *ngIf="!mobileView && !tabletView" class="btn btn-linkedin"
-       href="https://www.linkedin.com/in/louis-ayroles-4123b9200/" target="_blank" role="button">
-      <span class="fa fa-linkedin hide"></span> <span class="ro"> LinkedIn</span></a>
-
     <a *ngIf="!mobileView && tabletView" class="btn btn-linkedin"
        href="https://www.linkedin.com/in/louis-ayroles-4123b9200/" target="_blank" role="button">
       <span class="fa fa-linkedin hide"></span> <span class="ro"></span></a>
 
-    <a *ngIf="!mobileView && !tabletView" class="btn btn-github" href="https://github.com/LouisAyroles/portfolio"
-       target="_blank" role="button">
-      <span class="fa fa-github hide"></span> <span class="ro">  View on Github</span></a>
+    <a class="nav-link btn btn-contact" routerLink="contact">Contact</a>
 
     <a *ngIf="!mobileView && tabletView" class="btn btn-github" href="https://github.com/LouisAyroles/portfolio"
        target="_blank" role="button">
