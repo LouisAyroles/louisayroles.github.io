@@ -17,11 +17,9 @@
 }
 .fab-container:hover .sub-button:nth-child(2) {
   transform: translateY(-50px);
-  background-color: #000000;
 }
 .fab-container:hover .sub-button:nth-child(3) {
   transform: translateY(-100px);
-  background-color: #000000;
 }
 .fab-container:hover .sub-button:nth-child(4) {
   transform: translateY(-150px);
@@ -33,13 +31,24 @@
 }
 .fab-container:hover .sub-button:nth-child(6) {
   transform: translateY(-250px);
-  background-color: #0e76a8;
 }
+.moon-button {
+  width: 32px;
+  height: 32px;
+}
+svg .mooned {
+  transform: translate(-5px, 5px);
+}
+
+svg #overlay, body {
+  transition: all 1.2s ease-in-out;
+}
+
 .fab-container .fab {
   position: relative;
   height: 50px;
   width: 50px;
-  background-color: #000000;
+  background-color: #b516ad;
   border-radius: 50%;
   z-index: 2;
 }

@@ -3,12 +3,6 @@
     <a class="navbar-brand" href="#">
       <img src="assets/home/logo.png" alt="Louis Ayroles">
     </a>
-    <a (click)="switchToFrench()" class="btn btn-language" [ngClass]="{'outlined' : french}">
-      <span class="flag-icon flag-icon-fr flag-icon-squared flag-icon-left"></span>
-    </a>
-    <a (click)="switchToEnglish()" class="btn btn-language btn-last" [ngClass]="{'outlined' : english}">
-      <span class="flag-icon flag-icon-gb flag-icon-squared"></span>
-    </a>
     <app-theme-toggle></app-theme-toggle>
     <a *ngIf="mobileView" class="btn btn-github" href="https://github.com/LouisAyroles/portfolio" target="_blank"
        role="button">

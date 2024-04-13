@@ -6,7 +6,8 @@
   },
   "HEADER": {
     "NAME": "Louis Ayroles",
-    "TITLE": "I'm a young <b>Web Engineer</b>. Passionate about coding, I created this <b>Portfolio</b> to introduce myself."
+    "JOB": "Software engineer",
+    "SHORT_DESC": "Passionate about <b>coding</b>,<br> I created this <b>Portfolio</b> to introduce myself."
   },
   "HOME": {
     "PROJECTS" : "My Projects"

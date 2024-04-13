@@ -6,7 +6,8 @@
   },
   "HEADER": {
     "NAME": "Louis Ayroles",
-    "TITLE": "Je suis un jeune <b>Ingénieur Logiciel</b>. Passioné par le développement, j'ai crée ce <b>Portfolio</b> pour me présenter."
+    "JOB": "Ingénieur Logiciel",
+    "SHORT_DESC": "Passioné par le <b>développement</b>,<br> j'ai crée ce <b>Portfolio</b> pour me présenter."
   },
   "HOME": {
     "PROJECTS" : "Mes projets"

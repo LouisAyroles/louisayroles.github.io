@@ -10,6 +10,7 @@ export class FloatingButtonComponent {
 
   french : boolean;
   english : boolean;
+  mooned : boolean;
 
   constructor(private translateService : TranslateService) {
   }
@@ -26,4 +27,7 @@ export class FloatingButtonComponent {
     this.english = true;
   }
 
+  toggleMoon() {
+    this.mooned = !this.mooned;
+  }
 }
