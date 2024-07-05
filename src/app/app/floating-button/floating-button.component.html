@@ -40,18 +40,18 @@
   </div>
   <div class="sub-button shadow" >
     <a role="button" class="moon-button" (click)="toggleMoon()">
-      <svg id="sunmoon" width="64" height="64">
+      <svg id="sunmoon" width="32" height="32">
         <defs>
           <mask id="hole">
             <rect width="100%" height="100%" fill="white"></rect>
-            <circle [class.mooned]="mooned" id="overlay" r="8" cx="18" cy="-2" fill="black"></circle>
+            <circle [class.mooned]="mooned" id="overlay" r="22" cx="46" cy="-8" fill="black"></circle>
           </mask>
           <filter id="blur">
             <feDropShadow dx="0" dy="0" stdDeviation="2" flood-color="gold"></feDropShadow>
           </filter>
         </defs>
         <g filter="url(#blur)">
-          <circle fill="gold" id="donut" r="8" cx="8" cy="8" mask="url(#hole)"></circle>
+          <circle fill="gold" id="donut" r="16" cx="16" cy="16" mask="url(#hole)"></circle>
         </g>
       </svg>
     </a>

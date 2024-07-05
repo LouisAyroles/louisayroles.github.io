@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {TranslateService} from "@ngx-translate/core";
+import {ThemeService} from "../../dark-mode/theme.service";
 
 @Component({
   selector: 'app-floating-button',
@@ -10,9 +11,11 @@ export class FloatingButtonComponent {
 
   french : boolean;
   english : boolean;
-  mooned : boolean;
+  mooned : boolean = true;
+  theme: string = 'bootstrap-dark';
 
-  constructor(private translateService : TranslateService) {
+  constructor(private translateService : TranslateService,
+              private themeService: ThemeService) {
   }
 
   switchToFrench(){
@@ -29,5 +32,11 @@ export class FloatingButtonComponent {
 
   toggleMoon() {
     this.mooned = !this.mooned;
+    if (this.theme === 'bootstrap') {
+      this.theme = 'bootstrap-dark';
+    } else  {
+      this.theme = 'bootstrap';
+    }
+    this.themeService.setTheme(this.theme)
   }
 }

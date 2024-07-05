@@ -75,9 +75,9 @@ h1{
   overflow:auto;
 }
 
-.custom-container{
+.custom-container-header{
   width: 90%;
-  height: 100vh;
+  height: calc(100vh - 172px);
   margin-right: auto;
   margin-left: auto;
 }

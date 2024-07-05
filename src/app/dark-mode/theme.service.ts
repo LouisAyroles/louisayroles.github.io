@@ -14,7 +14,7 @@ export class ThemeService {
 
   initialSetting: ThemeObject = {
     oldValue: null,
-    newValue: 'bootstrap'
+    newValue: 'bootstrap-dark'
   };
 
   themeSelection: BehaviorSubject<ThemeObject> =  new BehaviorSubject<ThemeObject>(this.initialSetting);
