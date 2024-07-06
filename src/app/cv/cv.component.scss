@@ -1,18 +1,7 @@
 h1{
   font-size: 3rem;
   font-family: 'Montserrat',sans-serif;
-  &.education{
-    color: #5c5b7c
-  }
-  &.skills{
-    color: #355c7a
-  }
-  &.work{
-    color: #014d93
-  }
-  &.hobbies{
-    color: #002649
-  }
+  color: #b516ad;
 }
 
 @media only screen and (max-width: 575px) {
@@ -33,13 +22,13 @@ h2{
   margin-right: 2em;
   max-width: 52px;
   max-height: 52px;
-  &.education{
+  &.work{
     filter: invert(37%) sepia(9%) saturate(1334%) hue-rotate(203deg) brightness(96%) contrast(94%);
   }
   &.skills{
     filter: invert(27%) sepia(71%) saturate(376%) hue-rotate(167deg) brightness(101%) contrast(88%);
   }
-  &.work{
+  &.education{
     filter: invert(19%) sepia(85%) saturate(1856%) hue-rotate(193deg) brightness(94%) contrast(99%);
   }
   &.hobbies{
@@ -58,36 +47,6 @@ h2{
 .timeline_area {
   position: relative;
   z-index: 1;
-}
-.btn-cv{
-  background: #0e76a8;
-  color: white;
-  border-radius: 50%;
-  & span{
-    font-size: 1.5rem;
-    padding: 0.5rem
-  }
-}
-
-.btn-cv:hover{
-  color: white;
-  border: 2px solid #0e76a8;
-  background-color: white;
-  & span{
-    color: #0e76a8 !important;
-  }
-}
-
-.floating-button{
-  @media screen and (min-width: 768px) {
-    right: 1rem;
-    left: auto;
-  }
-  z-index: 2;
-  position: fixed;
-  bottom: 1rem;
-  left: 0.8rem;
-  right: auto;
 }
 
 .single-timeline-content {

@@ -1,26 +1,19 @@
-<div class="floating-button">
-  <a class="btn btn-cv" role="button" target="_blank"
-     (click)="downloadPdf()">
-    <span class="fa fa-download hide text-white"  ></span></a>
-</div>
-
-
-<!--- Education -->
-<div class="center shadow-lg p-3 mb-5 rounded">
+<!-- Work -->
+<div class="center p-3 mt-5 rounded">
   <div class="title-container">
-    <img class="icon education" src="assets/cv/education.png" alt="skills">
-    <h1 class="education"> {{"CV.EDUCATION.TITLE" | translate }}</h1>
+    <img class="icon work" src="assets/cv/work.png" alt="skills">
+    <h1 class="work"> {{"CV.WORK.TITLE" | translate }}</h1>
   </div>
 </div>
 <section class="timeline_area section_padding_130">
   <div class="container">
     <div class="row">
       <!-- Timeline Area-->
-        <div *ngFor="let eduItem of education">
-          <app-diploma
-            [diploma]="eduItem">
-          </app-diploma>
-        </div>
+      <div *ngFor="let expItem of experience">
+        <app-work
+          [work]="expItem">
+        </app-work>
+      </div>
     </div>
   </div>
 </section>
@@ -68,30 +61,27 @@
     </div>
   </div>
 
-
-  <div class="center shadow-lg p-3 mb-5 bg-white rounded">
+  <!--- Education -->
+  <div class="center shadow-lg p-3 mb-5 rounded">
     <div class="title-container">
-       <img class="icon work" src="assets/cv/work.png" alt="skills">
-       <h1 class="work"> {{"CV.WORK.TITLE" | translate }}</h1>
-     </div>
+      <img class="icon education" src="assets/cv/education.png" alt="skills">
+      <h1 class="education"> {{"CV.EDUCATION.TITLE" | translate }}</h1>
+    </div>
   </div>
-   <section class="timeline_area section_padding_130">
-     <div class="container">
-       <div class="row">
-         <!-- Timeline Area-->
-           <div *ngFor="let expItem of experience">
-             <app-work
-               [work]="expItem">
-             </app-work>
-           </div>
-       </div>
-     </div>
-   </section>
+  <section class="timeline_area section_padding_130">
+    <div class="container">
+      <div class="row">
+        <!-- Timeline Area-->
+        <div *ngFor="let eduItem of education">
+          <app-diploma
+            [diploma]="eduItem">
+          </app-diploma>
+        </div>
+      </div>
+    </div>
+  </section>
 
-
-
-
-  <div class="center shadow-lg p-3 mb-5 bg-white rounded">
+  <div class="center shadow-lg p-3 mb-5 rounded">
     <div class="title-container">
        <img class="icon hobbies" src="assets/cv/hobbies.png" alt="skills">
        <h1 class="hobbies"> {{"CV.HOBBIES.TITLE" | translate }}</h1>

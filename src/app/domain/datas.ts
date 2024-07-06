@@ -97,6 +97,26 @@ export const EDUCATION : Education[] =
 export const EXPERIENCE : Experience[] = [
   {
     id: 1,
+    company: "AIR FRANCE",
+    year: "Janvier 2024 - Aujourd'hui",
+    year_en: "January 2024 - Today",
+    city: "Toulouse",
+    occupation: "Ingénieur Logiciel",
+    occupation_en: "Software Engineer",
+    description: [
+      "Développement application web en Spring et Angular",
+      "Outil d'aide à la decision et de gestion de l'operationel",
+      "Migration de l'application vers SpringBoot 3+ pour préparer une migration cloud"
+    ],
+    description_en: [
+      "Web application development in JAVA and Angular",
+      "Tool to help decision taking and operational handle",
+      "Migration of the app to SpringBoot 3+ to prepare the cloud migration to cloud"
+    ],
+    company_logo :"assets/cv/infotel.png"
+  },
+  {
+    id: 2,
     company: "INFOTEL",
     year: "Septembre 2021 - Aujourd'hui",
     year_en: "September 2021 - Today",
@@ -116,7 +136,7 @@ export const EXPERIENCE : Experience[] = [
     company_logo :"assets/cv/infotel.png"
   },
   {
-    id: 2,
+    id: 3,
     company: "IRIT / Equipe ACADIE",
     year: "Mai, Juin, Juillet 2021",
     year_en: "May, June, July 2021",
@@ -137,7 +157,7 @@ export const EXPERIENCE : Experience[] = [
     company_logo :"assets/cv/irit.png"
   },
   {
-    id: 3,
+    id: 4,
     company: "IRIT / Equipe SMAC",
     year: "Avril,Mai 2020",
     year_en: "April, May 2020",
@@ -157,7 +177,7 @@ export const EXPERIENCE : Experience[] = [
     company_logo :"assets/cv/irit.png"
   },
   {
-    id: 4,
+    id: 5,
     company: "SYSCO FRANCE",
     year: "Étés 2018,2019 & 2020",
     year_en: "Summer 2018,2019 & 2020",
@@ -177,7 +197,7 @@ export const EXPERIENCE : Experience[] = [
     company_logo :"assets/cv/sysco.png"
   },
   {
-    id: 5,
+    id: 6,
     company: "COPEYRE CANOE",
     year: "Étés 2015 & 2016",
     year_en: "Summer 2015 & 2016",
@@ -197,7 +217,7 @@ export const EXPERIENCE : Experience[] = [
     company_logo :"assets/cv/copeyre.png"
   },
   {
-    id: 6,
+    id: 7,
     company: "University Moto",
     year: "Vacances 2014",
     year_en: "Holidays 2014",
@@ -215,7 +235,7 @@ export const EXPERIENCE : Experience[] = [
     company_logo :"assets/cv/university.png"
   },
   {
-    id: 7,
+    id: 8,
     company: "Garage Pompougnac",
     year: "Étés 2013 & 2014",
     year_en: "Summer 2015 & 2016",
@@ -233,7 +253,7 @@ export const EXPERIENCE : Experience[] = [
     company_logo :"assets/cv/garage.png"
   },
   {
-    id: 8,
+    id: 9,
     company: "Feronnerie Malbeth",
     year: "Étés 2015/2016",
     year_en: "Summer 2015/2016",
