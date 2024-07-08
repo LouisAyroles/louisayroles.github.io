@@ -113,13 +113,13 @@ export const EXPERIENCE : Experience[] = [
       "Tool to help decision taking and operational handle",
       "Migration of the app to SpringBoot 3+ to prepare the cloud migration to cloud"
     ],
-    company_logo :"assets/cv/infotel.png"
+    company_logo :"assets/cv/AirFrance.png"
   },
   {
     id: 2,
     company: "INFOTEL",
-    year: "Septembre 2021 - Aujourd'hui",
-    year_en: "September 2021 - Today",
+    year: "Septembre 2021 - Décembre 2023",
+    year_en: "September 2021 - December 2023",
     city: "Toulouse",
     occupation: "Ingénieur Logiciel",
     occupation_en: "Software Engineer",

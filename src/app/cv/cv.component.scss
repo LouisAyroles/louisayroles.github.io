@@ -22,18 +22,7 @@ h2{
   margin-right: 2em;
   max-width: 52px;
   max-height: 52px;
-  &.work{
-    filter: invert(37%) sepia(9%) saturate(1334%) hue-rotate(203deg) brightness(96%) contrast(94%);
-  }
-  &.skills{
-    filter: invert(27%) sepia(71%) saturate(376%) hue-rotate(167deg) brightness(101%) contrast(88%);
-  }
-  &.education{
-    filter: invert(19%) sepia(85%) saturate(1856%) hue-rotate(193deg) brightness(94%) contrast(99%);
-  }
-  &.hobbies{
-    filter: invert(12%) sepia(32%) saturate(3685%) hue-rotate(188deg) brightness(90%) contrast(103%);
-  }
+  filter: invert(17%) sepia(94%) saturate(2905%) hue-rotate(290deg) brightness(95%) contrast(103%);
 }
 
 .center{
@@ -49,7 +38,4 @@ h2{
   z-index: 1;
 }
 
-.single-timeline-content {
-  background-color: white !important;
-}
 
