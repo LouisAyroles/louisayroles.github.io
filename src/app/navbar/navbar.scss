@@ -1,16 +1,17 @@
 
-:host-context(bootstrap) {
-  .navbar{
-    background-color: lightgrey;
-    border-color: darkgrey;
+:host-context(.bootstrap) {
+  .brand-themed {
+    filter: invert(17%) sepia(94%) saturate(2905%) hue-rotate(290deg) brightness(95%) contrast(103%);
+  }
+  a {
+    color: black !important;
+  }
+  .btn-contact{
+    color: white !important;
   }
 }
 
-:host-context(bootstrap-dark) {
-  .navbar{
-    background-color: rgb(22 27 34);
-    border-color: darkgrey;
-  }
+:host-context(.bootstrap-dark) {
 }
 
 .flag-icon{
@@ -29,10 +30,6 @@
 .contact{
   background: white !important;
   height: 100%;
-}
-
-nav .navbar-nav li a{
-  color: white;
 }
 
 
@@ -148,11 +145,6 @@ nav .navbar-nav li a {
     }
     color: #ad6882;
     background: white;
-  }
-  &:hover{
-    box-shadow: 0 2px 1px -1px white;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
   }
 }
 
