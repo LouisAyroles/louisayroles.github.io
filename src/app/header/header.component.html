@@ -29,7 +29,9 @@
 
     <div *ngIf="mobileView" class="row">
       <div class="col text animate__animated animate__fadeInDownBig">
-        <h1 [innerHTML]="'HEADER.TITLE' | translate"></h1>
+        <h1 class="name" [innerHTML]="'HEADER.NAME' | translate"></h1>
+        <h1 class="job" [innerHTML]="'HEADER.JOB' | translate"></h1>
+        <h1 class="short_desc" [innerHTML]="'HEADER.SHORT_DESC' | translate"></h1>
       </div>
       <div class="col  animate__animated animate__flip">
         <img id="banner" class="img-fluid" src="assets/home/banner.png" alt="">

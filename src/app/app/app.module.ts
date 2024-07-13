@@ -19,7 +19,7 @@ import {ProjectModule} from "../project/project.module";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {FormsModule} from "@angular/forms";
 import { ToastComponent } from './toast/toast.component';
-import {NgbToastModule} from "@ng-bootstrap/ng-bootstrap";
+import {NgbModule, NgbToastModule} from "@ng-bootstrap/ng-bootstrap";
 import { CloseMenuDirective } from './close-menu.directive';
 import {NgApexchartsModule} from "ng-apexcharts";
 import { NgChartsModule } from 'ng2-charts';
@@ -58,6 +58,7 @@ export function createTranslateLoader(http: HttpClient) {
     FormsModule,
     NgbToastModule,
     CvModule,
+    NgbModule
   ],
   declarations: [
     AppComponent,

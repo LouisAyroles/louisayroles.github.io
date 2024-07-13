@@ -11,7 +11,16 @@
   }
 }
 
-:host-context(.bootstrap-dark) {
+:host-context(.bootstrap-dark){
+  .fa.fa-bars::before {
+    color: white;
+  }
+  .navbar{
+    background-color: #161b22;
+  }
+  .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: #adadad;
+  }
 }
 
 .flag-icon{
