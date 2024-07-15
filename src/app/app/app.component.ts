@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import {Component, Renderer2} from '@angular/core';
 import { OnInit } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import * as AOS from 'aos';
+import {ThemeService} from "../dark-mode/theme.service";
 
 
 @Component({
@@ -11,7 +12,9 @@ import * as AOS from 'aos';
 })
 export class AppComponent implements OnInit {
 
-  constructor( public translate: TranslateService) {
+  constructor( private themeService : ThemeService,
+               public translate: TranslateService,
+               private renderer: Renderer2) {
     this.translate.addLangs(["en", "fr"]);
     translate.setDefaultLang('fr');
 
@@ -31,5 +34,11 @@ export class AppComponent implements OnInit {
       {duration: 1300,
       }
     );
+    this.themeService.themeChanges().subscribe(theme => {
+      if (theme.oldValue) {
+        this.renderer.removeClass(document.body, theme.oldValue);
+      }
+      this.renderer.addClass(document.body, theme.newValue);
+    })
   }
 }

@@ -4,31 +4,79 @@
 h1{
     font-family: 'Montserrat', sans-serif;
     font-size: 3rem;
-    color: white;
 }
 #banner{
-    max-width: 700px;
-    height: auto;
-    float: left;
+  max-width: 70%;
+  max-height: 70%;
+  margin: auto;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right: 0;
 }
 .text{
-  text-align: justify;
   display:flex;
+  flex-direction: column;
   justify-content:center;
-  align-items:center;
+  max-width: 85%;
+  height: 100%;
+  margin: 0 0 0 auto;
+  padding: 10px;
+  position: relative;
 }
-.gradient{
-  background: #355C7D;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+.name {
+  color: #b516ad;
+  font-size: 2.5rem;
+}
+
+.job {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.short_desc {
+  font-size: 1.5rem;
+}
+
+.button-header {
+    display: flex;
+    flex-direction: row;
+   .button-cv {
+     height: 32px;
+     width: 40px;
+   }
+  &:nth-child(2){
+    padding-left: 50px;
+  }
+  &:hover{
+    cursor: pointer;
+  }
+  h1{
+    font-size: 1.4rem;
+    color: #b516ad;
+    margin: 0;
+  }
+}
+
+.buttons-header{
+  display: flex;
+  flex-direction: row;
+}
+
+.row{
+  height: 100%;
 }
 
 .col{
   overflow:auto;
 }
 
-.custom-container{
+.custom-container-header{
   width: 90%;
+  height: calc(100vh - 172px);
   margin-right: auto;
   margin-left: auto;
 }
@@ -43,12 +91,47 @@ img {
   .row{
     display: block;
   }
-
+  #banner {
+    position: relative;
+  }
 
 }
 
 @media only screen and (max-width: 425px) {
   h1{
     font-size: 1.5rem;
+  }
+  .name {
+    font-size: 2rem;
+  }
+
+  .job {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .short_desc {
+    font-size: 1rem;
+  }
+  .custom-container {
+    width: 200px;
+    height: 200px;
+    position: relative;
+  }
+  .custom-container-header {
+    height: calc(100vh - 212px);
+  }
+  .row {
+    height: 50%;
+    margin-top: 50px;
+  }
+  .col {
+    overflow: hidden;
+  }
+  #banner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
   }
 }

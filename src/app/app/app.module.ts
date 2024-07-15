@@ -19,12 +19,14 @@ import {ProjectModule} from "../project/project.module";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {FormsModule} from "@angular/forms";
 import { ToastComponent } from './toast/toast.component';
-import {NgbToastModule} from "@ng-bootstrap/ng-bootstrap";
+import {NgbModule, NgbToastModule} from "@ng-bootstrap/ng-bootstrap";
 import { CloseMenuDirective } from './close-menu.directive';
 import {NgApexchartsModule} from "ng-apexcharts";
 import { NgChartsModule } from 'ng2-charts';
 import {CvModule} from "../cv/cv.module";
-import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
+import {HashLocationStrategy, LocationStrategy, NgOptimizedImage} from '@angular/common';
+import {ThemeToggleComponent} from "../dark-mode/theme-toggle/theme-toggle.component";
+import {FloatingButtonComponent} from "./floating-button/floating-button.component";
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -36,27 +38,29 @@ export function createTranslateLoader(http: HttpClient) {
     providers: [
       {provide : LocationStrategy , useClass: HashLocationStrategy}
     ],
-    imports: [
-        BrowserModule,
-        NgApexchartsModule,
-        NgChartsModule,
-        HttpClientModule,
-        TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: createTranslateLoader,
-                deps: [HttpClient]
-            }
-        }),
-        RouterModule,
-        AppRoutingModule,
-        NgxExtendedPdfViewerModule,
-        ProjectModule,
-        FontAwesomeModule,
-        FormsModule,
-        NgbToastModule,
-        CvModule
-    ],
+  imports: [
+    BrowserModule,
+    NgApexchartsModule,
+    NgChartsModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: createTranslateLoader,
+        deps: [HttpClient]
+      }
+    }),
+    RouterModule,
+    AppRoutingModule,
+    NgxExtendedPdfViewerModule,
+    ProjectModule,
+    FontAwesomeModule,
+    FormsModule,
+    NgbToastModule,
+    CvModule,
+    NgbModule,
+    NgOptimizedImage
+  ],
   declarations: [
     AppComponent,
     HeaderComponent,
@@ -67,8 +71,10 @@ export function createTranslateLoader(http: HttpClient) {
     ContactComponent,
     HobbiesComponent,
     ToastComponent,
-     CloseMenuDirective
-    ],
+    CloseMenuDirective,
+    ThemeToggleComponent,
+    FloatingButtonComponent
+  ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

@@ -97,9 +97,49 @@ export const EDUCATION : Education[] =
 export const EXPERIENCE : Experience[] = [
   {
     id: 1,
+    company: "AIR FRANCE",
+    year: "Janvier 2024 - Aujourd' hui",
+    year_en: "January 2024 - Today",
+    city: "Toulouse",
+    occupation: "Ingénieur Logiciel",
+    occupation_en: "Software Engineer",
+    description: [
+      "Développement application web en Spring et Angular",
+      "Outil d'aide à la decision et de gestion de l'operationel",
+      "Portefeuille d'applications liés à la maintenance des moteurs"
+    ],
+    description_en: [
+      "Web application development in JAVA and Angular",
+      "Tool to help decision taking and operational handle",
+      "Portfolio of engine maintenance applications"
+    ],
+    company_logo :"assets/cv/AirFrance.png"
+  },
+  {
+    id: 2,
+    company: "Université Paul Sabatier",
+    year: "",
+    year_en: "",
+    city: "Toulouse",
+    occupation: "Enseignant",
+    occupation_en: "Teacher",
+    description: [
+      "Prise en charge d'une promotion de master 2 pour donner des cours théorique et pratique de DevOps",
+      "Gestion de la conteneurisation d'une application avec docket et docker compose",
+      "Gestion de CI/CD avec github actions"
+    ],
+    description_en: [
+      "Taking charge of a class of Masters 2 students to give theoretical and practical DevOps courses",
+      "Managing application containerisation with docket and docker compose",
+      "CI/CD management with github actions"
+    ],
+    company_logo :"assets/cv/paulsab.png"
+  },
+  {
+    id: 3,
     company: "INFOTEL",
-    year: "Septembre 2021 - Aujourd'hui",
-    year_en: "September 2021 - Today",
+    year: "Septembre 2021 - Décembre 2023",
+    year_en: "September 2021 - December 2023",
     city: "Toulouse",
     occupation: "Ingénieur Logiciel",
     occupation_en: "Software Engineer",
@@ -116,7 +156,7 @@ export const EXPERIENCE : Experience[] = [
     company_logo :"assets/cv/infotel.png"
   },
   {
-    id: 2,
+    id: 4,
     company: "IRIT / Equipe ACADIE",
     year: "Mai, Juin, Juillet 2021",
     year_en: "May, June, July 2021",
@@ -137,7 +177,7 @@ export const EXPERIENCE : Experience[] = [
     company_logo :"assets/cv/irit.png"
   },
   {
-    id: 3,
+    id: 5,
     company: "IRIT / Equipe SMAC",
     year: "Avril,Mai 2020",
     year_en: "April, May 2020",
@@ -157,7 +197,7 @@ export const EXPERIENCE : Experience[] = [
     company_logo :"assets/cv/irit.png"
   },
   {
-    id: 4,
+    id: 6,
     company: "SYSCO FRANCE",
     year: "Étés 2018,2019 & 2020",
     year_en: "Summer 2018,2019 & 2020",
@@ -177,7 +217,7 @@ export const EXPERIENCE : Experience[] = [
     company_logo :"assets/cv/sysco.png"
   },
   {
-    id: 5,
+    id: 7,
     company: "COPEYRE CANOE",
     year: "Étés 2015 & 2016",
     year_en: "Summer 2015 & 2016",
@@ -197,7 +237,7 @@ export const EXPERIENCE : Experience[] = [
     company_logo :"assets/cv/copeyre.png"
   },
   {
-    id: 6,
+    id: 8,
     company: "University Moto",
     year: "Vacances 2014",
     year_en: "Holidays 2014",
@@ -215,7 +255,7 @@ export const EXPERIENCE : Experience[] = [
     company_logo :"assets/cv/university.png"
   },
   {
-    id: 7,
+    id: 9,
     company: "Garage Pompougnac",
     year: "Étés 2013 & 2014",
     year_en: "Summer 2015 & 2016",
@@ -233,7 +273,7 @@ export const EXPERIENCE : Experience[] = [
     company_logo :"assets/cv/garage.png"
   },
   {
-    id: 8,
+    id: 10,
     company: "Feronnerie Malbeth",
     year: "Étés 2015/2016",
     year_en: "Summer 2015/2016",
@@ -463,7 +503,7 @@ export const PROJECTS_FR: Project[] = [
       }
     ],
     techno: [{photo: "assets/techno/ocaml.png", url: "https://ocaml.org/index.fr.html"},
-      {photo: "assets/techno/elisp.png", url: "https://www.gnu.org/software/emacs/manual/html_node/elisp/"},
+      {photo: "assets/techno/elisp.svg", url: "https://www.gnu.org/software/emacs/manual/html_node/elisp/"},
       {photo: "assets/techno/github.png", url: "https://www.github.com"}
     ],
     created: new Date(),

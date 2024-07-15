@@ -45,10 +45,8 @@ export class NavbarComponent implements OnInit {
     });
   }
 
-
-
   toggleNavbar() {
-    this.navbarOpen = !this.navbarOpen;
+    this.isCollapsed = true;
   }
 
 

@@ -1,8 +1,26 @@
 
-.navbar{
-    background: #355C7D;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+:host-context(.bootstrap) {
+  .brand-themed {
+    filter: invert(17%) sepia(94%) saturate(2905%) hue-rotate(290deg) brightness(95%) contrast(103%);
+  }
+  a {
+    color: black !important;
+  }
+  .btn-contact{
+    color: white !important;
+  }
+}
+
+:host-context(.bootstrap-dark){
+  .fa.fa-bars::before {
+    color: white;
+  }
+  .navbar{
+    background-color: #161b22;
+  }
+  .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: #adadad;
+  }
 }
 
 .flag-icon{
@@ -23,10 +41,6 @@
   height: 100%;
 }
 
-nav .navbar-nav li a{
-  color: white;
-}
-
 
 .btn-linkedin{
   margin-left: 1rem;
@@ -43,6 +57,13 @@ nav .navbar-nav li a{
   margin-left: 1rem;
   background: white;
   color: #1f335b;
+  outline: none !important;
+}
+
+.btn-contact{
+  margin-left: 1rem;
+  background: #b516ad;
+  color: white;
   outline: none !important;
 }
 
@@ -133,11 +154,6 @@ nav .navbar-nav li a {
     }
     color: #ad6882;
     background: white;
-  }
-  &:hover{
-    box-shadow: 0 2px 1px -1px white;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
   }
 }
 
