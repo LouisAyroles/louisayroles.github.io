@@ -108,6 +108,7 @@ img {
   .job {
     font-size: 2rem;
     font-weight: 700;
+    padding-bottom: 40px;
   }
 
   .short_desc {
@@ -115,7 +116,7 @@ img {
   }
   .custom-container {
     width: 200px;
-    height: 200px;
+    height: 400px;
     position: relative;
   }
   .custom-container-header {
@@ -130,8 +131,10 @@ img {
   }
   #banner{
     position: absolute;
-    top: 50%;
+    top: 100%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
+    max-width: 90%;
+    max-height: 100%;
   }
 }
