@@ -1,7 +1,11 @@
 main{
   min-height: calc(100vh - 131px);
 }
-
+@media only screen and (max-width: 425px) {
+  main {
+    min-height: calc(100vh - 183px);
+  }
+}
 body,html{
   min-height: 100vh;
 }

@@ -41,13 +41,13 @@
           <a class="nav-link" (click)="toggleNavbar()" [class.underlined]="isUnderlined === '/hobbies'"
              routerLink="hobbies">{{ "NAVBAR.HOBBIES" | translate }}</a>
         </li>
-        <li class="nav-item">
-          <a *ngIf="mobileView" class="nav-link" (click)="toggleNavbar()" [class.underlined]="isUnderlined === '/contact'"
+        <li *ngIf="mobileView" class="nav-item">
+          <a class="nav-link" (click)="toggleNavbar()" [class.underlined]="isUnderlined === '/contact'"
              routerLink="contact">Contact</a>
 
         </li>
       </ul>
     </div>
-    <a *ngIf="!mobileView && !tabletView" class="nav-link btn btn-contact" routerLink="contact">Contact</a>
+    <a *ngIf="!mobileView" class="nav-link btn btn-contact" routerLink="contact">Contact</a>
   </div>
 </nav>

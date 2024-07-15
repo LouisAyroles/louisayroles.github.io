@@ -24,7 +24,7 @@ import { CloseMenuDirective } from './close-menu.directive';
 import {NgApexchartsModule} from "ng-apexcharts";
 import { NgChartsModule } from 'ng2-charts';
 import {CvModule} from "../cv/cv.module";
-import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
+import {HashLocationStrategy, LocationStrategy, NgOptimizedImage} from '@angular/common';
 import {ThemeToggleComponent} from "../dark-mode/theme-toggle/theme-toggle.component";
 import {FloatingButtonComponent} from "./floating-button/floating-button.component";
 
@@ -58,7 +58,8 @@ export function createTranslateLoader(http: HttpClient) {
     FormsModule,
     NgbToastModule,
     CvModule,
-    NgbModule
+    NgbModule,
+    NgOptimizedImage
   ],
   declarations: [
     AppComponent,
