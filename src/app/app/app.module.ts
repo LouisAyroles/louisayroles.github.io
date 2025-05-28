@@ -2,7 +2,7 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {TranslateModule,TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
-import {HttpClientModule, HttpClient, HttpBackend} from '@angular/common/http';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 import { AppComponent }  from './app.component';
 import {HeaderComponent} from "../header/header.component";
@@ -34,47 +34,41 @@ export function createTranslateLoader(http: HttpClient) {
 
 
 
-@NgModule({
-    providers: [
-      {provide : LocationStrategy , useClass: HashLocationStrategy}
+@NgModule({ declarations: [
+        AppComponent,
+        HeaderComponent,
+        NavbarComponent,
+        FooterComponent,
+        HomepageComponent,
+        CvComponent,
+        ContactComponent,
+        HobbiesComponent,
+        ToastComponent,
+        CloseMenuDirective,
+        ThemeToggleComponent,
+        FloatingButtonComponent
     ],
-  imports: [
-    BrowserModule,
-    NgApexchartsModule,
-    NgChartsModule,
-    HttpClientModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: createTranslateLoader,
-        deps: [HttpClient]
-      }
-    }),
-    RouterModule,
-    AppRoutingModule,
-    NgxExtendedPdfViewerModule,
-    ProjectModule,
-    FontAwesomeModule,
-    FormsModule,
-    NgbToastModule,
-    CvModule,
-    NgbModule,
-    NgOptimizedImage
-  ],
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    NavbarComponent,
-    FooterComponent,
-    HomepageComponent,
-    CvComponent,
-    ContactComponent,
-    HobbiesComponent,
-    ToastComponent,
-    CloseMenuDirective,
-    ThemeToggleComponent,
-    FloatingButtonComponent
-  ],
-  bootstrap:    [ AppComponent ]
-})
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        NgApexchartsModule,
+        NgChartsModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: createTranslateLoader,
+                deps: [HttpClient]
+            }
+        }),
+        RouterModule,
+        AppRoutingModule,
+        NgxExtendedPdfViewerModule,
+        ProjectModule,
+        FontAwesomeModule,
+        FormsModule,
+        NgbToastModule,
+        CvModule,
+        NgbModule,
+        NgOptimizedImage], providers: [
+        { provide: LocationStrategy, useClass: HashLocationStrategy },
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class AppModule { }
