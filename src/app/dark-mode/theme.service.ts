@@ -33,4 +33,8 @@ export class ThemeService {
   themeChanges(): Observable<ThemeObject> {
     return this.themeSelection.asObservable();
   }
+
+  getTheme() : string {
+    return this.initialSetting.newValue;
+  }
 }
