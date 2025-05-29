@@ -1,21 +1,23 @@
 import {Component, HostListener, Input, OnInit} from '@angular/core';
 import {Experience} from "../../domain/experience";
-import {TranslateService} from "@ngx-translate/core";
+import {TranslateModule, TranslateService} from "@ngx-translate/core";
+import {NgForOf, NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-work',
   templateUrl: './work.component.html',
-  styleUrls: ['./work.component.scss']
+  styleUrls: ['./work.component.scss'],
+  imports: [TranslateModule, NgIf, NgForOf]
 })
 export class WorkComponent implements OnInit {
 
   @Input()
-  work : Experience
+  work: Experience
 
-  public mobileView : boolean
-  public tabletView : boolean
+  public mobileView: boolean
+  public tabletView: boolean
 
-  constructor(public translate : TranslateService) {
+  constructor(public translate: TranslateService) {
 
   }
 
@@ -23,7 +25,7 @@ export class WorkComponent implements OnInit {
   }
 
   @HostListener('window:resize', ['$event'])
-  onResize(event? : any) {
+  onResize() {
     this.mobileView = window.innerWidth <= 425;
     this.tabletView = window.innerWidth <= 768 && window.innerWidth > 425;
   }

@@ -1,11 +1,13 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import {TranslateService} from "@ngx-translate/core";
+import {TranslateModule, TranslateService} from "@ngx-translate/core";
+import {NgIf} from "@angular/common";
 
 
 @Component({
     selector: 'header-app',
     templateUrl: `./header.component.html`,
-    styleUrls: [`./header.scss`]
+    styleUrls: [`./header.scss`],
+  imports: [TranslateModule, NgIf]
 })
 export class HeaderComponent implements OnInit {
 
@@ -21,7 +23,7 @@ export class HeaderComponent implements OnInit {
   }
 
   @HostListener('window:resize', ['$event'])
-  onResize(event? : any) {
+  onResize() {
    this.mobileView = window.innerWidth <= 768;
 }
 

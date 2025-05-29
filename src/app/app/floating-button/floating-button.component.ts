@@ -1,30 +1,31 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {TranslateService} from "@ngx-translate/core";
 import {ThemeService} from "../../dark-mode/theme.service";
 
 @Component({
   selector: 'app-floating-button',
   templateUrl: './floating-button.component.html',
-  styleUrl: './floating-button.component.scss'
+  styleUrl: './floating-button.component.scss',
+  standalone: true
 })
 export class FloatingButtonComponent {
 
-  french : boolean;
-  english : boolean;
-  mooned : boolean = true;
+  french: boolean;
+  english: boolean;
+  mooned: boolean = true;
   theme: string = 'bootstrap-dark';
 
-  constructor(private translateService : TranslateService,
+  constructor(private translateService: TranslateService,
               private themeService: ThemeService) {
   }
 
-  switchToFrench(){
+  switchToFrench() {
     this.translateService.use('fr');
     this.french = true;
     this.english = false;
   }
 
-  switchToEnglish(){
+  switchToEnglish() {
     this.translateService.use('en');
     this.french = false;
     this.english = true;
@@ -34,7 +35,7 @@ export class FloatingButtonComponent {
     this.mooned = !this.mooned;
     if (this.theme === 'bootstrap') {
       this.theme = 'bootstrap-dark';
-    } else  {
+    } else {
       this.theme = 'bootstrap';
     }
     this.themeService.setTheme(this.theme)

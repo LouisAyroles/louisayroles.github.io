@@ -1,37 +1,41 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import { ChartConfiguration, ChartData, ChartType } from 'chart.js';
-import {BaseChartDirective} from "ng2-charts";
+import {ChartConfiguration, ChartData, ChartType} from 'chart.js';
+import {BaseChartDirective, NgChartsModule} from "ng2-charts";
 import {CvService} from "./cv.service";
 import {Education} from "../domain/education";
 import {Experience} from "../domain/experience";
 import {Hobie} from "../domain/hobie";
-import * as FileSaver from 'file-saver';
-import {TranslateService} from "@ngx-translate/core";
+import {TranslateModule, TranslateService} from "@ngx-translate/core";
+import {NgForOf} from "@angular/common";
+import {HobbiesComponent} from "./hobbies/hobbies.component";
+import {DiplomaComponent} from "./diploma/diploma.component";
+import {WorkComponent} from "./work/work.component";
 
 
 @Component({
   selector: 'app-cv',
   templateUrl: './cv.component.html',
-  styleUrls: ['./cv.component.scss']
+  styleUrls: ['./cv.component.scss'],
+  imports: [TranslateModule, NgChartsModule, NgForOf, HobbiesComponent, DiplomaComponent, WorkComponent]
 })
 
 export class CvComponent implements OnInit {
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
-  education : Education[]
-  experience : Experience[]
-  hobbies : Hobie[]
+  education: Education[]
+  experience: Experience[]
+  hobbies: Hobie[]
 
-  constructor(private cvService : CvService, private translateService : TranslateService){
+  constructor(private cvService: CvService, private translateService: TranslateService) {
 
   }
 
   downloadPdf() {
-      const pdfUrl = this.translateService.currentLang === 'en'? 'assets/cv/CV_EN_AYROLES_LOUIS.pdf' : 'assets/cv/CV_AYROLES_LOUIS.pdf';
-      window.open(pdfUrl, '_blank');
+    const pdfUrl = this.translateService.currentLang === 'en' ? 'assets/cv/CV_EN_AYROLES_LOUIS.pdf' : 'assets/cv/CV_AYROLES_LOUIS.pdf';
+    window.open(pdfUrl, '_blank');
   }
 
 
-  public isLoading : boolean = true;
+  public isLoading: boolean = true;
 
   ngOnInit(): void {
     this.education = this.cvService.getAllEducation()
@@ -39,9 +43,9 @@ export class CvComponent implements OnInit {
     this.hobbies = this.cvService.getAllHobbies()
   }
 
-  titlesLanguage = [ 'C, C#', 'JAVA' , 'Kotlin', 'HTML & CSS', 'OCaml', 'Python', 'SQL'];
+  titlesLanguage = ['C, C#', 'JAVA', 'Kotlin', 'HTML & CSS', 'OCaml', 'Python', 'SQL'];
 
-  titleTooltip : any = (tooltipItems : any) => {
+  titleTooltip: any = () => {
     return this.titlesLanguage;
   }
 
@@ -65,64 +69,63 @@ export class CvComponent implements OnInit {
   };
 
 
-
   public pieChartDataLanguages: ChartData<'pie', number[], string | string[]> = {
-    labels: [ 'C, C#', 'JAVA' , 'Kotlin', 'HTML & CSS', 'OCaml', 'Python', 'SQL'],
-    datasets: [ {
-      data: [ 500, 500, 200, 300,200,200, 200 ],
+    labels: ['C, C#', 'JAVA', 'Kotlin', 'HTML & CSS', 'OCaml', 'Python', 'SQL'],
+    datasets: [{
+      data: [500, 500, 200, 300, 200, 200, 200],
       backgroundColor: [
-       '#52cffe', '#69bff8', '#79b3f4', '#8aa7ec', '#9a9ae1','#aa8fd8', '#ba83ca'
+        '#52cffe', '#69bff8', '#79b3f4', '#8aa7ec', '#9a9ae1', '#aa8fd8', '#ba83ca'
       ],
       hoverBackgroundColor: [
-        '#10bcfd','#26a2f4', '#368dee', '#4a77e1', '#6060cf', '#825ac5', '#a055b6'
+        '#10bcfd', '#26a2f4', '#368dee', '#4a77e1', '#6060cf', '#825ac5', '#a055b6'
       ],
       hoverBorderColor: [
-        '#10bcfd','#26a2f4', '#368dee', '#4a77e1', '#6060cf', '#825ac5', '#a055b6'
+        '#10bcfd', '#26a2f4', '#368dee', '#4a77e1', '#6060cf', '#825ac5', '#a055b6'
       ]
-    } ]
+    }]
   };
 
 
   public pieChartDataTools: ChartData<'pie', number[], string | string[]> = {
-    labels: [ 'Git', 'Android Studio' , 'IntelliJ', 'Eclipse', 'Jira & Trello', 'Jenkins', 'Netbeans', 'Visual Studio', 'SSMS'],
-    datasets: [ {
-      data: [ 500, 200, 400, 300,200,100, 200, 200, 200 ],
+    labels: ['Git', 'Android Studio', 'IntelliJ', 'Eclipse', 'Jira & Trello', 'Jenkins', 'Netbeans', 'Visual Studio', 'SSMS'],
+    datasets: [{
+      data: [500, 200, 400, 300, 200, 100, 200, 200, 200],
       backgroundColor: [
-       '#d16ba5', '#c777b9', '#ba83ca','#aa8fd8', '#9a9ae1', '#8aa7ec', '#79b3f4', '#69bff8','#52cffe'
+        '#d16ba5', '#c777b9', '#ba83ca', '#aa8fd8', '#9a9ae1', '#8aa7ec', '#79b3f4', '#69bff8', '#52cffe'
       ],
       hoverBackgroundColor: [
-        '#c13c88','#b44aa2', '#a055b6', '#825ac5', '#6060cf', '#4a77e1', '#368dee',  '#26a2f4','#10bcfd'
+        '#c13c88', '#b44aa2', '#a055b6', '#825ac5', '#6060cf', '#4a77e1', '#368dee', '#26a2f4', '#10bcfd'
       ],
       hoverBorderColor: [
-        '#c13c88','#b44aa2', '#a055b6', '#825ac5', '#6060cf', '#4a77e1', '#368dee',  '#26a2f4','#10bcfd'
+        '#c13c88', '#b44aa2', '#a055b6', '#825ac5', '#6060cf', '#4a77e1', '#368dee', '#26a2f4', '#10bcfd'
       ]
-    } ]
+    }]
   };
 
   public pieChartDataFrameworks: ChartData<'pie', number[], string | string[]> = {
-    labels: [ 'Spring', 'Angular' , 'VueJS', '.NET', 'Tailwind', 'Bootstrap', 'React', 'NuxtJs'],
-    datasets: [ {
-      data: [ 500, 500, 400, 300,200,200, 100, 300 ],
+    labels: ['Spring', 'Angular', 'VueJS', '.NET', 'Tailwind', 'Bootstrap', 'React', 'NuxtJs'],
+    datasets: [{
+      data: [500, 500, 400, 300, 200, 200, 100, 300],
       backgroundColor: [
-        '#8aa7ec', '#9a9ae1','#aa8fd8', '#ba83ca','#c777b9',  '#d16ba5',  '#52cffe', '#69bff8'
+        '#8aa7ec', '#9a9ae1', '#aa8fd8', '#ba83ca', '#c777b9', '#d16ba5', '#52cffe', '#69bff8'
       ],
       hoverBackgroundColor: [
-        '#668ce6','#7979d7', '#825ac5', '#a055b6', '#b44aa2', '#c13c88', '#10bcfd', '#26a2f4'
+        '#668ce6', '#7979d7', '#825ac5', '#a055b6', '#b44aa2', '#c13c88', '#10bcfd', '#26a2f4'
       ],
       hoverBorderColor: [
-        '#668ce6','#7979d7', '#825ac5', '#a055b6', '#b44aa2', '#c13c88', '#10bcfd', '#26a2f4'
+        '#668ce6', '#7979d7', '#825ac5', '#a055b6', '#b44aa2', '#c13c88', '#10bcfd', '#26a2f4'
       ]
-    } ]
+    }]
   };
 
   public pieChartType: ChartType = 'pie';
 
   // events
-  public chartClicked({ event, active }: { event: MouseEvent, active: {}[] }): void {
+  public chartClicked({event, active}: { event: MouseEvent, active: {}[] }): void {
     console.log(event, active);
   }
 
-  public chartHovered({ event, active }: { event: MouseEvent, active: {}[] }): void {
+  public chartHovered({event, active}: { event: MouseEvent, active: {}[] }): void {
     console.log(event, active);
   }
 
