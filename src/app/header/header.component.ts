@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import {TranslateModule, TranslateService} from "@ngx-translate/core";
 import {RouterLink} from "@angular/router";
+import {NgOptimizedImage} from "@angular/common";
 
 
 
@@ -8,7 +9,7 @@ import {RouterLink} from "@angular/router";
     selector: 'header-app',
     templateUrl: `./header.component.html`,
     styleUrls: [`./header.scss`],
-  imports: [TranslateModule, RouterLink]
+  imports: [TranslateModule, RouterLink, NgOptimizedImage]
 })
 export class HeaderComponent implements OnInit {
 
