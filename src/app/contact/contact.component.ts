@@ -1,16 +1,18 @@
 import {Component, OnInit} from '@angular/core';
-import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
-import {FormGroup} from "@angular/forms";
+import emailjs from 'emailjs-com';
+import {FormGroup, FormsModule} from "@angular/forms";
 import {Email} from "../domain/email";
 import {Router} from "@angular/router";
 import { ToastService } from '../app/toast/toast.service';
-import {TranslateService} from "@ngx-translate/core";
+import {TranslateModule, TranslateService} from "@ngx-translate/core";
+import {NgIf} from "@angular/common";
 
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+    selector: 'app-contact',
+    templateUrl: './contact.component.html',
+    styleUrls: ['./contact.component.scss'],
+  imports: [TranslateModule, FormsModule, NgIf]
 })
 export class ContactComponent implements OnInit {
 
@@ -56,10 +58,10 @@ export class ContactComponent implements OnInit {
 
     if(form.valid) {
       emailjs.sendForm('service_contact', 'template_qqiyhml', e.target as HTMLFormElement, 'user_BBqImLJvHMfsJwBrg3e2W')
-        .then((result: EmailJSResponseStatus) => {
+        .then(() => {
           this.showSuccessEmail();
           this.router.navigate(['/']);
-        }, (error) => {
+        }, () => {
           this.showErrorEmail();
         });
     }

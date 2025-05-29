@@ -1,16 +1,19 @@
-import { Component, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Project} from "../../domain/project";
 import {ActivatedRoute} from "@angular/router";
-import { HostListener } from "@angular/core";
+import {HostListener} from "@angular/core";
+import {TranslateModule} from "@ngx-translate/core";
+import {NgForOf, NgIf} from "@angular/common";
 
 @Component({
   selector: 'project-details-component',
   templateUrl: './project-details.component.html',
-  styleUrls: ['./project-details.component.scss']
+  styleUrls: ['./project-details.component.scss'],
+  imports: [TranslateModule, NgIf, NgForOf]
 })
 export class ProjectDetailsComponent implements OnInit {
 
-  public project : Project;
+  public project: Project;
   public mobileView: boolean = false;
   public isLoading: boolean = true;
 
@@ -19,26 +22,28 @@ export class ProjectDetailsComponent implements OnInit {
   }
 
   @HostListener('window:resize', ['$event'])
-  onResize(event? : any) {
-   this.mobileView = window.innerWidth <= 768;
-}
+  onResize() {
+    this.mobileView = window.innerWidth <= 768;
+  }
 
   ngOnInit(): void {
-    this.route.data.subscribe((data) => {this.project = data.project});
+    this.route.data.subscribe((data) => {
+      this.project = data.project
+    });
   }
 
-  mobileDescription(i: number): boolean{
-    if(this.mobileView){
+  mobileDescription(i: number): boolean {
+    if (this.mobileView) {
       return true;
     }
-    return i%2 == 1;
+    return i % 2 == 1;
   }
 
-  notMobileDescription(i: number): boolean{
-    if(this.mobileView){
+  notMobileDescription(i: number): boolean {
+    if (this.mobileView) {
       return false;
     }
-    return i%2 == 0;
+    return i % 2 == 0;
   }
 
 }

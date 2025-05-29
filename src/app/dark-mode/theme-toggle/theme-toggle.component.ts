@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import {ThemeService} from "../theme.service";
+import {NgClass} from "@angular/common";
 
 @Component({
-  selector: 'app-theme-toggle',
-  templateUrl: './theme-toggle.component.html',
-  styleUrls: ['./theme-toggle.component.scss']
+    selector: 'app-theme-toggle',
+    templateUrl: './theme-toggle.component.html',
+    styleUrls: ['./theme-toggle.component.scss'],
+    imports: [NgClass]
 })
 export class ThemeToggleComponent implements OnInit {
 

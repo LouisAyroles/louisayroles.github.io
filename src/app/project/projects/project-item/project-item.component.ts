@@ -3,9 +3,10 @@ import {Project} from "../../../domain/project";
 
 
 @Component({
-  selector: 'app-project-item',
-  templateUrl: './project-item.component.html',
-  styleUrls: ['./project-item.component.scss']
+    selector: 'app-project-item',
+    templateUrl: './project-item.component.html',
+    styleUrls: ['./project-item.component.scss'],
+    standalone: false
 })
 export class ProjectItemComponent implements OnInit {
 
@@ -21,7 +22,7 @@ export class ProjectItemComponent implements OnInit {
   }
 
   @HostListener('window:resize', ['$event'])
-  onResize(event? : any) {
+  onResize() {
    this.mobileView = window.innerWidth <= 425;
    this.tabletView = window.innerWidth <= 768 && window.innerWidth > 425;
 }
