@@ -1,15 +1,17 @@
 <div class="container">
   <h1> {{"HOBBIES.TRAVEL" | translate }} </h1>
   <hr/>
-  <div   *ngIf="isLoading" class="text-center">
-    <div class="spinner-border text-primary" role="status">
+  @if (isLoading) {
+    <div   class="text-center">
+      <div class="spinner-border text-primary" role="status">
+      </div>
     </div>
-  </div>
-<div class="video-responsive">
+  }
+  <div class="video-responsive">
     <iframe (load)="isLoading=false" [class.d-none]="isLoading" src="https://www.youtube.com/embed/saAStqW4bdc" title="YouTube video player" onload="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-<div class="video-responsive">
+  </div>
+  <div class="video-responsive">
     <iframe [class.d-none]="isLoading" src="https://www.youtube.com/embed/rdWeFKTZbIQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+  </div>
 
 </div>

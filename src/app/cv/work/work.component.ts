@@ -1,13 +1,13 @@
 import {Component, HostListener, Input, OnInit} from '@angular/core';
 import {Experience} from "../../domain/experience";
 import {TranslateModule, TranslateService} from "@ngx-translate/core";
-import {NgForOf, NgIf} from "@angular/common";
+
 
 @Component({
   selector: 'app-work',
   templateUrl: './work.component.html',
   styleUrls: ['./work.component.scss'],
-  imports: [TranslateModule, NgIf, NgForOf]
+  imports: [TranslateModule]
 })
 export class WorkComponent implements OnInit {
 

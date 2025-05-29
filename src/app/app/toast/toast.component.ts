@@ -2,7 +2,7 @@
 import {Component, TemplateRef} from '@angular/core';
 import {ToastService} from './toast.service';
 import {NgbToast} from "@ng-bootstrap/ng-bootstrap";
-import {NgForOf, NgIf, NgTemplateOutlet} from "@angular/common";
+import { NgTemplateOutlet } from "@angular/common";
 
 @Component({
   selector: 'app-toasts',
@@ -11,10 +11,8 @@ import {NgForOf, NgIf, NgTemplateOutlet} from "@angular/common";
   host: {'[class.ngb-toasts]': 'true'},
   imports: [
     NgbToast,
-    NgForOf,
-    NgTemplateOutlet,
-    NgIf
-  ],
+    NgTemplateOutlet
+],
   standalone: true
 })
 export class ToastComponent {

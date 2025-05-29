@@ -1,79 +1,115 @@
 <div class="container">
-    <div *ngIf="!mobileView" class="float-end" id="buttons">
-        <a *ngIf="project.site" class="btn btn-blue float-right" href="{{project.site}}" target="_blank" role="button">
-            <span class="fa fa-globe hide"></span> <span> View site</span>
+  @if (!mobileView) {
+    <div class="float-end" id="buttons">
+      @if (project.site) {
+        <a class="btn btn-blue float-right" href="{{project.site}}" target="_blank" role="button">
+          <span class="fa fa-globe hide"></span> <span> View site</span>
         </a>
-        <a *ngIf="project.code" class="btn btn-blue" href="{{project.code}}" target="_blank" role="button">
-            <span class="fa fa-code hide"></span> <span> View code</span>
+      }
+      @if (project.code) {
+        <a class="btn btn-blue" href="{{project.code}}" target="_blank" role="button">
+          <span class="fa fa-code hide"></span> <span> View code</span>
         </a>
+      }
     </div>
+  }
 
   <h2>{{project.name}}</h2>
 
   <span id="subtitle">«{{"PROJECT.SHORT" | translate: {value1: project.short_description, value2: project.short_description_en} }}»</span>
-  <div *ngIf="mobileView"  id="buttons">
-      <a *ngIf="project.site" class="btn btn-blue float-right" href="{{project.site}}" target="_blank" role="button">
+  @if (mobileView) {
+    <div  id="buttons">
+      @if (project.site) {
+        <a class="btn btn-blue float-right" href="{{project.site}}" target="_blank" role="button">
           <span class="fa fa-globe hide"></span> <span> View site</span>
-      </a>
-      <a *ngIf="project.code" class="btn btn-blue" href="{{project.code}}" target="_blank" role="button">
+        </a>
+      }
+      @if (project.code) {
+        <a class="btn btn-blue" href="{{project.code}}" target="_blank" role="button">
           <span class="fa fa-code hide"></span> <span> View code</span>
-      </a>
-  </div>
+        </a>
+      }
+    </div>
+  }
   <div class="row infos">
-      <div class="col img-desc" data-aos="zoom-in">
-          <img src="{{project.profilPicture}}" alt="{{project.name}}">
-        </div>
+    <div class="col img-desc" data-aos="zoom-in">
+      <img src="{{project.profilPicture}}" alt="{{project.name}}">
+    </div>
 
-    <div *ngIf="!mobileView" class="col general-desc" data-aos="zoom-out-left">
-      {{"PROJECT.DESC" | translate: {value1: project.description, value2: project.description_en} }}
-    </div>
-    <div *ngIf="mobileView" class="col general-desc" data-aos="fade-right">
-      {{"PROJECT.DESC" | translate: {value1: project.description, value2: project.description_en} }}
-    </div>
+    @if (!mobileView) {
+      <div class="col general-desc" data-aos="zoom-out-left">
+        {{"PROJECT.DESC" | translate: {value1: project.description, value2: project.description_en} }}
+      </div>
+    }
+    @if (mobileView) {
+      <div class="col general-desc" data-aos="fade-right">
+        {{"PROJECT.DESC" | translate: {value1: project.description, value2: project.description_en} }}
+      </div>
+    }
 
   </div>
 
   <hr/>
   <h2>{{"PROJECT.DETAILS" | translate }}</h2>
   <hr/>
-  <div class="row full-desc py-2" *ngFor="let picdesc of project.pictures; let i = index">
-      <div *ngIf="notMobileDescription(i)" class="col desc" data-aos="zoom-in-left">
-        {{ "PHOTO.DESC"  | translate: {value1: picdesc.desc, value2: picdesc.desc_en} }}
-      </div>
-      <div *ngIf="notMobileDescription(i)" class="col img-right" data-aos="fade-down">
-        <img src="{{picdesc.src}}" alt="{{project.name}}">
-      </div>
-      <div *ngIf="mobileDescription(i)" class="col img-left" data-aos="fade-up" >
-        <img src="{{picdesc.src}}" alt="{{project.name}}">
-      </div>
-      <div *ngIf="mobileDescription(i)" class="col desc" data-aos="zoom-in-right">
+  @for (picdesc of project.pictures; track picdesc; let i = $index) {
+    <div class="row full-desc py-2">
+      @if (notMobileDescription(i)) {
+        <div class="col desc" data-aos="zoom-in-left">
+          {{ "PHOTO.DESC"  | translate: {value1: picdesc.desc, value2: picdesc.desc_en} }}
+        </div>
+      }
+      @if (notMobileDescription(i)) {
+        <div class="col img-right" data-aos="fade-down">
+          <img src="{{picdesc.src}}" alt="{{project.name}}">
+        </div>
+      }
+      @if (mobileDescription(i)) {
+        <div class="col img-left" data-aos="fade-up" >
+          <img src="{{picdesc.src}}" alt="{{project.name}}">
+        </div>
+      }
+      @if (mobileDescription(i)) {
+        <div class="col desc" data-aos="zoom-in-right">
           {{ "PHOTO.DESC" | translate: {value1: picdesc.desc, value2: picdesc.desc_en} }}
-      </div>
-</div>
-
-<div *ngIf="project.name.includes('LearnOcaml')" class="custom-container">
-    <hr/>
-    <h2>Rapport de Stage</h2>
-    <hr/>
-  <div *ngIf="isLoading" class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
-    <div class="spinner-border text-primary" role="status">
+        </div>
+      }
     </div>
-  </div>
-  <iframe (load)="isLoading=false" [class.d-none]="isLoading" src="https://drive.google.com/file/d/10KdhMkc7GQ2fuc-uVLYPxqXZ8UBLQoA8/preview" width=100% height="auto" allow="autoplay"></iframe>
-</div>
+  }
 
-<hr/>
-<h2>{{"PROJECT.TECHNO" | translate}}</h2>
-<hr/>
-<div class="techno">
+  @if (project.name.includes('LearnOcaml')) {
+    <div class="custom-container">
+      <hr/>
+      <h2>Rapport de Stage</h2>
+      <hr/>
+      @if (isLoading) {
+        <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
+          <div class="spinner-border text-primary" role="status">
+          </div>
+        </div>
+      }
+      <iframe (load)="isLoading=false" [class.d-none]="isLoading" src="https://drive.google.com/file/d/10KdhMkc7GQ2fuc-uVLYPxqXZ8UBLQoA8/preview" width=100% height="auto" allow="autoplay"></iframe>
+    </div>
+  }
 
-<a *ngFor="let techno of project.techno; let i = index" href="{{techno.url}}" target="blank" >
-  <div *ngIf="i%2==0" class="techno-block" data-aos="flip-left">
-  <img  src="{{techno.photo}}" alt="" >
+  <hr/>
+  <h2>{{"PROJECT.TECHNO" | translate}}</h2>
+  <hr/>
+  <div class="techno">
+
+    @for (techno of project.techno; track techno; let i = $index) {
+      <a href="{{techno.url}}" target="blank" >
+        @if (i%2==0) {
+          <div class="techno-block" data-aos="flip-left">
+            <img  src="{{techno.photo}}" alt="" >
+          </div>
+        }
+        @if (i%2==1) {
+          <div class="techno-block" data-aos="fade-down">
+            <img  src="{{techno.photo}}" alt="" >
+          </div>
+        }
+      </a>
+    }
   </div>
-  <div *ngIf="i%2==1" class="techno-block" data-aos="fade-down">
-    <img  src="{{techno.photo}}" alt="" >
-  </div>
-</a>
-</div>
 </div>

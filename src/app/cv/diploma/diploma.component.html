@@ -25,16 +25,24 @@
     </div>
 
     <div class="col-12 col-md-6" style="overflow-x: hidden">
-      <div *ngIf="translate.currentLang==='fr'" class="single-timeline-content" data-aos="fade-left">
-        <ul *ngFor="let desc of diploma.description" class="timeline-text-desc">
-          <li>{{desc}}</li>
-        </ul>
-      </div>
-      <div *ngIf="translate.currentLang==='en'" class="single-timeline-content" data-aos="fade-left">
-        <ul *ngFor="let desc of diploma.description_en" class="timeline-text-desc">
-          <li>{{desc}}</li>
-        </ul>
-      </div>
+      @if (translate.currentLang==='fr') {
+        <div class="single-timeline-content" data-aos="fade-left">
+          @for (desc of diploma.description; track desc) {
+            <ul class="timeline-text-desc">
+              <li>{{desc}}</li>
+            </ul>
+          }
+        </div>
+      }
+      @if (translate.currentLang==='en') {
+        <div class="single-timeline-content" data-aos="fade-left">
+          @for (desc of diploma.description_en; track desc) {
+            <ul class="timeline-text-desc">
+              <li>{{desc}}</li>
+            </ul>
+          }
+        </div>
+      }
+    </div>
   </div>
-</div>
 </div>

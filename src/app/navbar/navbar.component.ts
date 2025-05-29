@@ -4,7 +4,7 @@ import {PROJECTS_FR} from "../domain/datas";
 import {NavigationStart, Router, RouterLink} from "@angular/router";
 import {TranslateModule, TranslateService} from '@ngx-translate/core';
 import {NgbCollapse} from "@ng-bootstrap/ng-bootstrap";
-import {NgForOf, NgIf} from "@angular/common";
+
 
 
 @Component({
@@ -13,10 +13,8 @@ import {NgForOf, NgIf} from "@angular/common";
   imports: [
     RouterLink,
     TranslateModule,
-    NgbCollapse,
-    NgIf,
-    NgForOf
-  ],
+    NgbCollapse
+],
   styleUrls: [`./navbar.scss`]
 })
 

@@ -1,13 +1,13 @@
 import {Component, HostListener, Input, OnInit} from '@angular/core';
 import {Education} from "../../domain/education";
 import {TranslateModule, TranslateService} from "@ngx-translate/core";
-import {NgForOf, NgIf} from "@angular/common";
+
 
 @Component({
   selector: 'app-diploma',
   templateUrl: './diploma.component.html',
   styleUrls: ['./diploma.component.scss'],
-  imports: [TranslateModule, NgIf, NgForOf]
+  imports: [TranslateModule]
 })
 export class DiplomaComponent implements OnInit {
 

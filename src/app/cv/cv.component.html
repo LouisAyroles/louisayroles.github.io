@@ -9,11 +9,13 @@
   <div class="container">
     <div class="row">
       <!-- Timeline Area-->
-      <div *ngFor="let expItem of experience">
-        <app-work
-          [work]="expItem">
-        </app-work>
-      </div>
+      @for (expItem of experience; track expItem) {
+        <div>
+          <app-work
+            [work]="expItem">
+          </app-work>
+        </div>
+      }
     </div>
   </div>
 </section>
@@ -30,9 +32,9 @@
       <h2> {{"CV.SKILLS.TITLE_LANGUAGE" | translate }} </h2>
       <div class="chart" data-aos="zoom-out-down">
         <canvas baseChart
-                [data]="pieChartDataLanguages"
-                [type]="pieChartType"
-                [options]="pieChartOptions">
+          [data]="pieChartDataLanguages"
+          [type]="pieChartType"
+          [options]="pieChartOptions">
         </canvas>
       </div>
     </div>
@@ -42,9 +44,9 @@
       <h2> {{"CV.SKILLS.TITLE_TOOL" | translate }} </h2>
       <div class="chart" data-aos="zoom-out-down">
         <canvas baseChart
-                [data]="pieChartDataTools"
-                [type]="pieChartType"
-                [options]="pieChartOptions">
+          [data]="pieChartDataTools"
+          [type]="pieChartType"
+          [options]="pieChartOptions">
         </canvas>
       </div>
     </div>
@@ -53,9 +55,9 @@
       <h2> {{"CV.SKILLS.TITLE_FRAMEWORK" | translate }} </h2>
       <div class="chart" data-aos="zoom-out-down">
         <canvas baseChart
-                [data]="pieChartDataFrameworks"
-                [type]="pieChartType"
-                [options]="pieChartOptions">
+          [data]="pieChartDataFrameworks"
+          [type]="pieChartType"
+          [options]="pieChartOptions">
         </canvas>
       </div>
     </div>
@@ -72,30 +74,34 @@
     <div class="container">
       <div class="row">
         <!-- Timeline Area-->
-        <div *ngFor="let eduItem of education">
-          <app-diploma
-            [diploma]="eduItem">
-          </app-diploma>
-        </div>
+        @for (eduItem of education; track eduItem) {
+          <div>
+            <app-diploma
+              [diploma]="eduItem">
+            </app-diploma>
+          </div>
+        }
       </div>
     </div>
   </section>
 
   <div class="center shadow-lg p-3 mb-5 rounded">
     <div class="title-container">
-       <img class="icon hobbies" src="assets/cv/hobbies.png" alt="skills">
-       <h1 class="hobbies"> {{"CV.HOBBIES.TITLE" | translate }}</h1>
-     </div>
+      <img class="icon hobbies" src="assets/cv/hobbies.png" alt="skills">
+      <h1 class="hobbies"> {{"CV.HOBBIES.TITLE" | translate }}</h1>
+    </div>
   </div>
-   <section class="wrapper">
-     <div class="container">
-         <div  class="row">
-           <app-cv-hobbies *ngFor="let hobie of hobbies" class="col-12 col-sm-6 col-lg-3  mb-4 " data-aos="zoom-in-up"
-             [hobie]="hobie">
-           </app-cv-hobbies>
-       </div>
-     </div>
-   </section>
- </div>
+  <section class="wrapper">
+    <div class="container">
+      <div  class="row">
+        @for (hobie of hobbies; track hobie) {
+          <app-cv-hobbies class="col-12 col-sm-6 col-lg-3  mb-4 " data-aos="zoom-in-up"
+            [hobie]="hobie">
+          </app-cv-hobbies>
+        }
+      </div>
+    </div>
+  </section>
+</div>
 
 

@@ -3,51 +3,58 @@
     <a class="navbar-brand" href="#">
       <img class="brand-themed" src="assets/home/logo.png" alt="Louis Ayroles">
     </a>
-<button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
-        aria-controls="navbarSupportedContent" [attr.aria-expanded]="!isCollapsed" aria-label="Toggle navigation">
-  <i class="fa fa-bars fa-lg"></i>
-</button>
-<div class="collapse navbar-collapse" id="navbarSupportedContent" [ngbCollapse]="isCollapsed">
+    <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
+      aria-controls="navbarSupportedContent" [attr.aria-expanded]="!isCollapsed" aria-label="Toggle navigation">
+      <i class="fa fa-bars fa-lg"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngbCollapse]="isCollapsed">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-center">
         <li class="nav-item">
           <a (click)="toggleNavbar()" [class.underlined]="isUnderlined === '/'" class="nav-link active"
-             aria-current="page" href="#">{{ "NAVBAR.HOME" | translate }}</a>
+          aria-current="page" href="#">{{ "NAVBAR.HOME" | translate }}</a>
         </li>
         <li class="nav-item dropdown">
           <a [class.underlined]="isUnderlined.startsWith('/project/')" class="nav-link dropdown-toggle" href=""
-             id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {{ "NAVBAR.PROJECTS" | translate }}
           </a>
           <ul [class.inverse]="inverseColor" class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li *ngFor="let project of getProItems()">
-              <a (click)="toggleNavbar()" class="dropdown-item"
-                 routerLink="project/{{project.id}}">{{ project.name }}</a></li>
-
-            <li>
-              <hr class="dropdown-divider divider">
-            </li>
-            <li *ngFor="let project of getPersoItems()">
-              <div [class.inverse]="inverseColor">
+            @for (project of getProItems(); track project) {
+              <li>
                 <a (click)="toggleNavbar()" class="dropdown-item"
-                   routerLink="project/{{project.id}}">{{ project.name }}</a></div>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a (click)="toggleNavbar()" [class.underlined]="isUnderlined === '/cv'" class="nav-link"
-             routerLink="cv">CV</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" (click)="toggleNavbar()" [class.underlined]="isUnderlined === '/hobbies'"
-             routerLink="hobbies">{{ "NAVBAR.HOBBIES" | translate }}</a>
-        </li>
-        <li *ngIf="mobileView" class="nav-item">
-          <a class="nav-link" (click)="toggleNavbar()" [class.underlined]="isUnderlined === '/contact'"
-             routerLink="contact">Contact</a>
+                routerLink="project/{{project.id}}">{{ project.name }}</a></li>
+              }
 
-        </li>
-      </ul>
-    </div>
-    <a *ngIf="!mobileView" class="nav-link btn btn-contact" routerLink="contact">Contact</a>
-  </div>
-</nav>
+              <li>
+                <hr class="dropdown-divider divider">
+              </li>
+              @for (project of getPersoItems(); track project) {
+                <li>
+                  <div [class.inverse]="inverseColor">
+                    <a (click)="toggleNavbar()" class="dropdown-item"
+                    routerLink="project/{{project.id}}">{{ project.name }}</a></div>
+                  </li>
+                }
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a (click)="toggleNavbar()" [class.underlined]="isUnderlined === '/cv'" class="nav-link"
+              routerLink="cv">CV</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="toggleNavbar()" [class.underlined]="isUnderlined === '/hobbies'"
+              routerLink="hobbies">{{ "NAVBAR.HOBBIES" | translate }}</a>
+            </li>
+            @if (mobileView) {
+              <li class="nav-item">
+                <a class="nav-link" (click)="toggleNavbar()" [class.underlined]="isUnderlined === '/contact'"
+                routerLink="contact">Contact</a>
+              </li>
+            }
+          </ul>
+        </div>
+        @if (!mobileView) {
+          <a class="nav-link btn btn-contact" routerLink="contact">Contact</a>
+        }
+      </div>
+    </nav>

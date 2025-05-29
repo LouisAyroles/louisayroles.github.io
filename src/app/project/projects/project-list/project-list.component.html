@@ -1,7 +1,9 @@
 <div class="container">
   <h2> {{"HOME.PROJECTS" | translate}}</h2>
   <hr/>
-  <div *ngFor="let project of projects">
-    <app-project-item [project]="project"></app-project-item>
-  </div>
+  @for (project of projects; track project) {
+    <div>
+      <app-project-item [project]="project"></app-project-item>
+    </div>
+  }
 </div>

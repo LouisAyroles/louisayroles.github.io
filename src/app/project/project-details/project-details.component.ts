@@ -3,13 +3,13 @@ import {Project} from "../../domain/project";
 import {ActivatedRoute} from "@angular/router";
 import {HostListener} from "@angular/core";
 import {TranslateModule} from "@ngx-translate/core";
-import {NgForOf, NgIf} from "@angular/common";
+
 
 @Component({
   selector: 'project-details-component',
   templateUrl: './project-details.component.html',
   styleUrls: ['./project-details.component.scss'],
-  imports: [TranslateModule, NgIf, NgForOf]
+  imports: [TranslateModule]
 })
 export class ProjectDetailsComponent implements OnInit {
 

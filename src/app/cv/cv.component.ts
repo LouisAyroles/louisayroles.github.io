@@ -6,7 +6,7 @@ import {Education} from "../domain/education";
 import {Experience} from "../domain/experience";
 import {Hobie} from "../domain/hobie";
 import {TranslateModule, TranslateService} from "@ngx-translate/core";
-import {NgForOf} from "@angular/common";
+
 import {HobbiesComponent} from "./hobbies/hobbies.component";
 import {DiplomaComponent} from "./diploma/diploma.component";
 import {WorkComponent} from "./work/work.component";
@@ -16,7 +16,7 @@ import {WorkComponent} from "./work/work.component";
   selector: 'app-cv',
   templateUrl: './cv.component.html',
   styleUrls: ['./cv.component.scss'],
-  imports: [TranslateModule, NgChartsModule, NgForOf, HobbiesComponent, DiplomaComponent, WorkComponent]
+  imports: [TranslateModule, NgChartsModule, HobbiesComponent, DiplomaComponent, WorkComponent]
 })
 
 export class CvComponent implements OnInit {

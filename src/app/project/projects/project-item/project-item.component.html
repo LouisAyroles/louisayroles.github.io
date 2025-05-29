@@ -4,58 +4,74 @@
       <div class="row">
 
         <!-- Project display with picture on left and text on right -->
-        <div *ngIf="project.id%2==0 && !mobileView && !tabletView" class="col desc">
-          <div class="title">
-            {{project.name}}
+        @if (project.id%2==0 && !mobileView && !tabletView) {
+          <div class="col desc">
+            <div class="title">
+              {{project.name}}
+            </div>
+            {{"PROJECT.DESC" | translate: {value1: project.description, value2: project.description_en} }}
           </div>
-          {{"PROJECT.DESC" | translate: {value1: project.description, value2: project.description_en} }}
-        </div>
-        <div *ngIf="project.id%2==0 && !mobileView && !tabletView" class="col img2 ">
-          <div  class="h-100 d-flex justify-content-center align-items-center">
-            <img class="img-fluid" src="{{project.profilPicture}}" alt="{{project.name}}">
-        </div>
-        </div>
+        }
+        @if (project.id%2==0 && !mobileView && !tabletView) {
+          <div class="col img2 ">
+            <div  class="h-100 d-flex justify-content-center align-items-center">
+              <img class="img-fluid" src="{{project.profilPicture}}" alt="{{project.name}}">
+            </div>
+          </div>
+        }
 
         <!-- Project display with picture on right and text on left-->
-        <div *ngIf="project.id%2==1 && !mobileView && !tabletView" class="col  align-items-center justify-content-center img">
-          <div  class="h-100 d-flex justify-content-center align-items-center">
-            <img class="img-fluid" src="{{project.profilPicture}}" alt="{{project.name}}">
+        @if (project.id%2==1 && !mobileView && !tabletView) {
+          <div class="col  align-items-center justify-content-center img">
+            <div  class="h-100 d-flex justify-content-center align-items-center">
+              <img class="img-fluid" src="{{project.profilPicture}}" alt="{{project.name}}">
+            </div>
           </div>
-        </div>
-        <div *ngIf="project.id%2==1 && !mobileView && !tabletView" class="col desc">
-          <div class="title">
-            {{project.name}}
+        }
+        @if (project.id%2==1 && !mobileView && !tabletView) {
+          <div class="col desc">
+            <div class="title">
+              {{project.name}}
+            </div>
+            {{"PROJECT.DESC" | translate: {value1: project.description, value2: project.description_en} }}
           </div>
-          {{"PROJECT.DESC" | translate: {value1: project.description, value2: project.description_en} }}
-        </div>
+        }
 
         <!-- Project display for tablet view-->
-        <div *ngIf="tabletView" class="col img">
+        @if (tabletView) {
+          <div class="col img">
             <div class="title">
-                {{project.name}}
-              </div>
-          <div  class="h-100 d-flex justify-content-center align-items-center">
-             <img class="img-fluid" src="{{project.profilPicture}}" alt="{{project.name}}">
+              {{project.name}}
+            </div>
+            <div  class="h-100 d-flex justify-content-center align-items-center">
+              <img class="img-fluid" src="{{project.profilPicture}}" alt="{{project.name}}">
+            </div>
           </div>
-        </div>
-        <div *ngIf="tabletView" class="col desc">
-          {{"PROJECT.DESC" | translate: {value1: project.description, value2: project.description_en} }}
-        </div>
+        }
+        @if (tabletView) {
+          <div class="col desc">
+            {{"PROJECT.DESC" | translate: {value1: project.description, value2: project.description_en} }}
+          </div>
+        }
 
         <!-- Project display for mobile view-->
-        <div *ngIf="mobileView" class="col img">
-          <div class="title">
-            {{project.name}}
+        @if (mobileView) {
+          <div class="col img">
+            <div class="title">
+              {{project.name}}
+            </div>
+            <div  class="h-100 d-flex justify-content-center align-items-center">
+              <img class="img-fluid" src="{{project.profilPicture}}" alt="{{project.name}}">
+            </div>
           </div>
-          <div  class="h-100 d-flex justify-content-center align-items-center">
-            <img class="img-fluid" src="{{project.profilPicture}}" alt="{{project.name}}">
+        }
+        @if (mobileView) {
+          <div class="col desc">
+            {{"PROJECT.SHORT" | translate: {value1: project.short_description, value2: project.short_description_en} }}
           </div>
-        </div>
-        <div *ngIf="mobileView" class="col desc">
-          {{"PROJECT.SHORT" | translate: {value1: project.short_description, value2: project.short_description_en} }}
-        </div>
+        }
 
       </div>
+    </div>
   </div>
-</div>
 </div>

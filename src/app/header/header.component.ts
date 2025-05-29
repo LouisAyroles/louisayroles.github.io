@@ -1,13 +1,14 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import {TranslateModule, TranslateService} from "@ngx-translate/core";
-import {NgIf} from "@angular/common";
+import {RouterLink} from "@angular/router";
+
 
 
 @Component({
     selector: 'header-app',
     templateUrl: `./header.component.html`,
     styleUrls: [`./header.scss`],
-  imports: [TranslateModule, NgIf]
+  imports: [TranslateModule, RouterLink]
 })
 export class HeaderComponent implements OnInit {
 

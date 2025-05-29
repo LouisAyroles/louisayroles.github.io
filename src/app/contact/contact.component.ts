@@ -5,14 +5,14 @@ import {Email} from "../domain/email";
 import {Router} from "@angular/router";
 import { ToastService } from '../app/toast/toast.service';
 import {TranslateModule, TranslateService} from "@ngx-translate/core";
-import {NgIf} from "@angular/common";
+
 
 
 @Component({
     selector: 'app-contact',
     templateUrl: './contact.component.html',
     styleUrls: ['./contact.component.scss'],
-  imports: [TranslateModule, FormsModule, NgIf]
+  imports: [TranslateModule, FormsModule]
 })
 export class ContactComponent implements OnInit {
 
